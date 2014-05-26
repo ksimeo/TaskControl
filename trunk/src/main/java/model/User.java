@@ -8,14 +8,14 @@ public class User {
     private String name;
     private String login;
     private String password;
-    private String access;
+    private int role;
 
-    public User(int userId, String name, String login, String password, String access) {
-        this.userId = userId;
+    public User(/*int userId*/ String name, String login, String password, int role) {
+        /*this.userId = userId;*/
         this.name = name;
         this.login = login;
         this.password = password;
-        this.access = access;
+        this.role = role;
     }
 
     public int getUserId() {
@@ -34,8 +34,8 @@ public class User {
         return password;
     }
 
-    public String getAccess() {
-        return access;
+    public int getRole() {
+        return role;
     }
 
     public void setUserId(int userId) {
@@ -54,8 +54,8 @@ public class User {
         this.password = password;
     }
 
-    public void setAccess(String access) {
-        this.access = access;
+    public void setRole(int role) {
+        this.role = role;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", access='" + access + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
