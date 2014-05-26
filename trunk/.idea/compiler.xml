@@ -25,6 +25,9 @@
         <module name="taskcontrol" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="taskcontrol" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
