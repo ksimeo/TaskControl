@@ -4,7 +4,7 @@ USE `taskcontrol`;
 --
 -- Host: localhost    Database: taskcontrol
 -- ------------------------------------------------------
--- Server version	5.1.73-community
+-- Server version	5.5.36
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-05-25 13:10:40
+-- Dump completed on 2014-05-25 23:15:15

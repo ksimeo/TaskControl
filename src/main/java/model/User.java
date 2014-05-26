@@ -4,11 +4,11 @@ package model;
  * Created by user on 25.05.14.
  */
 public class User {
-   private int userId;
-   private String name;
-   private String login;
-   private String password;
-   private String access;
+    private int userId;
+    private String name;
+    private String login;
+    private String password;
+    private String access;
 
     public User(int userId, String name, String login, String password, String access) {
         this.userId = userId;
