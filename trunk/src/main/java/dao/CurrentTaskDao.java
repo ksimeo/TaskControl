@@ -8,7 +8,6 @@ package dao;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import model.CurrentTask;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -86,9 +85,8 @@ public class CurrentTaskDao {
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
-                            rs.getString("state"),
                             rs.getInt("recipient_id"),
-
+                            rs.getString("state"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
                             new java.util.Date(rs.getTimestamp("start_date").getTime()),
                             new java.util.Date(rs.getTimestamp("end_date").getTime()));
