@@ -32,7 +32,7 @@ public class CurrentTaskService
         return flag;
     }
 
-    public List<CurrentTask> getAllCarrentTasks()
+    public List<CurrentTask> getAllCurrentTasks()
     {
         return ctasks;
     }
