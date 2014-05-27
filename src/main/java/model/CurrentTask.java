@@ -17,7 +17,7 @@ public class CurrentTask {
     private Date startDate;
     private Date endDate;
 
-    public CurrentTask(int id, int taskId, int creatorId, String state, int recipientId, Date createDate, Date startDate, Date endDate) {
+    public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, Date createDate, Date startDate, Date endDate) {
         this.id = id;
         this.taskId = taskId;
         this.creatorId = creatorId;
