@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="1ffb56b7-74cd-466d-9914-22653ed674f4" name="Default" comment="Init">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java" />
-      <change type="DELETED" beforePath="D:\PROJECTS\JAVA\TaskControl\svn\trunk\.idea\libraries\Maven__junit_junit_3_8_1.xml" afterPath="" />
+    <list default="true" readonly="true" id="1ffb56b7-74cd-466d-9914-22653ed674f4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/UserDaoTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/UserDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskcontrol.iml" afterPath="$PROJECT_DIR$/taskcontrol.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="taskcontrol.iws" />
@@ -70,39 +66,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TaskDao.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CurrentTaskDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="1887">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1581">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0991453" vertical-offset="180" max-vertical-offset="1683">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#447#453#0" expanded="true" />
-                <marker date="1401211152599" expanded="true" signature="752:780" placeholder="Select from taskcontrol.task..." />
-                <marker date="1401211152599" expanded="true" signature="1914:1958" placeholder="Insert into ..." />
+                <element signature="e#542#548#0" expanded="true" />
+                <marker date="1401212952189" expanded="true" signature="855:886" placeholder="SELECT FROM taskcontrol.task..." />
+                <marker date="1401212952189" expanded="true" signature="855:885" placeholder="SELECT * FRO..task..." />
+                <marker date="1401212952189" expanded="true" signature="2027:2055" placeholder="INSERT INTO ..." />
+                <marker date="1401212952189" expanded="true" signature="2027:2161" placeholder="INSERT INTO ..." />
+                <marker date="1401212952189" expanded="true" signature="2146:2161" placeholder="VALUES(?,?,?..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskDaoTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TaskDaoTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="901">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -110,8 +111,8 @@
       <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1139">
-              <caret line="28" column="48" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="1139">
+              <caret line="38" column="38" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1401200149387" expanded="true" signature="647:772" placeholder="Insert into ..." />
@@ -671,6 +672,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" myUseAcceleration="nothing" cleanupOnStartRun="true">
     <configuration>C:\Users\Admin\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
@@ -708,12 +714,17 @@
       <workItem from="1401047414724" duration="2784000" />
       <workItem from="1401122115180" duration="244000" />
       <workItem from="1401200163459" duration="14000" />
-      <workItem from="1401200189669" duration="9111000" />
+      <workItem from="1401200189669" duration="10935000" />
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1401211419146</created>
+      <updated>1401211419146</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16601000" />
+    <option name="totallyTimeSpent" value="18425000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1016,32 +1027,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9179487" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4068376" vertical-offset="0" max-vertical-offset="585">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1139">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1401200149387" expanded="true" signature="647:772" placeholder="Insert into ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,22 +1045,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1581">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#447#453#0" expanded="true" />
-            <marker date="1401211152599" expanded="true" signature="752:780" placeholder="Select from taskcontrol.task..." />
-            <marker date="1401211152599" expanded="true" signature="1914:1958" placeholder="Insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+        <state vertical-scroll-proportion="1.2495726" vertical-offset="0" max-vertical-offset="833">
           <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding />
         </state>
@@ -1078,10 +1055,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="901">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="1887">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="1139">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1401200149387" expanded="true" signature="647:772" placeholder="Insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0991453" vertical-offset="180" max-vertical-offset="1683">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#542#548#0" expanded="true" />
+            <marker date="1401212952189" expanded="true" signature="855:886" placeholder="SELECT FROM taskcontrol.task..." />
+            <marker date="1401212952189" expanded="true" signature="855:885" placeholder="SELECT * FRO..task..." />
+            <marker date="1401212952189" expanded="true" signature="2027:2055" placeholder="INSERT INTO ..." />
+            <marker date="1401212952189" expanded="true" signature="2027:2161" placeholder="INSERT INTO ..." />
+            <marker date="1401212952189" expanded="true" signature="2146:2161" placeholder="VALUES(?,?,?..." />
           </folding>
         </state>
       </provider>

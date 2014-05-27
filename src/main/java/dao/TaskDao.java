@@ -17,6 +17,9 @@ package dao;
  */
 public class TaskDao {
 
+    private static String dbConnName = "root";
+    private static String dbConnPass = "root";
+
     public static List<Task> getAllTasks() {
         List<Task> toReturn = new LinkedList<Task>();
         try {
@@ -24,8 +27,8 @@ public class TaskDao {
             PreparedStatement ps = null;
             ResultSet rs = null;
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", "root", "root");
-                ps=conn.prepareStatement("Select from taskcontrol.task");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", dbConnName, dbConnPass);
+                ps=conn.prepareStatement("SELECT * FROM taskcontrol.task");
                 rs=ps.executeQuery();
                 Task t = null;
                 while(rs.next()){
@@ -60,8 +63,11 @@ public class TaskDao {
             Connection conn = null;
             PreparedStatement ps = null;
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", "root", "root");
-                ps = conn.prepareStatement("Insert into taskcontrol.task VALUES(?,?,?,?)");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", dbConnName, dbConnPass);
+                ps = conn.prepareStatement("INSERT INTO taskcontrol.task"
+                        +"(id, title, description, priority)"
+                        +" VALUES(?,?,?,?)"
+                );
                 ps.setInt(1, task.getId());
                 ps.setString(2, task.getTaskTitle());
                 ps.setString(3, task.getDescription());
