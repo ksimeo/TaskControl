@@ -8,6 +8,7 @@ package dao;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import model.CurrentTask;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -105,5 +106,36 @@ public class CurrentTaskDao {
             }
         }
         return tasks;
+    }
+
+    public int getLastId() {
+        int lastId = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+
+            try {
+                conn = (Connection) DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = (PreparedStatement) conn.prepareStatement(
+                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
+
+                rs = ps.executeQuery();
+                lastId = rs.getInt("m");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return lastId;
     }
 }

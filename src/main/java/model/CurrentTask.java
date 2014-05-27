@@ -1,8 +1,6 @@
 package model;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  * Created by user on 25.05.14.
