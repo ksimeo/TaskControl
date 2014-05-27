@@ -30,7 +30,7 @@ public class CurrentTaskTest
 //            print(cts.getAllCarrentTasks());
 //        }
 
-        print(cts.getAllCarrentTasks());
+        print(cts.getAllCurrentTasks());
 
     }
 
