@@ -14,6 +14,9 @@ public class CurrentTask {
     private Date createDate;
     private Date startDate;
     private Date endDate;
+    public  static String FINISH = "finished";
+    public  static String IN_PROCESS = "in process";
+    public  static String START = "started";
 
     public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, Date createDate, Date startDate, Date endDate) {
         this.id = id;
