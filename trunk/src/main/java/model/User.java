@@ -10,8 +10,14 @@ public class User {
     private String password;
     private int role;
 
-    public User(/*int userId*/ String name, String login, String password, int role) {
-        /*this.userId = userId;*/
+    public User( String name, String login, String password, int role) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+    public User(int userId, String name, String login, String password, int role) {
+        this.userId = userId;
         this.name = name;
         this.login = login;
         this.password = password;

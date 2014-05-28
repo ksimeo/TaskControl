@@ -21,5 +21,9 @@ public class UserDaoTest
             System.out.println("Error");
         }
 
+        User tmp = dao.getUserByLoginPassword("pupkin", "pupk45");
+
+        User searchName = dao.searchUserByFullName("pupkin");
+
     }
 }
