@@ -2,6 +2,7 @@ package service;
 
 import dao.CurrentTaskDao;
 import model.CurrentTask;
+import model.Task;
 import model.User;
 
 import java.util.Date;
@@ -19,11 +20,11 @@ public class CurrentTaskService
     public CurrentTaskService()
     {
         ctd = new CurrentTaskDao();
-        ctasks = ctd.getAllCarrentTasks();
+        ctasks = ctd.getAllCurrentTasks();
         if(ctasks.size() > 0) {
             nextId = ctasks.get(ctasks.size() - 1).getId() + 1;
         }else {
-            nextId = 0;
+            nextId = 1;
         }
 
     }
@@ -55,6 +56,11 @@ public class CurrentTaskService
         List<CurrentTask> ctasks = ctd.getAllByCreatorId(user);
         return ctasks;
 
+    }
+
+    public List<CurrentTask> getAllByTaskId(Task task)
+    {
+        return ctd.getAllByTaskId(task);
     }
 
 }
