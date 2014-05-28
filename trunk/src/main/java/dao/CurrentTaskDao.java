@@ -30,10 +30,10 @@ public class CurrentTaskDao {
         boolean flag = false;
         try {
             try {
-                conn = (Connection) DriverManager.getConnection(
+                conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
-                ps = (PreparedStatement) conn.prepareStatement(
+                ps = conn.prepareStatement(
                         "INSERT IGNORE INTO taskcontrol.currenttask"
                                 + "(id, task_id, creator_id, recipient_id, state,  create_date, start_date, end_date)"
                                 + "VALUES(?,?,?,?,?,?,?,?)"
@@ -77,10 +77,10 @@ public class CurrentTaskDao {
         try {
 
             try {
-                conn = (Connection) DriverManager.getConnection(
+                conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
-                ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask;");
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask;");
                 rs = ps.executeQuery();
 
                 while (rs.next()) {
@@ -117,7 +117,7 @@ public class CurrentTaskDao {
         try {
 
             try {
-                conn = (Connection) DriverManager.getConnection(
+                conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
                 ps = (PreparedStatement) conn.prepareStatement(
@@ -150,10 +150,10 @@ public class CurrentTaskDao {
 
         try {
             try {
-                conn = (Connection) DriverManager.getConnection(
+                conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
-                ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = "+ user.getUserId() + ")");
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = "+ user.getUserId() + ")");
                 rs = ps.executeQuery();
 
                 while (rs.next()) {
@@ -184,20 +184,21 @@ public class CurrentTaskDao {
 
         return ctasks;
     }
+
     public List<CurrentTask> getAllByCreatorId(User user)
     {
 
         ArrayList<CurrentTask> ctasks = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
-        ResultSet rs = null;
+        ResultSet rs;
 
         try {
             try {
-                conn = (Connection) DriverManager.getConnection(
+                conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
-                ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = "+ user.getUserId() + ")");
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = "+ user.getUserId() + ")");
                 rs = ps.executeQuery();
 
                 while (rs.next()) {
@@ -223,9 +224,6 @@ public class CurrentTaskDao {
                 ps = null;
             }
         }
-
-
-
         return ctasks;
     }
 }
