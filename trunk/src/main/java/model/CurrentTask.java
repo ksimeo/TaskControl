@@ -19,8 +19,8 @@ public class CurrentTask {
         this.id = id;
         this.taskId = taskId;
         this.creatorId = creatorId;
-        this.state = state;
         this.recipientId = recipientId;
+        this.state = state;
         this.createDate = createDate;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -96,8 +96,8 @@ public class CurrentTask {
                 "id=" + id +
                 ", taskId=" + taskId +
                 ", creatorId=" + creatorId +
-                ", state='" + state + '\'' +
                 ", recipientId=" + recipientId +
+                ", state='" + state + '\'' +
                 ", createDate=" + createDate +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +

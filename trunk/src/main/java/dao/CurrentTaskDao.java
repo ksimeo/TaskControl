@@ -8,7 +8,6 @@ package dao;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import model.CurrentTask;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;

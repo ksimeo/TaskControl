@@ -1,9 +1,7 @@
 package tests;
 
-import dao.CurrentTaskDao;
 import model.CurrentTask;
 import service.CurrentTaskService;
-
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
