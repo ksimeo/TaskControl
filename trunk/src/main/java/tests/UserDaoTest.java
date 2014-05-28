@@ -11,7 +11,7 @@ public class UserDaoTest
     public static void main (String[] args)
     {
         UserDao dao = new UserDao();
-        User user = new User("pupkin", "pupkin","pupk45", 2);
+        User user = new User("pupkin", "pupkin1","pupk45", 2);
         if (dao.saveUser(user))
         {
             System.out.println("SUCCESS");
@@ -21,9 +21,9 @@ public class UserDaoTest
             System.out.println("Error");
         }
 
-        User tmp = dao.getUserByLoginPassword("pupkin", "pupk45");
+       /* User tmp = dao.getUserByLoginPassword("pupkin", "pupk45");
 
         User searchName = dao.searchUserByFullName("pupkin");
-
+*/
     }
 }
