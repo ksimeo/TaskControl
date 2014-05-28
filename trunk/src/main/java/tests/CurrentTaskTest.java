@@ -1,6 +1,8 @@
 package tests;
 
+import dao.CurrentTaskDao;
 import model.CurrentTask;
+import model.User;
 import service.CurrentTaskService;
 import java.util.Date;
 import java.util.Iterator;
@@ -15,20 +17,22 @@ public class CurrentTaskTest
     public static void main (String[] args)
     {
 
+
         Date d = new Date();
         CurrentTaskService cts = new CurrentTaskService();
 
-//        boolean res1 = cts.saveCurrentTask(2, 4, 9, "made", d, d, d);
+//        boolean res1 = cts.saveCurrentTask(1, 4, 9, "made", d, d, d);
 //        System.out.println("Operetion res1 is " + res1);
-//        boolean res2 = cts.saveCurrentTask(1, 2, 1, "waits", d, d, d);
+//        boolean res2 = cts.saveCurrentTask(2, 2, 1, "waits", d, d, d);
 //        System.out.println("Operetion res2 is " + res2);
+//        print(cts.getAllCurrentTasks());
+        User user = new User(9, "Vasya Pupkin","vasya123", "qwert", 1);
 
-//        if (res1 || res2)
-//        {
-//            print(cts.getAllCarrentTasks());
-//        }
 
-        print(cts.getAllCurrentTasks());
+
+        print(cts.getAllByUserId(user)); // getting all users by userId
+
+
 
     }
 

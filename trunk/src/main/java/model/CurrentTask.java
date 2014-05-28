@@ -9,8 +9,8 @@ public class CurrentTask {
     private int id;
     private int taskId;
     private int creatorId;
-    private String state;
     private int recipientId;
+    private String state;
     private Date createDate;
     private Date startDate;
     private Date endDate;

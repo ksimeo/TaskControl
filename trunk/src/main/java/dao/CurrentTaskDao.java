@@ -8,6 +8,8 @@ package dao;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import model.CurrentTask;
+import model.User;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -33,7 +35,7 @@ public class CurrentTaskDao {
                         dbConnName, dbConnPass);
                 ps = (PreparedStatement) conn.prepareStatement(
                         "INSERT IGNORE INTO taskcontrol.currenttask"
-                                + "(id, task_id, creator_id, state, recipient_id, create_date, start_date, end_date)"
+                                + "(id, task_id, creator_id, recipient_id, state,  create_date, start_date, end_date)"
                                 + "VALUES(?,?,?,?,?,?,?,?)"
                 );
 
@@ -136,5 +138,50 @@ public class CurrentTaskDao {
             }
         }
         return lastId;
+    }
+
+    public List<CurrentTask> getAllByUserId(User user)
+    {
+
+        ArrayList<CurrentTask> ctasks = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            try {
+                conn = (Connection) DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = "+ user.getUserId() + ")");
+                rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                            rs.getInt("task_id"),
+                            rs.getInt("creator_id"),
+                            rs.getInt("recipient_id"),
+                            rs.getString("state"),
+                            new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                    ctasks.add(ct);
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+
+
+
+        return ctasks;
     }
 }
