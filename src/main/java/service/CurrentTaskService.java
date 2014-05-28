@@ -47,9 +47,14 @@ public class CurrentTaskService
     public List<CurrentTask> getAllByUserId(User user)
     {
         List<CurrentTask> ctasks = ctd.getAllByUserId(user);
-
-
         return ctasks;
+    }
+
+    public List<CurrentTask> getAllByCreatorId(User user)
+    {
+        List<CurrentTask> ctasks = ctd.getAllByCreatorId(user);
+        return ctasks;
+
     }
 
 }
