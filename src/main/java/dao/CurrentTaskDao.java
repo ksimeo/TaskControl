@@ -7,7 +7,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import model.CurrentTask;
+import model.Task;
 import model.User;
 
 import java.sql.DriverManager;
@@ -69,11 +71,11 @@ public class CurrentTaskDao {
 
     }
 
-    public List<CurrentTask> getAllCarrentTasks() {
+    public List<CurrentTask> getAllCurrentTasks() {
         ArrayList<CurrentTask> tasks = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ps = null;
-        ResultSet rs = null;
+        ResultSet rs;
         try {
 
             try {
@@ -109,84 +111,7 @@ public class CurrentTaskDao {
         return tasks;
     }
 
-    public int getLastId() {
-        int lastId = 0;
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-
-            try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
-                ps = (PreparedStatement) conn.prepareStatement(
-                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
-
-                rs = ps.executeQuery();
-                lastId = rs.getInt("m");
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } finally {
-            if (conn != null) {
-                conn = null;
-            }
-            if (ps != null) {
-                ps = null;
-            }
-        }
-        return lastId;
-    }
-
-    public List<CurrentTask> getAllByUserId(User user)
-    {
-
-        ArrayList<CurrentTask> ctasks = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        try {
-            try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
-                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = "+ user.getUserId() + ")");
-                rs = ps.executeQuery();
-
-                while (rs.next()) {
-                    CurrentTask ct = new CurrentTask(rs.getInt("id"),
-                            rs.getInt("task_id"),
-                            rs.getInt("creator_id"),
-                            rs.getInt("recipient_id"),
-                            rs.getString("state"),
-                            new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
-                    ctasks.add(ct);
-
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } finally {
-            if (conn != null) {
-                conn = null;
-            }
-            if (ps != null) {
-                ps = null;
-            }
-        }
-
-
-
-        return ctasks;
-    }
-
-    public List<CurrentTask> getAllByCreatorId(User user)
-    {
+    public List<CurrentTask> getAllByUserId(User user) {
 
         ArrayList<CurrentTask> ctasks = new ArrayList<>();
         Connection conn = null;
@@ -198,7 +123,50 @@ public class CurrentTaskDao {
                 conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
-                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = "+ user.getUserId() + ")");
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = " + user.getUserId() + ")");
+                rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                            rs.getInt("task_id"),
+                            rs.getInt("creator_id"),
+                            rs.getInt("recipient_id"),
+                            rs.getString("state"),
+                            new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                    ctasks.add(ct);
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+
+
+        return ctasks;
+    }
+
+    public List<CurrentTask> getAllByCreatorId(User user) {
+
+        ArrayList<CurrentTask> ctasks = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = " + user.getUserId() + ")");
                 rs = ps.executeQuery();
 
                 while (rs.next()) {
@@ -226,4 +194,78 @@ public class CurrentTaskDao {
         }
         return ctasks;
     }
+
+    public List<CurrentTask> getAllByTaskId(Task task) {
+
+        ArrayList<CurrentTask> ctasks = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(task_id = " + task.getId() + ")");
+                rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                            rs.getInt("task_id"),
+                            rs.getInt("creator_id"),
+                            rs.getInt("recipient_id"),
+                            rs.getString("state"),
+                            new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                    ctasks.add(ct);
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return ctasks;
+    }
+
+    //    public int getLastId() {
+//        int lastId = 0;
+//        Connection conn = null;
+//        PreparedStatement ps = null;
+//        ResultSet rs;
+//        try {
+//
+//            try {
+//                conn = DriverManager.getConnection(
+//                        "jdbc:mysql://localhost:3306/taskcontrol",
+//                        dbConnName, dbConnPass);
+//                ps = conn.prepareStatement(
+//                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
+//
+//                rs = ps.executeQuery();
+//                lastId = rs.getInt("m");
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        } finally {
+//            if (conn != null) {
+//                conn = null;
+//            }
+//            if (ps != null) {
+//                ps = null;
+//            }
+//        }
+//        return lastId;
+//    }
+
 }
+
