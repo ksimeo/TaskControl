@@ -1,6 +1,6 @@
 package dao;
 
-/**
+/**Класс определяющий Dao к Task
  * Created by Ksimeo on 25.05.14.
  */
         import model.Task;
