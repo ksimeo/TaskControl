@@ -43,7 +43,7 @@ public class CurrentTaskDao {
                 ps.setInt(2, ct.getTaskId());
                 ps.setInt(3, ct.getCreatorId());
                 ps.setInt(4, ct.getRecepientId());
-                ps.setString(5, "in process");
+                ps.setString(5, ct.getState());
                 ps.setTimestamp(6, new Timestamp(ct.getCreateDate().getTime()));
                 ps.setTimestamp(7, new Timestamp(ct.getStartDate().getTime()));
                 ps.setTimestamp(8, new Timestamp(ct.getEndDate().getTime()));
@@ -154,6 +154,50 @@ public class CurrentTaskDao {
                         "jdbc:mysql://localhost:3306/taskcontrol",
                         dbConnName, dbConnPass);
                 ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = "+ user.getUserId() + ")");
+                rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                            rs.getInt("task_id"),
+                            rs.getInt("creator_id"),
+                            rs.getInt("recipient_id"),
+                            rs.getString("state"),
+                            new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
+                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                    ctasks.add(ct);
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+
+
+
+        return ctasks;
+    }
+    public List<CurrentTask> getAllByCreatorId(User user)
+    {
+
+        ArrayList<CurrentTask> ctasks = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            try {
+                conn = (Connection) DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = (PreparedStatement) conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = "+ user.getUserId() + ")");
                 rs = ps.executeQuery();
 
                 while (rs.next()) {

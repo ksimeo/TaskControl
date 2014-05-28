@@ -16,21 +16,23 @@ public class CurrentTaskTest
 {
     public static void main (String[] args)
     {
-
-
         Date d = new Date();
         CurrentTaskService cts = new CurrentTaskService();
 
-//        boolean res1 = cts.saveCurrentTask(1, 4, 9, "made", d, d, d);
+        // Saving new current tasks --------------
+//        boolean res1 = cts.saveCurrentTask(1, 4, 9, CurrentTask.START, d, d, d);
 //        System.out.println("Operetion res1 is " + res1);
-//        boolean res2 = cts.saveCurrentTask(2, 2, 1, "waits", d, d, d);
+//        boolean res2 = cts.saveCurrentTask(2, 2, 1, CurrentTask.IN_PROCESS, d, d, d);
 //        System.out.println("Operetion res2 is " + res2);
-//        print(cts.getAllCurrentTasks());
-        User user = new User(9, "Vasya Pupkin","vasya123", "qwert", 1);
+//        boolean res3 = cts.saveCurrentTask(3, 2, 9, CurrentTask.FINISH, d, d, d);
+//        System.out.println("Operetion res2 is " + res3);
+        print(cts.getAllCurrentTasks());
 
 
-
-        print(cts.getAllByUserId(user)); // getting all users by userId
+        // getting all users by userId --------------
+//        User user = new User("Vasya Pupkin","vasya123", "qwert", 1);
+//        user.setUserId(9);
+//        print(cts.getAllByUserId(user));
 
 
 
