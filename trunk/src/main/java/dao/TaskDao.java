@@ -57,7 +57,7 @@ public class TaskDao {
         return toReturn;
     }
 
-    public boolean addTask (Task task){
+    public static boolean addTask (Task task){
         boolean f = false;
         try {
             Connection conn = null;
