@@ -42,8 +42,8 @@
             </tr>
 
             <tr>
-                <td>
-
+                <td  style="text-align: right;">
+                    <input type="button" value="Sign Up"/>
                 </td>
                 <td style="text-align: right;">
                     <input type="submit" value="Sign In"/>
