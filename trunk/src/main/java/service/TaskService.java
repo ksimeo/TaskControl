@@ -27,10 +27,10 @@ public class TaskService {
         return id;
     }
 
-    public boolean addNewTask(String taskTitle, String description, String priority)
+    public boolean addNewTask(String taskTitle, String description)
     {
         int id = getNewTaskId();
-        Task t = new Task(id, taskTitle, description, priority);
+        Task t = new Task(id, taskTitle, description);
         allTasks.add(t);
         boolean f = TaskDao.addTask(t);
         allTasks.add(t);

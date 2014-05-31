@@ -7,13 +7,11 @@ public class Task {
     private int id;
     private String taskTitle;
     private String description;
-    private String priority;
 
-    public Task(int id, String taskTitle, String description, String priority) {
+    public Task(int id, String taskTitle, String description) {
         this.id = id;
         this.taskTitle = taskTitle;
         this.description = description;
-        this.priority = priority;
     }
 
     public int getId() {
@@ -40,21 +38,12 @@ public class Task {
         this.description = description;
     }
 
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
-    }
-
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", taskTitle='" + taskTitle + '\'' +
                 ", description='" + description + '\'' +
-                ", priority='" + priority + '\'' +
                 '}';
     }
 }

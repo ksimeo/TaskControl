@@ -15,7 +15,7 @@ public class TaskDaoTest {
     public static void main(String[] args)
     {
         TaskDao td = new TaskDao();
-        Task newTask = new Task( 1, "Погрузка", "Грузите ананасы бочками!", "Максимальный");
+        Task newTask = new Task( 1, "Погрузка", "Грузите ананасы бочками!");
 
         if (td.addTask(newTask))
         {
