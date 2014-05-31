@@ -21,7 +21,7 @@ public class TaskDao {
     private static String dbConnPass = "root";
 
     public static List<Task> getAllTasks() {
-        List<Task> toReturn = new LinkedList<Task>();
+        List<Task> toReturn = new LinkedList<>();
         try {
             Connection conn = null;
             PreparedStatement ps = null;
@@ -32,7 +32,7 @@ public class TaskDao {
                 rs=ps.executeQuery();
                 Task t = null;
                 while(rs.next()){
-                    t = new Task(rs.getInt("id"), rs.getString("title"), rs.getString("discription"), rs.getString("priority"));
+                    t = new Task(rs.getInt("id"), rs.getString("title"), rs.getString("discription"));
                     toReturn.add(t);
                 }
             }
@@ -65,13 +65,12 @@ public class TaskDao {
             try {
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", dbConnName, dbConnPass);
                 ps = conn.prepareStatement("INSERT IGNORE INTO taskcontrol.task"
-                        +"(id, title, discription, priority)"
-                        +" VALUES(?,?,?,?)"
+                        +"(id, title, discription)"
+                        +" VALUES(?,?,?)"
                 );
                 ps.setInt(1, task.getId());
                 ps.setString(2, task.getTaskTitle());
                 ps.setString(3, task.getDescription());
-                ps.setString(4, task.getPriority());
                 int res = ps.executeUpdate();
                 f = res > 0;
             }
