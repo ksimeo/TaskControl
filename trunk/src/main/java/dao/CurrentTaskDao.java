@@ -24,7 +24,7 @@ import java.util.List;
 public class CurrentTaskDao {
 
     private String dbConnName = "root";
-    private String dbConnPass = "root";
+    private String dbConnPass = "";
 
     public boolean saveCurrentTask(CurrentTask ct) {
         Connection conn = null;
@@ -37,8 +37,8 @@ public class CurrentTaskDao {
                         dbConnName, dbConnPass);
                 ps = conn.prepareStatement(
                         "INSERT IGNORE INTO taskcontrol.currenttask"
-                                + "(id, task_id, creator_id, recipient_id, state,  create_date, start_date, end_date)"
-                                + "VALUES(?,?,?,?,?,?,?,?)"
+                                + "(id, task_id, creator_id, recipient_id, state, priority,  create_date, start_date, end_date)"
+                                + "VALUES(?,?,?,?,?,?,?,?,?)"
                 );
 
                 ps.setInt(1, ct.getId());
@@ -46,9 +46,10 @@ public class CurrentTaskDao {
                 ps.setInt(3, ct.getCreatorId());
                 ps.setInt(4, ct.getRecepientId());
                 ps.setString(5, ct.getState());
-                ps.setTimestamp(6, new Timestamp(ct.getCreateDate().getTime()));
-                ps.setTimestamp(7, new Timestamp(ct.getStartDate().getTime()));
-                ps.setTimestamp(8, new Timestamp(ct.getEndDate().getTime()));
+                ps.setString(6, ct.getPriority());
+                ps.setTimestamp(7, new Timestamp(ct.getCreateDate().getTime()));
+                ps.setTimestamp(8, new Timestamp(ct.getStartDate().getTime()));
+                ps.setTimestamp(9, new Timestamp(ct.getEndDate().getTime()));
                 int res = ps.executeUpdate();
 
                 if (res != 0) {
@@ -91,6 +92,7 @@ public class CurrentTaskDao {
                             rs.getInt("creator_id"),
                             rs.getInt("recipient_id"),
                             rs.getString("state"),
+                            rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
                             new java.util.Date(rs.getTimestamp("start_date").getTime()),
                             new java.util.Date(rs.getTimestamp("end_date").getTime()));
@@ -132,6 +134,7 @@ public class CurrentTaskDao {
                             rs.getInt("creator_id"),
                             rs.getInt("recipient_id"),
                             rs.getString("state"),
+                            rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
                             new java.util.Date(rs.getTimestamp("start_date").getTime()),
                             new java.util.Date(rs.getTimestamp("end_date").getTime()));
@@ -175,6 +178,7 @@ public class CurrentTaskDao {
                             rs.getInt("creator_id"),
                             rs.getInt("recipient_id"),
                             rs.getString("state"),
+                            rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
                             new java.util.Date(rs.getTimestamp("start_date").getTime()),
                             new java.util.Date(rs.getTimestamp("end_date").getTime()));
@@ -216,6 +220,7 @@ public class CurrentTaskDao {
                             rs.getInt("creator_id"),
                             rs.getInt("recipient_id"),
                             rs.getString("state"),
+                            rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
                             new java.util.Date(rs.getTimestamp("start_date").getTime()),
                             new java.util.Date(rs.getTimestamp("end_date").getTime()));
@@ -236,36 +241,37 @@ public class CurrentTaskDao {
         return ctasks;
     }
 
-    //    public int getLastId() {
-//        int lastId = 0;
-//        Connection conn = null;
-//        PreparedStatement ps = null;
-//        ResultSet rs;
-//        try {
-//
-//            try {
-//                conn = DriverManager.getConnection(
-//                        "jdbc:mysql://localhost:3306/taskcontrol",
-//                        dbConnName, dbConnPass);
-//                ps = conn.prepareStatement(
-//                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
-//
-//                rs = ps.executeQuery();
-//                lastId = rs.getInt("m");
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        } finally {
-//            if (conn != null) {
-//                conn = null;
-//            }
-//            if (ps != null) {
-//                ps = null;
-//            }
-//        }
-//        return lastId;
-//    }
+        public int getLastId() {
+        int lastId = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+        try {
+
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
+
+                rs = ps.executeQuery();
+                rs.next();
+                lastId = rs.getInt("m");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return lastId;
+    }
 
 }
 

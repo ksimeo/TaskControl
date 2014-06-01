@@ -2,9 +2,9 @@ CREATE DATABASE  IF NOT EXISTS `taskcontrol` /*!40100 DEFAULT CHARACTER SET lati
 USE `taskcontrol`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: localhost    Database: taskcontrol
+-- Host: 127.0.0.1    Database: taskcontrol
 -- ------------------------------------------------------
--- Server version	5.6.16
+-- Server version	5.1.73-community
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,20 +28,13 @@ CREATE TABLE `currenttask` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `task_id` int(11) DEFAULT NULL,
   `creator_id` int(11) DEFAULT NULL,
+  `recipient_id` int(11) DEFAULT NULL,
   `state` varchar(45) DEFAULT NULL,
-  `recipient` int(11) DEFAULT NULL,
   `priority` varchar(45) DEFAULT NULL,
-  `create_date` date DEFAULT NULL,
-  `start_date` date DEFAULT NULL,
-  `end_date` date DEFAULT NULL,
-
-  PRIMARY KEY (`id`),
-  KEY `task_id_idx` (`task_id`),
-  KEY `creator_id_idx` (`creator_id`),
-  KEY `recipient_idx` (`recipient`),
-  CONSTRAINT `creator_id` FOREIGN KEY (`creator_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `recipient` FOREIGN KEY (`recipient`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `task_id` FOREIGN KEY (`task_id`) REFERENCES `task` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  `create_date` timestamp NULL DEFAULT NULL,
+  `start_date` timestamp NULL DEFAULT NULL,
+  `end_date` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-05-31 21:52:00
+-- Dump completed on 2014-06-01 11:26:47

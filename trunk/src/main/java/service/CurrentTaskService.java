@@ -29,10 +29,10 @@ public class CurrentTaskService
 
     }
 
-    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, Date createDate, Date startDate, Date endDate)
+    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate)
     {
 
-        CurrentTask ct = new CurrentTask(nextId, taskId, creatorId, recipientId, state, createDate, startDate, endDate);
+        CurrentTask ct = new CurrentTask(nextId, taskId, creatorId, recipientId, state, priority, createDate, startDate, endDate);
 
         boolean flag = ctd.saveCurrentTask(ct);
         ctasks.add(ct);

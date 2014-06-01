@@ -11,6 +11,7 @@ public class CurrentTask {
     private int creatorId;
     private int recipientId;
     private String state;
+    private String priority;
     private Date createDate;
     private Date startDate;
     private Date endDate;
@@ -18,12 +19,13 @@ public class CurrentTask {
     public  static String IN_PROCESS = "in process";
     public  static String START = "started";
 
-    public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, Date createDate, Date startDate, Date endDate) {
+    public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate) {
         this.id = id;
         this.taskId = taskId;
         this.creatorId = creatorId;
         this.recipientId = recipientId;
         this.state = state;
+        this.priority = priority;
         this.createDate = createDate;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -93,6 +95,14 @@ public class CurrentTask {
         this.endDate = endDate;
     }
 
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
     @Override
     public String toString() {
         return "CurrentTask{" +
@@ -101,6 +111,7 @@ public class CurrentTask {
                 ", creatorId=" + creatorId +
                 ", recipientId=" + recipientId +
                 ", state='" + state + '\'' +
+                ", priority='" + priority + '\'' +
                 ", createDate=" + createDate +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
