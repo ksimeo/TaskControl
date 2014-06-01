@@ -1,6 +1,7 @@
 package tests;
 
 import model.CurrentTask;
+import model.Parcel;
 import model.Task;
 import model.User;
 import service.CurrentTaskService;
@@ -27,9 +28,9 @@ public class CurrentTaskTest
 //        boolean res3 = cts.saveCurrentTask(3, 2, 9, CurrentTask.FINISH, "LOW", d, d, d);
 //        System.out.println("Operation res2 is " + res3);
 //        System.out.println("Saving is ready");
-//
-//
-//        //getting all --------------
+////
+////
+////        //getting all --------------
 //        User recipient = new User("Vasya Pupkin","vasya123", "qwert", 1);
 //        recipient.setUserId(9);
 //        User creator = new User("Kolya, Pupkin","vasya123", "qwert", 1);
@@ -44,7 +45,8 @@ public class CurrentTaskTest
 //        print(cts.getAllByCreatorId(creator));
 //        // getting all current tasks by task id --------------
 //        print(cts.getAllByTaskId(task1));
-//        System.out.println(cts.getLastId());
+//        Parcel<CurrentTask> parcel = cts.getCurrentTaskPage(recipient, 5, 10);
+//        print(parcel.getPage());
 
     }
 

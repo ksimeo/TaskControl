@@ -10,13 +10,13 @@ import java.util.List;
 /**
  * Created by user on 01.06.14.
  */
-public interface ICurrentTask
+public interface ICurrentTaskDao
 {
     public boolean saveCurrentTask(CurrentTask ct);
     public List<CurrentTask> getAllCurrentTasks();
     public List<CurrentTask> getAllByUserId(User user);
     public List<CurrentTask> getAllByCreatorId(User user);
     public List<CurrentTask> getAllByTaskId(Task task);
-    public Parcel<CurrentTask> getCurrentTaskPage();
+    public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to);
     public int getLastId();
 }
