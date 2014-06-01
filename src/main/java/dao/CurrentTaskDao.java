@@ -7,9 +7,12 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import model.CurrentTask;
+import model.Parcel;
 import model.Task;
 import model.User;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -246,6 +249,11 @@ public class CurrentTaskDao implements ICurrentTask
     }
 
     @Override
+    public Parcel<CurrentTask> getCurrentTaskPage() {
+        return null;
+    }
+
+    @Override
     public int getLastId() {
         int lastId = 0;
         Connection conn = null;
@@ -261,8 +269,10 @@ public class CurrentTaskDao implements ICurrentTask
                         "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
 
                 rs = ps.executeQuery();
-                rs.next();
-                lastId = rs.getInt("m");
+                if (rs.next())
+                    lastId = rs.getInt("m");
+                else
+                    lastId = 0;
 
             } catch (Exception e) {
                 e.printStackTrace();

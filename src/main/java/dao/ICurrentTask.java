@@ -1,6 +1,7 @@
 package dao;
 
 import model.CurrentTask;
+import model.Parcel;
 import model.Task;
 import model.User;
 
@@ -16,5 +17,6 @@ public interface ICurrentTask
     public List<CurrentTask> getAllByUserId(User user);
     public List<CurrentTask> getAllByCreatorId(User user);
     public List<CurrentTask> getAllByTaskId(Task task);
+    public Parcel<CurrentTask> getCurrentTaskPage();
     public int getLastId();
 }
