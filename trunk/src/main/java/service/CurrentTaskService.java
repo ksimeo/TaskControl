@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by VLAD on 27.05.2014.
  */
-public enum CurrentTaskService
+public enum CurrentTaskService implements ICurrentTaskService
 {
     INSTANCE;
     private AtomicInteger lastId;
@@ -30,6 +30,7 @@ public enum CurrentTaskService
 
     }
 
+    @Override
     public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate)
     {
 
@@ -39,17 +40,20 @@ public enum CurrentTaskService
         return flag;
     }
 
+    @Override
     public List<CurrentTask> getAllCurrentTasks()
     {
         return ctd.getAllCurrentTasks();
     }
 
+    @Override
     public List<CurrentTask> getAllByUserId(User user)
     {
         List<CurrentTask> ctasks = ctd.getAllByUserId(user);
         return ctasks;
     }
 
+    @Override
     public List<CurrentTask> getAllByCreatorId(User user)
     {
         List<CurrentTask> ctasks = ctd.getAllByCreatorId(user);
@@ -57,11 +61,13 @@ public enum CurrentTaskService
 
     }
 
+    @Override
     public List<CurrentTask> getAllByTaskId(Task task)
     {
         return ctd.getAllByTaskId(task);
     }
 
+    @Override
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to)
     {
         return ctd.getCurrentTaskPage(user, from, to);
