@@ -22,8 +22,7 @@ import java.util.List;
 /**
  * @author VLAD
  */
-public class CurrentTaskDao implements ICurrentTask
-{
+public class CurrentTaskDao implements ICurrentTaskDao {
 
     private String dbConnName = "root";
     private String dbConnPass = "";
@@ -249,8 +248,54 @@ public class CurrentTaskDao implements ICurrentTask
     }
 
     @Override
-    public Parcel<CurrentTask> getCurrentTaskPage() {
-        return null;
+    public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to) {
+        ArrayList<CurrentTask> page = new ArrayList<>();
+        Parcel parcel;
+        int count = getLastId();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+
+        try {
+            try {
+                if (from < count)
+                {
+                    conn = DriverManager.getConnection(
+                            "jdbc:mysql://localhost:3306/taskcontrol",
+                            dbConnName, dbConnPass);
+                    ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(id>"+from+" && recipient_id = "+user.getUserId()+") LIMIT " + to);
+                    rs = ps.executeQuery();
+
+                    while (rs.next()) {
+                        CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                                rs.getInt("task_id"),
+                                rs.getInt("creator_id"),
+                                rs.getInt("recipient_id"),
+                                rs.getString("state"),
+                                rs.getString("priority"),
+                                new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                                new java.util.Date(rs.getTimestamp("start_date").getTime()),
+                                new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                        page.add(ct);
+                    }
+
+                }
+                else
+                {
+                    page = new ArrayList<>();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return new Parcel<CurrentTask>(count, page);
     }
 
     @Override
@@ -267,8 +312,8 @@ public class CurrentTaskDao implements ICurrentTask
                         dbConnName, dbConnPass);
                 ps = conn.prepareStatement(
                         "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
-
                 rs = ps.executeQuery();
+
                 if (rs.next())
                     lastId = rs.getInt("m");
                 else
