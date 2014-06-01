@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1ffb56b7-74cd-466d-9914-22653ed674f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" afterPath="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/ICurrentTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" afterPath="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9b7e4ef5-bc46-4b44-a6e2-9fcc5068257f" name="New changelist" comment="" />
@@ -75,8 +74,19 @@
       <file leaf-file-name="CurrentTaskTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="27" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1020">
+            <state line="4" column="18" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1122">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICurrentTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ICurrentTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="27" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="442">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,27 +94,19 @@
       <file leaf-file-name="CurrentTaskDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="4556">
+            <state line="7" column="7" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="680">
               <folding>
-                <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-                <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-                <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-                <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-                <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="23" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1598">
-              <folding>
-                <element signature="e#2147#2148#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#2266#2267#0" expanded="true" />
+                <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+                <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
               </folding>
             </state>
           </provider>
@@ -113,13 +115,13 @@
       <file leaf-file-name="CurrentTaskService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="4" selection-start="1289" selection-end="1289" vertical-scroll-proportion="1.200565" vertical-offset="0" max-vertical-offset="629">
+            <state line="22" column="35" selection-start="400" selection-end="400" vertical-scroll-proportion="0.43220338" vertical-offset="102" max-vertical-offset="833">
               <folding>
-                <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
                 <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
                 <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
                 <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
                 <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
+                <element signature="method#getLastId#0;class#CurrentTaskService#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -147,10 +149,11 @@
         <option value="$PROJECT_DIR$/src/main/java/service/TaskService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_task.sql" />
         <option value="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ICurrentTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" />
       </list>
     </option>
   </component>
@@ -840,7 +843,7 @@
       <workItem from="1401305627787" duration="5695000" />
       <workItem from="1401362482753" duration="8016000" />
       <workItem from="1401471111043" duration="2493000" />
-      <workItem from="1401608153508" duration="3197000" />
+      <workItem from="1401608153508" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1401211419146</created>
@@ -866,11 +869,15 @@
       <created>1401608350213</created>
       <updated>1401608350213</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Init">
+      <created>1401611377110</created>
+      <updated>1401611377110</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45429000" />
+    <option name="totallyTimeSpent" value="47109000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -999,11 +1006,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1012,11 +1025,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskService#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1032,11 +1045,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1045,11 +1064,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskService#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1070,11 +1089,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskService#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1083,11 +1102,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1101,11 +1126,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1129,11 +1160,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1142,11 +1179,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1155,11 +1198,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1175,11 +1224,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1200,11 +1255,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1250,11 +1311,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
@@ -1334,26 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="27" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="4556">
-          <folding>
-            <marker date="1401610054410" expanded="true" signature="2669:2706" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="4187:4271" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="5758:5840" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="7322:7397" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401610054410" expanded="true" signature="8844:8892" placeholder="SELECT MAX(i..currenttask..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="36" selection-start="1870" selection-end="1870" vertical-scroll-proportion="2.4853802" vertical-offset="0" max-vertical-offset="1105">
@@ -1363,7 +1410,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1598">
+        <state line="98" column="23" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.2881356" vertical-offset="1020" max-vertical-offset="1598">
           <folding>
             <element signature="e#2147#2148#0" expanded="true" />
             <element signature="e#2178#2179#0" expanded="true" />
@@ -1373,15 +1420,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="7" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="680">
+          <folding>
+            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401612382843" expanded="true" signature="2719:2756" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="4251:4335" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="5836:5918" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="7414:7489" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401612382843" expanded="true" signature="8946:8994" placeholder="SELECT MAX(i..currenttask..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ICurrentTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="27" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="442">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="4" selection-start="1289" selection-end="1289" vertical-scroll-proportion="1.200565" vertical-offset="0" max-vertical-offset="629">
+        <state line="22" column="35" selection-start="400" selection-end="400" vertical-scroll-proportion="0.43220338" vertical-offset="102" max-vertical-offset="833">
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskService#0" expanded="false" />
           </folding>
         </state>
       </provider>

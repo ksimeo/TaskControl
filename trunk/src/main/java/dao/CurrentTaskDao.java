@@ -7,11 +7,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import model.CurrentTask;
 import model.Task;
 import model.User;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -21,11 +19,13 @@ import java.util.List;
 /**
  * @author VLAD
  */
-public class CurrentTaskDao {
+public class CurrentTaskDao implements ICurrentTask
+{
 
     private String dbConnName = "root";
     private String dbConnPass = "";
 
+    @Override
     public boolean saveCurrentTask(CurrentTask ct) {
         Connection conn = null;
         PreparedStatement ps = null;
@@ -72,6 +72,7 @@ public class CurrentTaskDao {
 
     }
 
+    @Override
     public List<CurrentTask> getAllCurrentTasks() {
         ArrayList<CurrentTask> tasks = new ArrayList<>();
         Connection conn = null;
@@ -113,6 +114,7 @@ public class CurrentTaskDao {
         return tasks;
     }
 
+    @Override
     public List<CurrentTask> getAllByUserId(User user) {
 
         ArrayList<CurrentTask> ctasks = new ArrayList<>();
@@ -157,6 +159,7 @@ public class CurrentTaskDao {
         return ctasks;
     }
 
+    @Override
     public List<CurrentTask> getAllByCreatorId(User user) {
 
         ArrayList<CurrentTask> ctasks = new ArrayList<>();
@@ -199,6 +202,7 @@ public class CurrentTaskDao {
         return ctasks;
     }
 
+    @Override
     public List<CurrentTask> getAllByTaskId(Task task) {
 
         ArrayList<CurrentTask> ctasks = new ArrayList<>();
@@ -241,7 +245,8 @@ public class CurrentTaskDao {
         return ctasks;
     }
 
-        public int getLastId() {
+    @Override
+    public int getLastId() {
         int lastId = 0;
         Connection conn = null;
         PreparedStatement ps = null;
