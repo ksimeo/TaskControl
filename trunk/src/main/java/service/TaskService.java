@@ -7,10 +7,18 @@ import java.util.List;
 /**
  * Created by Ksimeo on 29.05.2014.
  */
-public class TaskService {
+public enum TaskService
+{
+    INSTANCE;
 
-    TaskDao task = new TaskDao();
-    List<Task> allTasks = task.getAllTasks();
+    private List<Task> allTasks;
+    TaskDao task;
+
+    private TaskService()
+    {
+        task = new TaskDao();
+        allTasks = task.getAllTasks();
+    }
 
     public int getNewTaskId()
     {
@@ -27,12 +35,12 @@ public class TaskService {
         return id;
     }
 
-    public boolean addNewTask(String taskTitle, String description)
+    public boolean addTask(String taskTitle, String description)
     {
         int id = getNewTaskId();
         Task t = new Task(id, taskTitle, description);
         allTasks.add(t);
-        boolean f = TaskDao.addTask(t);
+        boolean f = task.addTask(t);
         allTasks.add(t);
         return f;
     }

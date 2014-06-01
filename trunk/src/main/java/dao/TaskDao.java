@@ -15,12 +15,13 @@ package dao;
  *
  * @author Ksimeo
  */
-public class TaskDao {
+public class TaskDao implements ITaskDao {
 
     private static String dbConnName = "root";
-    private static String dbConnPass = "root";
+    private static String dbConnPass = "root123";
 
-    public static List<Task> getAllTasks() {
+    @Override
+    public List<Task> getAllTasks() {
         List<Task> toReturn = new LinkedList<>();
         try {
             Connection conn = null;
@@ -57,7 +58,8 @@ public class TaskDao {
         return toReturn;
     }
 
-    public static boolean addTask (Task task){
+    @Override
+    public boolean addTask (Task task){
         boolean f = false;
         try {
             Connection conn = null;
