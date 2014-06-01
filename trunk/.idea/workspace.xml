@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1ffb56b7-74cd-466d-9914-22653ed674f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" afterPath="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" afterPath="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Parcel.java" afterPath="$PROJECT_DIR$/src/main/java/model/Parcel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9b7e4ef5-bc46-4b44-a6e2-9fcc5068257f" name="New changelist" comment="" />
@@ -23,7 +29,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -59,16 +65,103 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_rules />
-    <ui_properties />
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="taskcontrol" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="CurrentTaskTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.68528867" vertical-offset="482" max-vertical-offset="1173">
+              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICurrentTaskService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentTaskService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="618" max-vertical-offset="1258">
+              <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
+              <folding>
+                <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
+                <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
+                <element signature="method#getCurrentTaskPage#0;class#CurrentTaskService#0" expanded="false" />
+                <element signature="e#1746#1747#0" expanded="true" />
+                <element signature="e#1801#1802#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
+                <element signature="e#1988#1989#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICurrentTaskDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="23" column="64" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentTaskDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2261">
+              <caret line="432" column="31" selection-start-line="432" selection-start-column="31" selection-end-line="432" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+                <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+                <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+                <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -78,25 +171,24 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/model/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/userDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_task.sql" />
         <option value="$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql" />
         <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/UserDaoTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Task.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/TaskService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_task.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ICurrentTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Parcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/CurrentTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java" />
       </list>
     </option>
   </component>
@@ -136,10 +228,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -157,7 +247,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -184,8 +274,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -194,20 +284,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -216,24 +302,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -242,24 +328,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -268,20 +354,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -290,24 +376,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -316,24 +402,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -342,24 +428,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="taskcontrol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="TaskControl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -374,7 +460,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MainPrj" />
     <property name="recentsLimit" value="5" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -389,6 +475,8 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -477,7 +565,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
       <setting name="cmdLine" value="run-app" />
@@ -487,7 +575,7 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
@@ -523,7 +611,7 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -604,7 +692,7 @@
       <option name="launchUrl" value="false" />
       <option name="launcherParameters">
         <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
           <option name="launcherType" value="OSDefault" />
           <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
@@ -641,13 +729,14 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
         <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
           <option name="launcherType" value="OSDefault" />
           <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
@@ -708,6 +797,7 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <list size="3">
@@ -733,43 +823,29 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="true" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <configuration useDefault="false">C:\Users\Admin\AppData\Roaming\Subversion</configuration>
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing" cleanupOnStartRun="true">
+    <configuration>C:\Users\VLAD\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
+    <option name="UPDATE_LOCK_ON_DEMAND" value="true" />
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\taskcontrol" />
-          <option name="myCopyRoot" value="D:\taskcontrol" />
+          <option name="myVcsRoot" value="E:\JProjects\TaskControl" />
+          <option name="myCopyRoot" value="E:\JProjects\TaskControl" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\taskcontrol\.idea" />
-          <option name="myCopyRoot" value="D:\taskcontrol\.idea" />
+          <option name="myVcsRoot" value="E:\JProjects\TaskControl\.idea" />
+          <option name="myCopyRoot" value="E:\JProjects\TaskControl\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\taskcontrol" />
-          <option name="myCopyRoot" value="D:\taskcontrol" />
+          <option name="myVcsRoot" value="E:\JProjects\TaskControl" />
+          <option name="myCopyRoot" value="E:\JProjects\TaskControl" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -788,10 +864,7 @@
       <workItem from="1401279330749" duration="1241000" />
       <workItem from="1401291847121" duration="6362000" />
       <workItem from="1401305627787" duration="5695000" />
-      <workItem from="1401362482753" duration="8016000" />
-      <workItem from="1401471111043" duration="2493000" />
-      <workItem from="1401608153508" duration="4877000" />
-      <workItem from="1401615819128" duration="3217000" />
+      <workItem from="1401632918319" duration="8139000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1401211419146</created>
@@ -809,31 +882,11 @@
       <created>1401307513108</created>
       <updated>1401307513108</updated>
     </task>
-    <task id="LOCAL-00005" summary="Init">
-      <created>1401373995111</created>
-      <updated>1401373995111</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Init">
-      <created>1401608350213</created>
-      <updated>1401608350213</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Init">
-      <created>1401611377110</created>
-      <updated>1401611377110</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Init">
-      <created>1401615884105</created>
-      <updated>1401615884105</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Init">
-      <created>1401618739109</created>
-      <updated>1401618739109</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50326000" />
+    <option name="totallyTimeSpent" value="39862000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -856,8 +909,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09189189" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="360" y="548" width="900" height="254" />
@@ -872,16 +925,16 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3360522" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35218978" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15658094" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2666163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33106962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33883387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -891,11 +944,11 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09189189" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="360" y="548" width="900" height="254" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3360522" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -914,13 +967,16 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15658094" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15658094" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -942,570 +998,666 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1037">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="5831">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1394">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getCurrentTaskPage#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
-            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
-            <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
-            <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
-            <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="935">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1071">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1037">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getCurrentTaskPage#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="4029">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1955">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2482">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1683">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="901">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="1139">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="38" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1887">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1887">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="1989">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="986">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="1972">
+          <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="986">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1972">
+          <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="50" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="884">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1309">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1105">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="1904">
+          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_user.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.44815466" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_task.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83655536" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_roles.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="-2.1288342" vertical-offset="694" max-vertical-offset="1020">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/TaskDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.055062167" vertical-offset="173" max-vertical-offset="1071">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.14756945" vertical-offset="0" max-vertical-offset="576">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.421933" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="45" column="133" selection-start-line="45" selection-start-column="133" selection-end-line="45" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2984015" vertical-offset="0" max-vertical-offset="833">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="93" max-vertical-offset="1683">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/UserDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.60544217" vertical-offset="1" max-vertical-offset="595">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.7096774" vertical-offset="0" max-vertical-offset="986">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state vertical-scroll-proportion="0.49815497" vertical-offset="2" max-vertical-offset="2924">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="49" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_task.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Parcel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="32" selection-start="700" selection-end="700" vertical-scroll-proportion="0.6181818" vertical-offset="0" max-vertical-offset="1547">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/TaskService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/taskcontrol_currenttask.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="36" selection-start="1870" selection-end="1870" vertical-scroll-proportion="2.4853802" vertical-offset="0" max-vertical-offset="1105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="2164" selection-end="2172" vertical-scroll-proportion="0.2881356" vertical-offset="1020" max-vertical-offset="1598">
-          <folding>
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2266#2267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1869" selection-end="1869" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CurrentTaskDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="140" selection-start="9248" selection-end="9248" vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="2074">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2261">
+          <caret line="432" column="31" selection-start-line="432" selection-start-column="31" selection-end-line="432" selection-end-column="47" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#saveCurrentTask#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllCurrentTasks#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskDao#0" expanded="false" />
             <element signature="method#getAllByTaskId#0;class#CurrentTaskDao#0" expanded="false" />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..currenttask..." />
-            <marker date="1401618566902" expanded="true" signature="-1:-1" placeholder="SELECT MAX(i..currenttask..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="79" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="79" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="476">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#getCurrentTaskPage#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#setStartDate#0;class#CurrentTaskDao#0" expanded="false" />
+            <element signature="method#getLastId#0;class#CurrentTaskDao#0" expanded="false" />
+            <marker date="1401641095090" expanded="true" signature="2589:2626" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="4391:4475" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="6246:6328" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="8094:8169" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10056" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT COUNT..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10005:10053" placeholder="SELECT MAX(i..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="10306:10416" placeholder="SELECT * FRO..currenttask..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12506" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12474" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12473" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12486" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="12426:12487" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="13488:13567" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="14502:14581" placeholder="UPDATE taskc..." />
+            <marker date="1401641095090" expanded="true" signature="15497:15545" placeholder="SELECT MAX(i..currenttask..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/CurrentTaskService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="1" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.8028169" vertical-offset="395" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.0" vertical-offset="618" max-vertical-offset="1258">
+          <caret line="88" column="45" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
           <folding>
-            <element signature="method#CurrentTaskService#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#saveCurrentTask#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllCurrentTasks#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByUserId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getAllByCreatorId#0;class#CurrentTaskService#0" expanded="false" />
-            <element signature="method#getAllByTaskId#0;class#CurrentTaskService#0" expanded="false" />
             <element signature="method#getCurrentTaskPage#0;class#CurrentTaskService#0" expanded="false" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ICurrentTaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ICurrentTaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/CurrentTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25976232" vertical-offset="170" max-vertical-offset="1768">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CurrentTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68528867" vertical-offset="482" max-vertical-offset="1173">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>

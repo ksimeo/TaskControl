@@ -15,9 +15,13 @@ public class CurrentTask {
     private Date createDate;
     private Date startDate;
     private Date endDate;
-    public  static String FINISH = "finished";
-    public  static String IN_PROCESS = "in process";
-    public  static String START = "started";
+    public  static String STATUS_FINISH = "finished";
+    public  static String STATUS_IN_PROCESS = "in process";
+    public  static String STATUS_START = "started";
+    public static String PRIORITY_LOW = "low";
+    public static String PRIORITY_MIDDLE = "middle";
+    public static String PRIORITY_HEIGHT = "height";
+
 
     public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate) {
         this.id = id;
@@ -29,6 +33,16 @@ public class CurrentTask {
         this.createDate = createDate;
         this.startDate = startDate;
         this.endDate = endDate;
+    }
+
+    public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, String priority, Date createDate) {
+        this.id = id;
+        this.taskId = taskId;
+        this.creatorId = creatorId;
+        this.recipientId = recipientId;
+        this.state = state;
+        this.priority = priority;
+        this.createDate = createDate;
     }
 
     public int getId() {

@@ -13,10 +13,13 @@ import java.util.List;
  */
 public interface ICurrentTaskService
 {
-    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate);
+    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority);
     public List<CurrentTask> getAllCurrentTasks();
     public List<CurrentTask> getAllByUserId(User user);
     public List<CurrentTask> getAllByCreatorId(User user);
     public List<CurrentTask> getAllByTaskId(Task task);
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to);
+    public boolean setStartDate(CurrentTask ct);
+    public boolean setEndDate(CurrentTask ct);
+    public boolean setPriority(CurrentTask ct, String priority);
 }

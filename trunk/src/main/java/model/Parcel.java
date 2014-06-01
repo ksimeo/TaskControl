@@ -20,15 +20,9 @@ public class Parcel<T>
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
 
     public List<T> getPage() {
         return page;
     }
 
-    public void setPage(List<T> page) {
-        this.page = page;
-    }
 }
