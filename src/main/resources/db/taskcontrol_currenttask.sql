@@ -30,10 +30,11 @@ CREATE TABLE `currenttask` (
   `creator_id` int(11) DEFAULT NULL,
   `state` varchar(45) DEFAULT NULL,
   `recipient` int(11) DEFAULT NULL,
+  `priority` varchar(45) DEFAULT NULL,
   `create_date` date DEFAULT NULL,
   `start_date` date DEFAULT NULL,
   `end_date` date DEFAULT NULL,
-  `priority` varchar(45) DEFAULT NULL,
+
   PRIMARY KEY (`id`),
   KEY `task_id_idx` (`task_id`),
   KEY `creator_id_idx` (`creator_id`),
