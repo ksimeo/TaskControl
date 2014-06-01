@@ -10,12 +10,12 @@ import java.sql.ResultSet;
 /**
  * Created by user on 25.05.14.
  */
-public class UserDao
+public class UserDao implements IUserDao
 {
     private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String mUserName = "root";
     private static String mPassword = "Monkey2003";
-
+    @Override
     public boolean saveUser(User user)
     {
         boolean returnValue = false;
@@ -62,6 +62,7 @@ public class UserDao
         }
         return returnValue;
     }
+    @Override
     public User getUserByLoginPassword(String login, String password)
     {
         String query = "Select * from taskcontrol.user where "
@@ -113,6 +114,7 @@ public class UserDao
         }
         return retValue;
     }
+    @Override
     public User  searchUserByFullName(String fullName)
     {
         String query = "Select * from taskcontrol.user where "
