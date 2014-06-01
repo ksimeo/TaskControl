@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public enum CurrentTaskService implements ICurrentTaskService
 {
     INSTANCE;
+
     private AtomicInteger lastId;
     private ICurrentTaskDao ctd;
 
@@ -31,10 +32,10 @@ public enum CurrentTaskService implements ICurrentTaskService
     }
 
     @Override
-    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate)
+    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority)
     {
 
-        CurrentTask ct = new CurrentTask(lastId.incrementAndGet(), taskId, creatorId, recipientId, state, priority, createDate, startDate, endDate);
+        CurrentTask ct = new CurrentTask(lastId.incrementAndGet(), taskId, creatorId, recipientId, state, priority, new Date());
 
         boolean flag = ctd.saveCurrentTask(ct);
         return flag;
@@ -71,6 +72,21 @@ public enum CurrentTaskService implements ICurrentTaskService
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to)
     {
         return ctd.getCurrentTaskPage(user, from, to);
+    }
+
+    @Override
+    public boolean setStartDate(CurrentTask ct) {
+        return ctd.setStartDate(ct, new Date());
+    }
+
+    @Override
+    public boolean setEndDate(CurrentTask ct) {
+        return ctd.setEndDate(ct, new Date());
+    }
+
+    public boolean setPriority(CurrentTask ct, String priority)
+    {
+        return ctd.setPriority(ct, priority);
     }
 
 }

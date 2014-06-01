@@ -17,6 +17,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,7 +26,7 @@ import java.util.List;
 public class CurrentTaskDao implements ICurrentTaskDao {
 
     private String dbConnName = "root";
-    private String dbConnPass = "";
+    private String dbConnPass = "root";
 
     @Override
     public boolean saveCurrentTask(CurrentTask ct) {
@@ -39,8 +40,8 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                         dbConnName, dbConnPass);
                 ps = conn.prepareStatement(
                         "INSERT IGNORE INTO taskcontrol.currenttask"
-                                + "(id, task_id, creator_id, recipient_id, state, priority,  create_date, start_date, end_date)"
-                                + "VALUES(?,?,?,?,?,?,?,?,?)"
+                                + "(id, task_id, creator_id, recipient_id, state, priority,  create_date)"
+                                + "VALUES(?,?,?,?,?,?,?)"
                 );
 
                 ps.setInt(1, ct.getId());
@@ -50,8 +51,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 ps.setString(5, ct.getState());
                 ps.setString(6, ct.getPriority());
                 ps.setTimestamp(7, new Timestamp(ct.getCreateDate().getTime()));
-                ps.setTimestamp(8, new Timestamp(ct.getStartDate().getTime()));
-                ps.setTimestamp(9, new Timestamp(ct.getEndDate().getTime()));
+
                 int res = ps.executeUpdate();
 
                 if (res != 0) {
@@ -89,7 +89,17 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask;");
                 rs = ps.executeQuery();
 
+                Date sd;
+                Date ed;
                 while (rs.next()) {
+                    try {
+                        sd = new Date(rs.getTimestamp("start_date").getTime());
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e) {
+                        sd = null;
+                        ed = null;
+
+                    }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
@@ -97,8 +107,8 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                             rs.getString("state"),
                             rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                            sd,
+                            ed);
                     tasks.add(ct);
 
                 }
@@ -132,7 +142,17 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = " + user.getUserId() + ")");
                 rs = ps.executeQuery();
 
+                Date sd;
+                Date ed;
                 while (rs.next()) {
+                    try {
+                        sd = new Date(rs.getTimestamp("start_date").getTime());
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e) {
+                        sd = null;
+                        ed = null;
+
+                    }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
@@ -140,8 +160,8 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                             rs.getString("state"),
                             rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                            sd,
+                            ed);
                     ctasks.add(ct);
 
                 }
@@ -177,7 +197,17 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = " + user.getUserId() + ")");
                 rs = ps.executeQuery();
 
+                Date sd;
+                Date ed;
                 while (rs.next()) {
+                    try {
+                        sd = new Date(rs.getTimestamp("start_date").getTime());
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e) {
+                        sd = null;
+                        ed = null;
+
+                    }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
@@ -185,8 +215,8 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                             rs.getString("state"),
                             rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                            sd,
+                            ed);
                     ctasks.add(ct);
 
                 }
@@ -220,7 +250,17 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(task_id = " + task.getId() + ")");
                 rs = ps.executeQuery();
 
+                Date sd;
+                Date ed;
                 while (rs.next()) {
+                    try {
+                        sd = new Date(rs.getTimestamp("start_date").getTime());
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e) {
+                        sd = null;
+                        ed = null;
+
+                    }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
@@ -228,8 +268,8 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                             rs.getString("state"),
                             rs.getString("priority"),
                             new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                            new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                            sd,
+                            ed);
                     ctasks.add(ct);
 
                 }
@@ -250,23 +290,40 @@ public class CurrentTaskDao implements ICurrentTaskDao {
     @Override
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to) {
         ArrayList<CurrentTask> page = new ArrayList<>();
-        Parcel parcel;
-        int count = getLastId();
+        int count = 0;
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs;
 
         try {
             try {
-                if (from < count)
-                {
-                    conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/taskcontrol",
-                            dbConnName, dbConnPass);
-                    ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(id>"+from+" && recipient_id = "+user.getUserId()+") LIMIT " + to);
-                    rs = ps.executeQuery();
 
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    count = rs.getInt("m");
+                }
+
+                if (from < count) {
+                    ps = conn.prepareStatement(
+                            "SELECT * FROM taskcontrol.currenttask WHERE(id>" + from + " && recipient_id = " + user.getUserId() + ") LIMIT " + to);
+                    rs = ps.executeQuery();
+                    Date sd;
+                    Date ed;
                     while (rs.next()) {
+                        try {
+                             sd = new Date(rs.getTimestamp("start_date").getTime());
+                             ed = new Date(rs.getTimestamp("end_date").getTime());
+                        } catch (NullPointerException e) {
+                            sd = null;
+                            ed = null;
+
+                        }
+
                         CurrentTask ct = new CurrentTask(rs.getInt("id"),
                                 rs.getInt("task_id"),
                                 rs.getInt("creator_id"),
@@ -274,14 +331,13 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                                 rs.getString("state"),
                                 rs.getString("priority"),
                                 new java.util.Date(rs.getTimestamp("create_date").getTime()),
-                                new java.util.Date(rs.getTimestamp("start_date").getTime()),
-                                new java.util.Date(rs.getTimestamp("end_date").getTime()));
+                                sd,
+                                ed);
                         page.add(ct);
+
                     }
 
-                }
-                else
-                {
+                } else {
                     page = new ArrayList<>();
                 }
             } catch (Exception e) {
@@ -296,6 +352,117 @@ public class CurrentTaskDao implements ICurrentTaskDao {
             }
         }
         return new Parcel<CurrentTask>(count, page);
+    }
+
+    @Override
+    public boolean setStartDate(CurrentTask ct, Date d)
+    {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        boolean flag = false;
+        Timestamp time =  new Timestamp(d.getTime());
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "UPDATE taskcontrol.currenttask SET start_date = ? where(id = " + ct.getId() + ")"
+                );
+                ps.setTimestamp(1, time);
+                int res = ps.executeUpdate();
+
+                if (res != 0) {
+                    flag = true;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+
+        }
+        return flag;
+    }
+
+    @Override
+    public boolean setEndDate(CurrentTask ct, Date d)
+    {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        boolean flag = false;
+        Timestamp time =  new Timestamp(d.getTime());
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "UPDATE taskcontrol.currenttask SET end_date = ?  WHERE(id = " + ct.getId() + ")"
+
+                );
+                ps.setTimestamp(1, time);
+                int res = ps.executeUpdate();
+
+                if (res != 0) {
+                    flag = true;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+
+        }
+        return flag;
+    }
+
+    @Override
+    public boolean setPriority(CurrentTask ct, String priority) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        boolean flag = false;
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "UPDATE taskcontrol.currenttask SET priority = ?  WHERE(id = " + ct.getId() + ")"
+
+                );
+                ps.setString(1, priority);
+                int res = ps.executeUpdate();
+
+                if (res != 0) {
+                    flag = true;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+
+        }
+        return flag;
     }
 
     @Override
