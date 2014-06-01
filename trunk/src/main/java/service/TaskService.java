@@ -7,10 +7,9 @@ import java.util.List;
 /**
  * Created by Ksimeo on 29.05.2014.
  */
-public enum TaskService
+public enum TaskService implements ITaskService
 {
     INSTANCE;
-
     private List<Task> allTasks;
     TaskDao task;
 
