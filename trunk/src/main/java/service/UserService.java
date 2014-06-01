@@ -6,11 +6,12 @@ import model.User;
 /**
  * Created by Avega on 28.05.14.
  */
-public class UserService implements IUserService
+public enum  UserService implements IUserService
 {
+    INSTANCE;
     private UserDao usDao;
 
-    public UserService()
+    private UserService()
     {
         usDao = new UserDao();
     }
