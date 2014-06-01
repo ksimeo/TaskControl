@@ -2,6 +2,7 @@ package tests;
 
 import dao.TaskDao;
 import model.Task;
+import service.TaskService;
 
 import java.util.List;
 import java.util.Iterator;
@@ -14,10 +15,11 @@ public class TaskDaoTest {
 
     public static void main(String[] args)
     {
-        TaskDao td = new TaskDao();
+        //TaskDao td = new TaskDao();
+        TaskService ts = TaskService.INSTANCE;
         Task newTask = new Task( 1, "Погрузка", "Грузите ананасы бочками!");
 
-        if (td.addTask(newTask))
+        if (ts.addTask("Погрузка", "Грузите ананасы бочками!"))
         {
             System.out.println("SUCCESS");
         }
@@ -26,11 +28,11 @@ public class TaskDaoTest {
             System.out.println("Error");
         }
 
-        List<Task> db = TaskDao.getAllTasks();
+        List<Task> db = ts.getAllTasks();
 
-        boolean res = td.addTask(newTask);
+        boolean res = ts.addTask("Погрузка", "Грузите ананасы бочками!");
         System.out.println("RES: " + res);
-        db = TaskDao.getAllTasks();
+        db = ts.getAllTasks();
         showTasks(db);
     }
 
