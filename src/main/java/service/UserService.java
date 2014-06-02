@@ -30,7 +30,16 @@ public enum  UserService implements IUserService
     @Override
     public boolean checkLogin (String login, String password)
     {
-        return null != usDao.getUserByLoginPassword(login, password);
+        try
+        {
+            return null != usDao.getUserByLoginPassword(login, password);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return  false;
     }
 
 }
