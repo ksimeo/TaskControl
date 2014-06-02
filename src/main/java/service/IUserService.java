@@ -9,5 +9,5 @@ public interface IUserService
 {
     User saveUser(String name, String login, String password, int role);
     User searchUser(String name);
-    boolean checkLogin (String login, String password);
+    User checkLogin (String login, String password);
 }
