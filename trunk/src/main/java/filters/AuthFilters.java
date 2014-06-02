@@ -55,7 +55,7 @@ public class AuthFilters implements Filter
             }
 
         }
-        if(!isLoggedIn && !(uri.endsWith("/index.jsp") || uri.endsWith("authorization")))
+        if(!isLoggedIn && !(uri.endsWith("/index.jsp") || uri.endsWith("authorization") || uri.endsWith("registration")))
         {
             resp.sendRedirect("/index.jsp");
         }else{
