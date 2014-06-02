@@ -61,11 +61,15 @@ public class AuthFilters implements Filter
         }else{
             if(null != sessionUserAttr)
             {
-                if(sessionUserAttr.getRole() == 1 && ! (uri.endsWith("employer") || uri.endsWith("employer.jsp") )) //if employer
+                if(uri.endsWith("/logout"))
+                {
+                    filterChain.doFilter(servletRequest, servletResponse);
+                }
+                else if(sessionUserAttr.getRole() == 1 && ! (uri.endsWith("employer") || uri.endsWith("employer.jsp") )) //if employer
                 {
                     resp.sendRedirect("/secretPages/employer");
                 }
-                else if (sessionUserAttr.getRole() == 2 && !( uri.endsWith("employee") || uri.endsWith("employee.jsp") ))
+                else if (sessionUserAttr.getRole() == 2 && !( uri.endsWith("employee") || uri.endsWith("employee.jsp")))
                 {
                     resp.sendRedirect("/secretPages/employee");
                 }

@@ -27,7 +27,7 @@
                     <p> <strong> Full name:</strong> </p>
                 </td>
                 <td>
-                    <input type="text" name="fullName" value=""/>
+                    <input type="text" name="fullName" value="${param.fullName}"/>
                 </td>
             </tr>
             <tr>
@@ -35,7 +35,7 @@
                     <p> <strong> Login:</strong> </p>
                 </td>
                 <td>
-                    <input type="text" name="login" value=""/>
+                    <input type="text" name="login" value="${param.login}"/>
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                     <p> <strong> Password:</strong> </p>
                 </td>
                 <td>
-                    <input type="password" name="password" value=""/>
+                    <input type="password" name="password" value="${param.password}"/>
                 </td>
             </tr>
             <tr>
@@ -51,7 +51,7 @@
                 <p> <strong> Confirm password:</strong> </p>
             </td>
             <td>
-                <input type="password" name="confPassword" value=""/>
+                <input type="password" name="confPassword" value="${param.confPassword}"/>
             </td>
             </tr>
             <tr>
@@ -60,8 +60,8 @@
                 </td>
                 <td>
                     <select name="role" size="1">
-                        <option value="employer">employer</option>
-                        <option value="employee">employee</option>
+                        <option name="employer" value="${param.employer}">employer</option>
+                        <option name="employee" value="${param.employee}">employee</option>
                     </select>
                 </td>
             </tr>

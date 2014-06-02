@@ -4,6 +4,7 @@
 <%@ page isELIgnored="false" %>
 
 <html>
+<script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
 <head>
     <title></title>
 </head>
