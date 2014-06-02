@@ -19,7 +19,7 @@ public class UserDaoTest
     public static void main (String[] args)
     {
        UserDao dao = new UserDao();
-       /* User user = new User("petrov", "petrov","pe78554", 2);
+        User user = new User("sidorov", "sidorov","si78554", 1);
         if (dao.saveUser(user))
         {
             System.out.println("SUCCESS");
@@ -27,7 +27,7 @@ public class UserDaoTest
         else
         {
             System.out.println("Error");
-        }*/
+        }
 
         /*try {
             System.out.println(AuthHelper.String2Hash("spring"));

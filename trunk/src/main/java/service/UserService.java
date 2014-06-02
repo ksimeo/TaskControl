@@ -28,18 +28,18 @@ public enum  UserService implements IUserService
         return usDao.searchUserByFullName(name);
     }
     @Override
-    public boolean checkLogin (String login, String password)
+    public User checkLogin (String login, String password)
     {
         try
         {
-            return null != usDao.getUserByLoginPassword(login, password);
+            return usDao.getUserByLoginPassword(login, password);
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
 
-        return  false;
+        return  null;
     }
 
 }

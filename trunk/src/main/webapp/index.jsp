@@ -10,11 +10,11 @@
     <title></title>
 </head>
 <body>
-<form>
-    <div>
+<form action="/authorization" method="post">
+    <div  style="width: 100%; text-align: -webkit-center; margin-top: 50;">
         <table>
             <tr>
-                <td colspan="2" style="text-align:center; ">
+                <td colspan="2" style="text-align:-webkit-auto; ">
                     <h3 style="margin-left: 60; margin-bottom: 15;" > Authorization </h3>
                 </td>
                 <td>
@@ -22,13 +22,16 @@
                 </td>
             </tr>
 
-
             <tr>
                 <td>
                     <p> <strong> Login:</strong> </p>
                 </td>
                 <td>
-                    <input type="text" name="login" value=""/>
+                    <input type="text" name="login" value="${param.login}"/>
+                    </br>
+                        <p style="color: red">
+                            ${ErrorLogin}
+                        </p>
                 </td>
             </tr>
 
@@ -37,17 +40,37 @@
                     <p> <strong> Password:</strong> </p>
                 </td>
                 <td>
-                    <input type="password" name="password" value=""/>
+                    <input type="password" name="password" value="${param.password}"/>
+                    </br>
+                        <p style="color: red">
+                             ${ErrorPassw}
+                        </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:-webkit-auto; ">
+                    <p style="color: red">
+                        ${Error}
+                    </p>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td style="text-align: right;" >
+                    <input type="submit" value="Sign In"/>
                 </td>
             </tr>
 
             <tr>
-                <td  style="text-align: right;">
-                    <input type="button" value="Sign Up"/>
+                <td>
                 </td>
                 <td style="text-align: right;">
-                    <input type="submit" value="Sign In"/>
-                    <%-- ${Error}--%>
+                    <a href = registration.jsp><strong>Register new user</strong></a>
                 </td>
             </tr>
         </table>
