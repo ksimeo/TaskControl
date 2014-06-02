@@ -10,7 +10,7 @@
     <title></title>
 </head>
 <body>
-<form>
+<form action="/registration" method="post">
     <div>
         <table>
             <tr>
@@ -70,7 +70,7 @@
 
                 </td>
                 <td style="text-align: right;">
-                    <input type="submit" value="Sign Up"/>
+                    <input type="submit" value="Sign Up" />
                    <%-- ${Error}--%>
                 </td>
             </tr>

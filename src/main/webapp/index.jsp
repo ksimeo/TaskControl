@@ -70,7 +70,7 @@
                 <td>
                 </td>
                 <td style="text-align: right;">
-                    <a href = registration.jsp><strong>Register new user</strong></a>
+                    <a href = "/registration"><strong>Register new user</strong></a>
                 </td>
             </tr>
         </table>
