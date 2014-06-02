@@ -1,7 +1,10 @@
 package dao;
 
+import helpers.AuthHelper;
 import model.User;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -19,13 +22,16 @@ public class UserDao implements IUserDao
     public boolean saveUser(User user)
     {
         boolean returnValue = false;
+
         try
         {
             Connection conn = null;
             PreparedStatement ps = null;
             try
             {
-                Class.forName("com.mysql.jdbc.Driver");
+                user.setPassword(AuthHelper.String2Hash(user.getPassword()));
+
+                        Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
                 ps = conn.prepareStatement("Insert into taskcontrol.user" + "(user_full_name, login, password, role)" +
                         " VALUES" + "(?, ?, ?, ?)");
@@ -63,11 +69,12 @@ public class UserDao implements IUserDao
         return returnValue;
     }
     @Override
-    public User getUserByLoginPassword(String login, String password)
-    {
+    public User getUserByLoginPassword(String login, String password) throws NoSuchProviderException, NoSuchAlgorithmException {
+
+
         String query = "Select * from taskcontrol.user where "
                 + " login = '" + login
-                + "' and password= '" + password + "'";
+                + "' and password= '" + AuthHelper.String2Hash(password) + "'";
 
         User retValue = null;
         try
