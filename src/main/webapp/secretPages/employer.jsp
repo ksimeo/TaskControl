@@ -13,7 +13,7 @@
 <body>
 Employer
 
-</body>
+
 
 
 
@@ -24,7 +24,7 @@ Employer
 
 
 <form name = creatTask method="post" action="/creattask">
-    <select size="5" name="username" selected=${param.username}>
+    <select size="5" name="username">
         <%!
             Iterator iter;
             List users;
@@ -48,4 +48,5 @@ Employer
     </select>
     <input type="submit" value="Creat">
 </form>
+</body>
 </html>
