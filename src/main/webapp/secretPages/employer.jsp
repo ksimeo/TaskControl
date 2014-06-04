@@ -18,7 +18,7 @@ Employer
     <input type="submit" value="LogOut"/>
 </form>
 
-
+<hr/>
 <form name=creatTask method="post" action="/creattask">
 
 
@@ -28,7 +28,8 @@ Employer
     <table border="0">
         <tr>
             <td align="center"><b>Workers</b></td>
-            <td align="center"><b>Tasks Titles</b></td>
+            <td align="center"><b>Tasks titles</b></td>
+            <td align="center"><b>Tasks description</b></td>
         </tr>
         <tr>
             <td>
@@ -74,8 +75,14 @@ Employer
             }
         %>
             </td>
+            <td>
+                <form name="description">
+                    <textarea rows="10" cols="60" style="font-family: sans-serif"></textarea>
+                </form>
+            </td>
 
         </tr>
+
         <tr>
             <td><input type="submit" value="Creat"></td>
         </tr>
@@ -83,5 +90,6 @@ Employer
     </table>
 
 </form>
+<hr/>
 </body>
 </html>
