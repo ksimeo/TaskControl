@@ -26,10 +26,11 @@ Employer
 
 
     <table border="0">
-        <tr>
-            <td align="center"><b>Workers</b></td>
-            <td align="center"><b>Tasks titles</b></td>
-            <td align="center"><b>Tasks description</b></td>
+        <tr align="left">
+            <td ><b>Workers</b></td>
+            <td><b>Tasks titles</b></td>
+            <td><b>Priority</b></td>
+            <td><b>Tasks description</b></td>
         </tr>
         <tr>
             <td>
@@ -74,6 +75,13 @@ Employer
                         <%
             }
         %>
+            </td>
+            <td>
+                <select size="10" name="priority">
+                    <option value="low">LOW</option>
+                    <option value="middle">MIDDLE</option>
+                    <option value="height">HEIGHT</option>
+                </select>
             </td>
             <td>
                 <form name="description">

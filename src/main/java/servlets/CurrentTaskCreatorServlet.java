@@ -30,14 +30,17 @@ public class CurrentTaskCreatorServlet extends HttpServlet
         TaskHelper th = new TaskHelper();
         String userName = req.getParameter("username");
         String taskTitle = req.getParameter("tasktitle");
+        String priority = req.getParameter("priority");
         HttpSession session = req.getSession();
         User creator = (User)session.getAttribute("user");
         User toSave = th.getUserByFullName(userName);
-        System.out.println("Creator's id: " + creator.getUserId());
-        System.out.println("User Name: " + userName);
-        System.out.println("User Id: " + toSave.getUserId());
-        System.out.println("Task Title: " + taskTitle);
-        System.out.println("Task Id: " + th.getTaskByTitle(taskTitle).getId());
+        System.out.println("-----------------------------");
+        System.out.println("Task Id: " + th.getTaskByTitle(taskTitle).getId() + "Task Title: " + taskTitle);
+        System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
+        System.out.println("User Id: " + toSave.getUserId() + "User Name: " + userName);
+        System.out.println("Priority: " + priority);
+        System.out.println("-----------------------------");
+
         resp.sendRedirect("/secretPages/employer");
         //th.saveCurrentTask(th.getTaskByTitle(taskTitle).getId(), creator.getUserId(),toSave.getUserId(), CurrentTask.STATUS_IN_PROCESS,CurrentTask.PRIORITY_HEIGHT);
 

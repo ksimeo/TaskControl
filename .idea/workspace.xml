@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1ffb56b7-74cd-466d-9914-22653ed674f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/EmployerServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/EmployerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ITaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ITaskDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ITaskService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ITaskService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/helpers/TaskHelper.java" afterPath="$PROJECT_DIR$/src/main/java/helpers/TaskHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/TaskService.java" afterPath="$PROJECT_DIR$/src/main/java/service/TaskService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9b7e4ef5-bc46-4b44-a6e2-9fcc5068257f" name="New changelist" comment="" />
@@ -74,20 +68,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="employer.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="employer.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="24.846153" vertical-offset="1122" max-vertical-offset="1717">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.33004925" vertical-offset="342" max-vertical-offset="1853">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployerServlet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EmployerServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlets/EmployerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6689815" vertical-offset="102" max-vertical-offset="663">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="663">
               <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
@@ -97,8 +91,8 @@
       <file leaf-file-name="CurrentTaskCreatorServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="697">
-              <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="748">
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -142,15 +136,15 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/EmployerServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/AuthServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ITaskDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ITaskService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/TaskService.java" />
         <option value="$PROJECT_DIR$/src/main/java/helpers/TaskHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/TaskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp" />
       </list>
     </option>
   </component>
@@ -1019,7 +1013,7 @@
       <workItem from="1401744043037" duration="2828000" />
       <workItem from="1401807846056" duration="15273000" />
       <workItem from="1401885954929" duration="17042000" />
-      <workItem from="1401906763428" duration="8101000" />
+      <workItem from="1401906763428" duration="9247000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1401211419146</created>
@@ -1057,11 +1051,15 @@
       <created>1401911469194</created>
       <updated>1401911469194</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Init">
+      <created>1401915612108</created>
+      <updated>1401915612108</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88705000" />
+    <option name="totallyTimeSpent" value="89851000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1498,14 +1496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="697">
-          <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar!/com/mysql/jdbc/PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7867036" vertical-offset="5904" max-vertical-offset="6290">
@@ -1563,18 +1553,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CurrentTaskCreatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="24.846153" vertical-offset="1122" max-vertical-offset="1717">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="748">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/EmployerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6689815" vertical-offset="102" max-vertical-offset="663">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="663">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/secretPages/employer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33004925" vertical-offset="342" max-vertical-offset="1853">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding />
         </state>
       </provider>
