@@ -24,7 +24,7 @@ public class CurrentTaskCreatorServlet extends HttpServlet
     {
         String userName = req.getParameter("username");
         System.out.println("User Name: " + userName);
-        req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
+        resp.sendRedirect("/secretPages/employer");
 
     }
 }
