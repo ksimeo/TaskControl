@@ -17,4 +17,5 @@ interface ITaskDao
     public List<Task> getAllTasks();
     public boolean addTask(Task task);
     public List<String> getAllTasksTitles();
+    public Task getTaskByTitle(String title);
 }

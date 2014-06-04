@@ -139,4 +139,45 @@ public class TaskDao implements ITaskDao {
         }
         return res;
     }
+
+    @Override
+    public Task getTaskByTitle(String title) {
+        Task res = null;
+        try
+        {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.task WHERE(title = "+"'"+ title +"'"+ ")");
+                rs = ps.executeQuery();
+                rs.next();
+
+                res = new Task(rs.getInt("id"),rs.getString("title"), rs.getString("discription"));
+
+            }
+            finally
+            {
+                if(conn != null)
+                {
+                    conn.close();
+                    conn = null;
+                }
+                if(ps != null)
+                {
+                    ps.close();
+                    ps = null;
+                }
+
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return res;
+    }
 }

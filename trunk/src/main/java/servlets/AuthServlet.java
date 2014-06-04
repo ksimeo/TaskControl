@@ -28,7 +28,6 @@ public class AuthServlet extends HttpServlet
         {
             String login = req.getParameter("login");
             String passw = req.getParameter("password");
-            System.out.println(passw);
             boolean isError = false;
 
             if (null == login || login.isEmpty())
