@@ -23,7 +23,10 @@ public class CurrentTaskCreatorServlet extends HttpServlet
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         String userName = req.getParameter("username");
+        String taskTitle = req.getParameter("tasktitle");
+
         System.out.println("User Name: " + userName);
+        System.out.println("Task Title: " + taskTitle);
         resp.sendRedirect("/secretPages/employer");
 
     }

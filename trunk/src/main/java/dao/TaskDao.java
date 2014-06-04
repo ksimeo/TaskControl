@@ -9,6 +9,7 @@ package dao;
         import java.sql.DriverManager;
         import java.sql.PreparedStatement;
         import java.sql.ResultSet;
+        import java.util.ArrayList;
         import java.util.LinkedList;
         import java.util.List;
 /**
@@ -17,8 +18,9 @@ package dao;
  */
 public class TaskDao implements ITaskDao {
 
+    private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String dbConnName = "root";
-    private static String dbConnPass = "root123";
+    private static String dbConnPass = "root";
 
     @Override
     public List<Task> getAllTasks() {
@@ -28,7 +30,8 @@ public class TaskDao implements ITaskDao {
             PreparedStatement ps = null;
             ResultSet rs = null;
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", dbConnName, dbConnPass);
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
                 ps=conn.prepareStatement("SELECT * FROM taskcontrol.task");
                 rs=ps.executeQuery();
                 Task t = null;
@@ -65,7 +68,8 @@ public class TaskDao implements ITaskDao {
             Connection conn = null;
             PreparedStatement ps = null;
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskcontrol", dbConnName, dbConnPass);
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
                 ps = conn.prepareStatement("INSERT IGNORE INTO taskcontrol.task"
                         +"(id, title, discription)"
                         +" VALUES(?,?,?)"
@@ -91,5 +95,48 @@ public class TaskDao implements ITaskDao {
             e.printStackTrace();
         }
         return f;
+    }
+
+    @Override
+    public List<String> getAllTasksTitles() {
+        List<String> res = new ArrayList<>();
+        try
+        {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
+                ps = conn.prepareStatement("SELECT title FROM taskcontrol.task");
+                rs = ps.executeQuery();
+
+                while (rs.next())
+                {
+                    res.add(rs.getString("title"));
+
+                }
+            }
+            finally
+            {
+                if(conn != null)
+                {
+                    conn.close();
+                    conn = null;
+                }
+                if(ps != null)
+                {
+                    ps.close();
+                    ps = null;
+                }
+
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return res;
     }
 }

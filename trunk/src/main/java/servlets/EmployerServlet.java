@@ -28,8 +28,9 @@ public class EmployerServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        IUserService us = UserService.INSTANCE;
-        req.setAttribute("users", us.getAllUsarsNames());
+        TaskHelper th = new TaskHelper();
+        req.setAttribute("users", th.getAllUsarsNames());
+        req.setAttribute("tasks", th.getAllTasksTitles());
         req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
 
     }
