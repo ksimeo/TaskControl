@@ -1,10 +1,9 @@
 package helpers;
 
-import model.CurrentTask;
-import service.CurrentTaskService;
+import com.sun.jmx.snmp.tasks.TaskServer;
+import service.TaskService;
+import service.UserService;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -12,16 +11,19 @@ import java.util.List;
  */
 public class TaskHelper
 {
-    public List<String> getAllCurrentTasks()
+    UserService userviSer = UserService.INSTANCE;
+    TaskService taskSer = TaskService.INSTANCE;
+
+
+    public List<String> getAllUsarsNames()
     {
-        CurrentTaskService cts = CurrentTaskService.INSTANCE;
-        ArrayList<CurrentTask> ctasks = (ArrayList) cts.getAllCurrentTasks();
-        ArrayList<String> toSend = new ArrayList<>();
-        Iterator<CurrentTask> iter = ctasks.iterator();
-        while (iter.hasNext())
-        {
-            toSend.add(iter.next().toString());
-        }
-        return toSend;
+
+        return userviSer.getAllUsarsNames();
+
+    }
+
+    public List<String> getAllTasksTitles()
+    {
+        return taskSer.getAllTasksTitles();
     }
 }

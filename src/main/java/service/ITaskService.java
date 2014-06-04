@@ -18,4 +18,5 @@ interface ITaskService {
     public boolean addTask(String taskTitle, String description);
 
     public List<Task> getAllTasks();
+    public List<String> getAllTasksTitles();
 }

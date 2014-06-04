@@ -48,4 +48,5 @@ public enum TaskService implements ITaskService
     {
         return allTasks;
     }
+    public List<String> getAllTasksTitles(){return task.getAllTasksTitles();}
 }

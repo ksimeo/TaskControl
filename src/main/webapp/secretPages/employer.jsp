@@ -14,23 +14,31 @@
 Employer
 
 
-
-
-
 <form action="/logout" method="post">
     <input type="submit" value="LogOut"/>
 </form>
 
 
+<form name=creatTask method="post" action="/creattask">
 
-<form name = creatTask method="post" action="/creattask">
-    <select size="5" name="username">
-        <%!
+
+    </select>
+
+
+    <table border="0">
+        <tr>
+            <td align="center"><b>Workers</b></td>
+            <td align="center"><b>Tasks Titles</b></td>
+        </tr>
+        <tr>
+            <td>
+                <select size="10" name="username">
+                        <%!
             Iterator iter;
             List users;
-            int i = 0;
+
         %>
-        <%
+                        <%
             users = (List)request.getAttribute("users");
             iter = users.iterator();
 
@@ -38,15 +46,42 @@ Employer
             {
                 String tmp = (String)iter.next();
         %>
-                <option value="<%= tmp%>"> <%= tmp%> </option>
+                    <option value="<%= tmp%>"><%= tmp%>
+                    </option>
 
-        <%
-                i++;
+                        <%
+
             }
         %>
+            </td>
+            <td>
+                <select size="10" name="tasktitle">
+                        <%!
+            List tasks;
+        %>
+                        <%
+            tasks = (List)request.getAttribute("tasks");
+            iter = tasks.iterator();
 
-    </select>
-    <input type="submit" value="Creat">
+            while (iter.hasNext())
+            {
+                String tmp = (String)iter.next();
+        %>
+                    <option value="<%= tmp%>"><%= tmp%>
+                    </option>
+
+                        <%
+            }
+        %>
+            </td>
+
+        </tr>
+        <tr>
+            <td><input type="submit" value="Creat"></td>
+        </tr>
+
+    </table>
+
 </form>
 </body>
 </html>
