@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by user on 25.05.14.
@@ -17,7 +19,7 @@ public class UserDao implements IUserDao
 {
     private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String mUserName = "root";
-    private static String mPassword = "Monkey2003";
+    private static String mPassword = "root";
     @Override
     public boolean saveUser(User user)
     {
@@ -31,7 +33,7 @@ public class UserDao implements IUserDao
             {
                 user.setPassword(AuthHelper.String2Hash(user.getPassword()));
 
-                        Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
                 ps = conn.prepareStatement("Insert into taskcontrol.user" + "(user_full_name, login, password, role)" +
                         " VALUES" + "(?, ?, ?, ?)");
@@ -172,4 +174,55 @@ public class UserDao implements IUserDao
         }
         return retValue;
     }
+
+    @Override
+    public List<String> getAllUsarsNames()
+    {
+
+        List<String> res = new ArrayList<>();
+        try
+        {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                ps = conn.prepareStatement("SELECT user_full_name FROM taskcontrol.user");
+                rs = ps.executeQuery();
+
+                while (rs.next())
+                {
+                    res.add(rs.getString("user_full_name"));
+
+                }
+            }
+            finally
+            {
+                if(conn != null)
+                {
+                    conn.close();
+                    conn = null;
+                }
+                if(ps != null)
+                {
+                    ps.close();
+                    ps = null;
+                }
+                if(res != null)
+                {
+                    rs.close();
+                    rs = null;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+
 }

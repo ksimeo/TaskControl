@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by Avega on 02.06.14.
  */
-@WebFilter(urlPatterns = "/*")
+@WebFilter(urlPatterns = "")
 public class AuthFilters implements Filter
 {
 

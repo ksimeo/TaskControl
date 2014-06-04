@@ -3,6 +3,8 @@ package service;
 import dao.UserDao;
 import model.User;
 
+import java.util.List;
+
 /**
  * Created by Avega on 28.05.14.
  */
@@ -40,6 +42,11 @@ public enum  UserService implements IUserService
         }
 
         return  null;
+    }
+    @Override
+    public List<String> getAllUsarsNames()
+    {
+        return usDao.getAllUsarsNames();
     }
 
 }
