@@ -59,9 +59,9 @@
                     <p> <strong> User Role:</strong> </p>
                 </td>
                 <td>
-                    <select name="role" size="1">
-                        <option name="employer" value="${param.employer}">employer</option>
-                        <option name="employee" value="${param.employee}">employee</option>
+                    <select name="role" size="1" selected="${param.role}">
+                        <option name="employer" value="1">employer</option>
+                        <option name="employee" value="2">employee</option>
                     </select>
                 </td>
             </tr>

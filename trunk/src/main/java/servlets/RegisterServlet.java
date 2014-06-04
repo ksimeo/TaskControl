@@ -25,11 +25,15 @@ public class RegisterServlet extends HttpServlet
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         String name = req.getParameter("fullName");
+
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         String confPassword = req.getParameter("confPassword");
         String role = req.getParameter("role");
         int rolenum = role != null ? Integer.parseInt(role) : 0;
+
+
+
 
         if (confPassword.equals(password))
         {
@@ -41,6 +45,7 @@ public class RegisterServlet extends HttpServlet
             req.getRequestDispatcher("/registration.jsp").forward(req, resp);
 
         }
+
 
 
     }

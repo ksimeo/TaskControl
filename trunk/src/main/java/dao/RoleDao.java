@@ -16,7 +16,7 @@ public class RoleDao implements IRoleDao
 {
     private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String mUserName = "root";
-    private static String mPassword = "Monkey2003";
+    private static String mPassword = "root";
 
     @Override
     public List<Role> getAllRole()
