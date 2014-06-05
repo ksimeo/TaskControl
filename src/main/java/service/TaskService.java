@@ -50,5 +50,7 @@ public enum TaskService implements ITaskService
     }
     public List<String> getAllTasksTitles(){return task.getAllTasksTitles();}
     public Task getTaskByTitle(String title){return task.getTaskByTitle(title);}
+    @Override
+    public Task  getTaskById(int id){return task.getTaskById(id);};
 
 }

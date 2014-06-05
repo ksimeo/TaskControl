@@ -1,5 +1,6 @@
 package servlets;
 
+import model.CurrentTask;
 import model.User;
 import service.UserService;
 
@@ -7,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Avega on 02.06.14.
@@ -47,6 +50,8 @@ public class AuthServlet extends HttpServlet
                 HttpSession session = req.getSession();
 
                 session.setAttribute("user", usr);
+                List<CurrentTask> newCurTasks = new ArrayList<>();
+                session.setAttribute("newCurTasks", newCurTasks);
 
                 session.setMaxInactiveInterval(30*60);
                 Cookie userLogin = new Cookie("user", login);

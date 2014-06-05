@@ -15,5 +15,6 @@ public interface IUserDao
     User getUserByLoginPassword(String login, String password) throws NoSuchProviderException, NoSuchAlgorithmException;
     User  searchUserByFullName(String fullName);
     List<String> getAllUsarsNames();
+    public User getUserById(int id);
 
 }

@@ -32,13 +32,14 @@ public enum CurrentTaskService implements ICurrentTaskService
     }
 
     @Override
-    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority)
+    public CurrentTask saveCurrentTask(int taskId, int creatorId, int recipientId, String priority)
     {
 
-        CurrentTask ct = new CurrentTask(lastId.incrementAndGet(), taskId, creatorId, recipientId, state, priority, new Date());
+
+        CurrentTask ct = new CurrentTask(lastId.incrementAndGet(), taskId, creatorId, recipientId, "NEW", priority, new Date());
 
         boolean flag = ctd.saveCurrentTask(ct);
-        return flag;
+        return ct;
     }
 
     @Override
@@ -87,6 +88,10 @@ public enum CurrentTaskService implements ICurrentTaskService
     public boolean setPriority(CurrentTask ct, String priority)
     {
         return ctd.setPriority(ct, priority);
+    }
+    public boolean setState(CurrentTask ct, String state)
+    {
+        return ctd.setPriority(ct, state);
     }
 
 }

@@ -22,5 +22,6 @@ public interface ICurrentTaskDao
     public boolean setStartDate(CurrentTask ct, Date d);
     public boolean setEndDate(CurrentTask ct, Date d);
     public boolean setPriority(CurrentTask ct, String priority);
+    public boolean setState(CurrentTask ct, String state);
     public int getLastId();
 }

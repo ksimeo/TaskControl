@@ -18,4 +18,5 @@ interface ITaskService {
     public List<Task> getAllTasks();
     public List<String> getAllTasksTitles();
     public Task getTaskByTitle(String title);
+    public Task  getTaskById(int id);
 }
