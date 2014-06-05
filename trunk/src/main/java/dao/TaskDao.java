@@ -4,6 +4,7 @@ package dao;
  * Created by Ksimeo on 25.05.14.
  */
         import model.Task;
+        import model.User;
 
         import java.sql.Connection;
         import java.sql.DriverManager;
@@ -153,6 +154,46 @@ public class TaskDao implements ITaskDao {
                 Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.task WHERE(title = "+"'"+ title +"'"+ ")");
+                rs = ps.executeQuery();
+                rs.next();
+
+                res = new Task(rs.getInt("id"),rs.getString("title"), rs.getString("discription"));
+
+            }
+            finally
+            {
+                if(conn != null)
+                {
+                    conn.close();
+                    conn = null;
+                }
+                if(ps != null)
+                {
+                    ps.close();
+                    ps = null;
+                }
+
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return res;
+    }
+    public Task  getTaskById(int id)
+    {
+        Task res = null;
+        try
+        {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, dbConnName, dbConnPass);
+                ps = conn.prepareStatement("SELECT * FROM taskcontrol.task WHERE(id = " + id + ")");
                 rs = ps.executeQuery();
                 rs.next();
 

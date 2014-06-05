@@ -13,4 +13,5 @@ public interface IUserService
     User searchUser(String name);
     User checkLogin (String login, String password);
     public List<String> getAllUsarsNames();
+    public User getUserById(int id);
 }

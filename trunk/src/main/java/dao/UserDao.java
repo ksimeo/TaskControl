@@ -223,6 +223,56 @@ public class UserDao implements IUserDao
         }
         return res;
     }
+    public User getUserById(int id)
+    {
+        String query = "Select * from taskcontrol.user where "
+                + " id = " + id;
+
+        User retValue = null;
+        try
+        {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            ResultSet res = null;
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                ps = conn.prepareStatement(query);
+                res = ps.executeQuery();
+
+                while (res.next())
+                {
+                    retValue = new User(res.getInt("id"),res.getString("user_full_name"), res.getString("login"),
+                            res.getString("password"), res.getInt("role"));
+                    break;
+                }
+            }
+            finally
+            {
+                if(conn != null)
+                {
+                    conn.close();
+                    conn = null;
+                }
+                if(ps != null)
+                {
+                    ps.close();
+                    ps = null;
+                }
+                if(res != null)
+                {
+                    res.close();
+                    res = null;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return retValue;
+    }
 
 
 }

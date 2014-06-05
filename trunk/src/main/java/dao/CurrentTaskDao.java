@@ -467,6 +467,42 @@ public class CurrentTaskDao implements ICurrentTaskDao {
     }
 
     @Override
+    public boolean setState(CurrentTask ct, String state) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        boolean flag = false;
+        try {
+            try {
+                conn = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/taskcontrol",
+                        dbConnName, dbConnPass);
+                ps = conn.prepareStatement(
+                        "UPDATE taskcontrol.currenttask SET state = ?  WHERE(id = " + ct.getId() + ")"
+
+                );
+                ps.setString(1, state);
+                int res = ps.executeUpdate();
+
+                if (res != 0) {
+                    flag = true;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+
+        }
+        return flag;
+    }
+
+    @Override
     public int getLastId() {
         int lastId = 0;
         Connection conn = null;

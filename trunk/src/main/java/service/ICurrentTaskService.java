@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface ICurrentTaskService
 {
-    public boolean saveCurrentTask(int taskId, int creatorId, int recipientId, String state, String priority);
+    public CurrentTask saveCurrentTask(int taskId, int creatorId, int recipientId, String priority);
     public List<CurrentTask> getAllCurrentTasks();
     public List<CurrentTask> getAllByUserId(User user);
     public List<CurrentTask> getAllByCreatorId(User user);
@@ -21,5 +21,6 @@ public interface ICurrentTaskService
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to);
     public boolean setStartDate(CurrentTask ct);
     public boolean setEndDate(CurrentTask ct);
-    public boolean setPriority(CurrentTask ct, String priority);
+    public boolean setPriority(CurrentTask ct, String state);
+    public boolean setState(CurrentTask ct, String state);
 }
