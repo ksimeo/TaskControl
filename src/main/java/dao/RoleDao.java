@@ -16,7 +16,7 @@ public class RoleDao implements IRoleDao
 {
     private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String mUserName = "root";
-    private static String mPassword = "root";
+    private static String mPassword = "Monkey2003"; //Monkey2003
 
     @Override
     public List<Role> getAllRole()
@@ -40,7 +40,7 @@ public class RoleDao implements IRoleDao
                 {
                     retValue = new Role(res.getInt("id"),res.getString("role_name"));
                     roles.add(retValue);
-                    break;
+
                 }
 
             }
