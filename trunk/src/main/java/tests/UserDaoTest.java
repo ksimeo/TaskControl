@@ -1,6 +1,7 @@
 package tests;
 
 import com.sun.org.apache.xml.internal.security.utils.Base64;
+import dao.RoleDao;
 import dao.UserDao;
 import helpers.AuthHelper;
 import model.User;
@@ -18,7 +19,10 @@ public class UserDaoTest
 {
     public static void main (String[] args)
     {
-       UserDao dao = new UserDao();
+        RoleDao role = new RoleDao();
+        System.out.println(role.getAllRole());
+
+       /*UserDao dao = new UserDao();
         User user = new User("sidorov", "sidorov","si78554", 1);
         if (dao.saveUser(user))
         {
@@ -27,7 +31,7 @@ public class UserDaoTest
         else
         {
             System.out.println("Error");
-        }
+        }*/
 
         /*try {
             System.out.println(AuthHelper.String2Hash("spring"));
@@ -38,14 +42,14 @@ public class UserDaoTest
             e.printStackTrace();
         }
 */
-        User tmp = null;
+       /* User tmp = null;
         try {
            tmp = dao.getUserByLoginPassword("petrov", "pe78554");
         } catch (NoSuchProviderException e) {
             e.printStackTrace();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-        }
+        }*/
 
        /* User searchName = dao.searchUserByFullName("pupkin");*/
     }

@@ -28,6 +28,10 @@
                 </td>
                 <td>
                     <input type="text" name="fullName" value="${param.fullName}"/>
+                    </br>
+                    <p style="color: red">
+                        ${ErrorName}
+                    </p>
                 </td>
             </tr>
             <tr>
@@ -36,6 +40,10 @@
                 </td>
                 <td>
                     <input type="text" name="login" value="${param.login}"/>
+                    </br>
+                    <p style="color: red">
+                        ${ErrorLogin}
+                    </p>
                 </td>
             </tr>
             <tr>
@@ -44,6 +52,10 @@
                 </td>
                 <td>
                     <input type="password" name="password" value="${param.password}"/>
+                    </br>
+                    <p style="color: red">
+                        ${ErrorPassw}
+                    </p>
                 </td>
             </tr>
             <tr>
@@ -52,6 +64,10 @@
             </td>
             <td>
                 <input type="password" name="confPassword" value="${param.confPassword}"/>
+                </br>
+                <p style="color: red">
+                    ${ErrorConfPassw}
+                </p>
             </td>
             </tr>
             <tr>
@@ -59,9 +75,10 @@
                     <p> <strong> User Role:</strong> </p>
                 </td>
                 <td>
-                    <select name="role" size="1" selected="${param.role}">
-                        <option name="employer" value="1">employer</option>
-                        <option name="employee" value="2">employee</option>
+                    <select name="role" size="1" >
+                        <c:forEach items="${role}" var="item">
+                            <option name="employer" value="${item.roleId}">${item.nameRole}</option>
+                        </c:forEach>
                     </select>
                 </td>
             </tr>
@@ -71,7 +88,10 @@
                 </td>
                 <td style="text-align: right;">
                     <input type="submit" value="Sign Up" />
-                   <%-- ${Error}--%>
+                    </br>
+                    <p style="color: red">
+                    ${Error}
+                    </p>
                 </td>
             </tr>
         </table>
