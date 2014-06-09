@@ -13,9 +13,7 @@ import java.util.List;
  * Created by Avega on 02.06.14.
  */
 public class RoleDao implements IRoleDao {
-    private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
-    private static String mUserName = "root";
-    private static String mPassword = "Monkey2003"; //Monkey2003
+
 
     public RoleDao() {
         try {
@@ -38,7 +36,7 @@ public class RoleDao implements IRoleDao {
             ResultSet res = null;
             try {
 
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(query);
                 res = ps.executeQuery();
                 while (res.next()) {
