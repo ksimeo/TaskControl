@@ -12,66 +12,61 @@ import java.util.List;
 /**
  * Created by Avega on 02.06.14.
  */
-public class RoleDao implements IRoleDao
-{
+public class RoleDao implements IRoleDao {
     private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     private static String mUserName = "root";
-    private static String mPassword = "Monkey2003"; //Monkey2003
+    private static String mPassword = "root123"; //Monkey2003
+
+    public RoleDao() {
+        try {
+            System.setProperty("jdbc.drivers", "com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
-    public List<Role> getAllRole()
-    {
-        ArrayList <Role> roles = new ArrayList<>();
+    public List<Role> getAllRole() {
+        ArrayList<Role> roles = new ArrayList<>();
         String query = "SELECT * FROM taskcontrol.roles";
 
         Role retValue = null;
-        try
-        {
+        try {
             Connection conn = null;
             PreparedStatement ps = null;
             ResultSet res = null;
-            try
-            {
-                Class.forName("com.mysql.jdbc.Driver");
+            try {
+
                 conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
                 ps = conn.prepareStatement(query);
                 res = ps.executeQuery();
-                while (res.next())
-                {
-                    retValue = new Role(res.getInt("id"),res.getString("role_name"));
+                while (res.next()) {
+                    retValue = new Role(res.getInt("id"), res.getString("role_name"));
                     roles.add(retValue);
 
                 }
 
-            }
-            finally
-            {
-                if(conn != null)
-                {
+            } finally {
+                if (conn != null) {
                     conn.close();
                     conn = null;
                 }
-                if(ps != null)
-                {
+                if (ps != null) {
                     ps.close();
                     ps = null;
                 }
-                if(res != null)
-                {
+                if (res != null) {
                     res.close();
                     res = null;
                 }
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return roles;
     }
-
-
 
 
 }

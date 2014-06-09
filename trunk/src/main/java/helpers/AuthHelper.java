@@ -1,7 +1,7 @@
 package helpers;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.util.encoders.Base64;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,6 +19,6 @@ public class AuthHelper
 
         MessageDigest mda = MessageDigest.getInstance("SHA-512", "BC");
 
-        return Base64.encode(mda.digest(str.getBytes()));
+        return new String(Base64.encode(mda.digest(str.getBytes())));
     }
 }

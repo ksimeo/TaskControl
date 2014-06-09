@@ -26,7 +26,7 @@ import java.util.List;
 public class CurrentTaskDao implements ICurrentTaskDao {
 
     private String dbConnName = "root";
-    private String dbConnPass = "root";
+    private String dbConnPass = "root123";
 
     @Override
     public boolean saveCurrentTask(CurrentTask ct) {
