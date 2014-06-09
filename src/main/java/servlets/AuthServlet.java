@@ -50,8 +50,6 @@ public class AuthServlet extends HttpServlet
                 HttpSession session = req.getSession();
 
                 session.setAttribute("user", usr);
-                List<CurrentTask> newCurTasks = new ArrayList<>();
-                session.setAttribute("newCurTasks", newCurTasks);
 
                 session.setMaxInactiveInterval(30*60);
                 Cookie userLogin = new Cookie("user", login);

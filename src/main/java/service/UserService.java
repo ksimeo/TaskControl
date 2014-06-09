@@ -48,6 +48,10 @@ public enum  UserService implements IUserService
     {
         return usDao.getAllUsersNames();
     }
-    public User getUserById(int id){return usDao.getUserById(id);}
+
+    public User getUserById(int id)
+    {
+        return usDao.getUserById(id);
+    }
 
 }

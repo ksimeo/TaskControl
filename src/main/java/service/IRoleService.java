@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface IRoleService
 {
-    public List<Role> getAllRole(int roleId, String nameRole);
+    public List<Role> getAllRole();
 }
