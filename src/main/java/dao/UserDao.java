@@ -17,9 +17,7 @@ import java.util.List;
  */
 public class UserDao implements IUserDao
 {
-    private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
-    private static String mUserName = "root";
-    private static String mPassword = "Monkey2003";
+
     @Override
     public boolean saveUser(User user)
     {
@@ -34,7 +32,7 @@ public class UserDao implements IUserDao
                 user.setPassword(AuthHelper.String2Hash(user.getPassword()));
 
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("Insert into taskcontrol.user" + "(user_full_name, login, password, role)" +
                         " VALUES" + "(?, ?, ?, ?)");
 
@@ -87,7 +85,7 @@ public class UserDao implements IUserDao
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(query);
                 res = ps.executeQuery();
 
@@ -138,7 +136,7 @@ public class UserDao implements IUserDao
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(query);
                 res = ps.executeQuery();
 
@@ -188,7 +186,7 @@ public class UserDao implements IUserDao
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("SELECT user_full_name FROM taskcontrol.user");
                 rs = ps.executeQuery();
 
@@ -237,7 +235,7 @@ public class UserDao implements IUserDao
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(mConnString, mUserName, mPassword);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(query);
                 res = ps.executeQuery();
 
