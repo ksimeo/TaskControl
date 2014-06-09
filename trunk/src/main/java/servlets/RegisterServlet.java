@@ -5,6 +5,7 @@ import dao.UserDao;
 import model.CurrentTask;
 import model.Role;
 import model.User;
+import service.RoleService;
 import service.UserService;
 
 import javax.servlet.ServletException;

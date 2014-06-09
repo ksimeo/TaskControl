@@ -46,7 +46,7 @@ public enum  UserService implements IUserService
     @Override
     public List<String> getAllUsarsNames()
     {
-        return usDao.getAllUsarsNames();
+        return usDao.getAllUsersNames();
     }
     public User getUserById(int id){return usDao.getUserById(id);}
 
