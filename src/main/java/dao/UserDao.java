@@ -176,7 +176,7 @@ public class UserDao implements IUserDao
     }
 
     @Override
-    public List<String> getAllUsarsNames()
+    public List<String> getAllUsersNames()
     {
 
         List<String> res = new ArrayList<>();

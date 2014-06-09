@@ -10,9 +10,19 @@
     <title></title>
 </head>
 <body>
+<form actiom="/userData" method="post">
+<table>
+    <tr>
+        <td>
+            ${user}
+        </td>
+
+    </tr>
+</table>
+<%--</form>
 Employee
 <form action="/logout" method="post">
     <input type="submit" value="LogOut"/>
-</form>
+</form>--%>
 </body>
 </html>
