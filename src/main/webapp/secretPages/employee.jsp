@@ -14,12 +14,17 @@
 <table>
     <tr>
         <td>
-            ${currentUser}
+            <p>
+                <strong>
+                     ${currentUser}
+                </strong>
+            </p>
+
         </td>
     </tr>
 </table>
 
-Employee
+
 <form action="/logout" method="post">
     <input type="submit" value="LogOut"/>
 </form>
