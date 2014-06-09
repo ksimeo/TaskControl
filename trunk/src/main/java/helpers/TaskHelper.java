@@ -58,7 +58,7 @@ public class TaskHelper
         {
             CurrentTask tmp = iter.next();
             StringBuilder sb = new StringBuilder();
-            SimpleDateFormat sdformat = new SimpleDateFormat("dd.MM.yy hh:mm");
+            SimpleDateFormat sdformat = new SimpleDateFormat("dd.MM.yy HH:mm");
             sb.append(userSer.getUserById(tmp.getRecepientId()).getName())
                     .append(" ")
                     .append(taskSer.getTaskById(tmp.getTaskId()).getTaskTitle())
