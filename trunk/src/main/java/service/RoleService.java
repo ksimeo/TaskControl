@@ -16,9 +16,8 @@ public enum RoleService implements IRoleService
     {
         rDao = new RoleDao();
     }
-    public List<Role> getAllRole(int roleId, String nameRole)
+    public List<Role> getAllRole()
     {
-        Role role = new Role(roleId, nameRole);
         return rDao.getAllRole();
     }
 }
