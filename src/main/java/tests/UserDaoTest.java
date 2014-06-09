@@ -1,16 +1,6 @@
 package tests;
 
-import com.sun.org.apache.xml.internal.security.utils.Base64;
 import dao.RoleDao;
-import dao.UserDao;
-import helpers.AuthHelper;
-import model.User;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.Security;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 /**
  * Created by Avega on 26.05.14.
