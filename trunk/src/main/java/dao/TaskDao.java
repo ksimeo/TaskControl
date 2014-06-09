@@ -19,9 +19,9 @@ package dao;
  */
 public class TaskDao implements ITaskDao {
 
-    private static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
-    private static String dbConnName = "root";
-    private static String dbConnPass = "root123";
+    private static String mConnString = ConnectionConfig.mConnString;
+    private static String dbConnName = ConnectionConfig.dbConnName;
+    private static String dbConnPass = ConnectionConfig.dbConnPass;
 
     @Override
     public List<Task> getAllTasks() {
