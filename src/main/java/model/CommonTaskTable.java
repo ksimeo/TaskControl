@@ -7,11 +7,13 @@ public class CommonTaskTable
 {
     CurrentTask currentTask;
     Task task;
+    User user;
 
-    public CommonTaskTable(CurrentTask currentTask, Task task)
+    public CommonTaskTable(CurrentTask currentTask, Task task, User user)
     {
         this.currentTask = currentTask;
         this.task = task;
+        this.user = user;
     }
 
     public CurrentTask getCurrentTask() {
@@ -28,5 +30,13 @@ public class CommonTaskTable
 
     public void setTask(Task task) {
         this.task = task;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
