@@ -36,7 +36,8 @@ public class EmployeeServlet extends HttpServlet
         for(CurrentTask item : allTasks)
         {
             Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
-            CommonTaskTable commonTaskTable = new CommonTaskTable(item, t);
+            User u = UserService.INSTANCE.getUserById(item.getCreatorId());
+            CommonTaskTable commonTaskTable = new CommonTaskTable(item, t, u);
             comTaskTab.add(commonTaskTable);
         }
 

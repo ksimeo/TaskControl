@@ -30,10 +30,10 @@ public class TaskDaoTest {
 
         List<Task> db = ts.getAllTasks();
 
-        Task res = ts.addTask("Погрузка", "Грузите ананасы бочками!");
+       /* boolean res = ts.addTask("Погрузка", "Грузите ананасы бочками!");
         System.out.println("RES: " + res);
         db = ts.getAllTasks();
-        showTasks(db);
+        showTasks(db);*/
     }
 
     private static void showTasks(List<Task> all)

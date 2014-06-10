@@ -20,14 +20,14 @@ public class CurrentTaskTest
         //Date d = new Date();
         CurrentTaskService cts = CurrentTaskService.INSTANCE;
 
-        //Saving new current tasks --------------
-//        boolean res1 = cts.saveCurrentTask(1, 4, 2, CurrentTask.START, "HAIGHT");
-//        System.out.println("Operation res1 is " + res1);
-//        boolean res2 = cts.saveCurrentTask(2, 2, 3, CurrentTask.IN_PROCESS, "MIDDLE");
-//        System.out.println("Operation res2 is " + res2);
-//        boolean res3 = cts.saveCurrentTask(3, 2, 1, CurrentTask.FINISH, "LOW");
-//        System.out.println("Operation res2 is " + res3);
-//        System.out.println("Saving is ready");
+        /*Saving new current tasks --------------*/
+        CurrentTask res1 = cts.saveCurrentTask(1, 1, 11,  "HAIGHT");
+        System.out.println("Operation res1 is " + res1);
+        /*boolean res2 = cts.saveCurrentTask(2, 2, 3, CurrentTask.IN_PROCESS, "MIDDLE");
+        System.out.println("Operation res2 is " + res2);
+        boolean res3 = cts.saveCurrentTask(3, 2, 1, CurrentTask.FINISH, "LOW");
+        System.out.println("Operation res2 is " + res3);*/
+        System.out.println("Saving is ready");
 
 ////        //getting all --------------
 //        User recipient = new User("Vasya Pupkin","vasya123", "qwert", 1);

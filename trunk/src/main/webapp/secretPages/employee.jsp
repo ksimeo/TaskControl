@@ -6,7 +6,7 @@
 
 <html>
 <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../../secretPages/style.css" />
+<link rel="stylesheet" type="text/css" href="../../content/style.css" />
 <head>
     <title></title>
 </head>
@@ -40,7 +40,7 @@
         </tr>
          <c:forEach var="item" items="${allUserTasks}">
              <tr class="column-view">
-                 <td class="column-view">${item.currentTask.creatorId}</td>
+                 <td class="column-view">${item.user.name}</td>
                  <td class="column-view">${item.currentTask.createDate}</td>
                  <td class="column-view">${item.task.taskTitle}</td>
                  <td class="column-view">${item.task.description}</td>
