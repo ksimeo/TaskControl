@@ -70,8 +70,10 @@ public enum CurrentTaskService implements ICurrentTaskService
     }
 
     @Override
-    public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to)
+    public Parcel<CurrentTask> getCurrentTaskPage(User user, int pageNummber)
     {
+        int from = pageNummber * 5;
+        int to = 5;
         return ctd.getCurrentTaskPage(user, from, to);
     }
 
@@ -89,9 +91,17 @@ public enum CurrentTaskService implements ICurrentTaskService
     {
         return ctd.setPriority(ct, priority);
     }
-    public boolean setState(CurrentTask ct, String state)
+
+    public boolean setStateStart(CurrentTask ct)
     {
-        return ctd.setPriority(ct, state);
+
+        return ctd.setPriority(ct, "STARTED");
+    }
+
+    public boolean setStateFinish(CurrentTask ct)
+    {
+
+        return ctd.setPriority(ct, "FINISHED");
     }
 
 }
