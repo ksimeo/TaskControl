@@ -1,7 +1,11 @@
 package servlets;
 
+import model.CommonTaskTable;
 import model.CurrentTask;
+import model.Task;
 import model.User;
+import service.CurrentTaskService;
+import service.TaskService;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -26,7 +30,19 @@ public class EmployeeServlet extends HttpServlet
         HttpSession session = req.getSession();
         User sessionUserAttr = (User)session.getAttribute("user");
 
-        session.setAttribute("currentUser", sessionUserAttr.getName());
+        req.setAttribute("currentUser", sessionUserAttr.getName());
+        List<CurrentTask> allTasks = CurrentTaskService.INSTANCE.getAllByUserId(sessionUserAttr);
+        List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
+        for(CurrentTask item : allTasks)
+        {
+            Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
+            CommonTaskTable commonTaskTable = new CommonTaskTable(item, t);
+            comTaskTab.add(commonTaskTable);
+        }
+
+        req.setAttribute("allUserTasks", comTaskTab);
+
+
         req.getRequestDispatcher("/secretPages/employee.jsp").forward(req, resp);
     }
 
