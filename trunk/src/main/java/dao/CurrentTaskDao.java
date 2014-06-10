@@ -313,7 +313,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                     ps = conn.prepareStatement(
                             "SELECT * FROM taskcontrol.currenttask WHERE recipient_id = ? LIMIT ?, ?");
                     ps.setInt(1, user.getUserId());
-                    ps.setInt(2, from);
+                    ps.setInt(2,  from);
                     ps.setInt(3, to);
                     rs = ps.executeQuery();
                     Date sd;
