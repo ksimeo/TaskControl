@@ -19,7 +19,7 @@ public class TaskDaoTest {
         TaskService ts = TaskService.INSTANCE;
         Task newTask = new Task( 1, "Погрузка", "Грузите ананасы бочками!");
 
-        if (ts.addTask("Погрузка", "Грузите ананасы бочками!"))
+        if (ts.addTask("Погрузка", "Грузите ананасы бочками!") != null)
         {
             System.out.println("SUCCESS");
         }
@@ -30,7 +30,7 @@ public class TaskDaoTest {
 
         List<Task> db = ts.getAllTasks();
 
-        boolean res = ts.addTask("Погрузка", "Грузите ананасы бочками!");
+        Task res = ts.addTask("Погрузка", "Грузите ананасы бочками!");
         System.out.println("RES: " + res);
         db = ts.getAllTasks();
         showTasks(db);

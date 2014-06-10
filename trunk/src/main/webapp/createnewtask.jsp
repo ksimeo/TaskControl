@@ -18,11 +18,13 @@
     <p style="color: red">
         ${ErrorTitle}
     </p>
+
     <p><b>Description of task:</b><Br>
         <textarea name="description" cols="40" rows="10" value="${param.description}></textarea></p>
     </br>
     <p style="color: red">
-${ErrorDescription}
+       ${ErrorDescription}
+    </p>
     </body>
 </form>
 </html>
