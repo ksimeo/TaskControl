@@ -12,18 +12,17 @@
     </head>
     <body>
     <p><h1>Creation of new task</h1></p>
-    <p>Fill all input field of new task, please!</p>
     <h><b>Title of new task:</b></h><input type="text" size="32" name="title" value="${param.title}"/>
     </br>
-    <p style="color: red">
-        ${ErrorTitle}
+    <p>
+        <b>Description of task:</b>
+        <br>
+        <textarea name="description" cols="40" rows="10" value="${param.description}></textarea>
+        </br>
     </p>
-
-    <p><b>Description of task:</b><Br>
-        <textarea name="description" cols="40" rows="10" value="${param.description}></textarea></p>
-    </br>
+    <input type="submit" value="Create"/>
     <p style="color: red">
-       ${ErrorDescription}
+        ${ErrorForm}
     </p>
     </body>
 </form>

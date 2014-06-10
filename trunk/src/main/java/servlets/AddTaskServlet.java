@@ -1,9 +1,7 @@
 package servlets;
 
-import model.Role;
-import service.RoleService;
-import service.TaskService;
 import model.Task;
+import service.TaskService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,17 +34,12 @@ public class AddTaskServlet extends HttpServlet {
         String taskTitle = req.getParameter("title");
         String description = req.getParameter("description");
         boolean isError = false;
-        if(taskTitle == null || taskTitle.isEmpty())
+        if(taskTitle == null || taskTitle.isEmpty()||description == null || description.isEmpty())
         {
-            req.setAttribute("ErrorTitle", "Field Title is empty!");
+            req.setAttribute("ErrorForm", "Fill all input field of new task, please!");
             isError = true;
         }
-        if(description == null || description.isEmpty())
-        {
-            req.setAttribute("ErrorDescription", "Field Description is empty!");
-            isError = true;
-        }
-        if(!isError) {
+        else {
             TaskService newTask = TaskService.INSTANCE;
             Task task = newTask.addTask(taskTitle, description);
             if(task != null && !isError) {
