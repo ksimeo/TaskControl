@@ -7,6 +7,7 @@ import model.Task;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -15,14 +16,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Admin on 09.06.2014.
+ * Created by Ksimeo on 09.06.2014.
  */
 
 @WebServlet (urlPatterns = "/createnewtask")
-public class AddTaskServlet {
+public class AddTaskServlet extends HttpServlet {
 
     @Override
-    protected void doGet (HttpServletRequest req, HttpServletResponse resp) {
+    protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
+        List<Task> task = TaskService.INSTANCE.getAllTasks();
+        req.setAttribute("task",task);
+        req.getRequestDispatcher("/createnewtask.jsp").forward(req, resp);
 
     }
 
@@ -45,7 +50,7 @@ public class AddTaskServlet {
         if(!isError) {
             TaskService newTask = TaskService.INSTANCE;
             Task task = newTask.addTask(taskTitle, description);
-            if(task !== null && !isError) {
+            if(task != null && !isError) {
                 HttpSession session = req.getSession();
                 session.setAttribute("task", task);
             }

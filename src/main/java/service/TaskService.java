@@ -1,6 +1,7 @@
 package service;
 
 import dao.TaskDao;
+import dao.UserDao;
 import model.Task;
 import java.util.List;
 
@@ -11,13 +12,18 @@ public enum TaskService implements ITaskService
 {
     INSTANCE;
     private List<Task> allTasks;
-    TaskDao task;
+    private TaskDao task;
 
     private TaskService()
     {
         task = new TaskDao();
-        allTasks = task.getAllTasks();
     }
+
+//    private TaskService()
+//    {
+//        task = new TaskDao();
+//        allTasks = task.getAllTasks();
+//    }
 
     public int getNewTaskId()
     {
@@ -34,14 +40,11 @@ public enum TaskService implements ITaskService
         return id;
     }
 
-    public boolean addTask(String taskTitle, String description)
+    public Task addTask(String taskTitle, String description)
     {
         int id = getNewTaskId();
         Task t = new Task(id, taskTitle, description);
-        allTasks.add(t);
-        boolean f = task.addTask(t);
-        allTasks.add(t);
-        return f;
+        return task.addTask(t) ? t : null;
     }
 
     public List<Task> getAllTasks()

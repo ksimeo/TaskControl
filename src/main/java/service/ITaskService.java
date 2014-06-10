@@ -14,7 +14,7 @@ import java.util.List;
 interface ITaskService {
 
     public int getNewTaskId();
-    public boolean addTask(String taskTitle, String description);
+    public Task addTask(String taskTitle, String description);
     public List<Task> getAllTasks();
     public List<String> getAllTasksTitles();
     public Task getTaskByTitle(String title);
