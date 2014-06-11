@@ -21,16 +21,16 @@ public class CurrentTaskTest
         CurrentTaskService cts = CurrentTaskService.INSTANCE;
 
         /*Saving new current tasks --------------*/
-        CurrentTask res1 = cts.saveCurrentTask(1, 1, 11,  "HAIGHT");
-        System.out.println("Operation res1 is " + res1);
+       /* CurrentTask res1 = cts.saveCurrentTask(2, 12, 11,  "HAIGHT");
+        System.out.println("Operation res1 is " + res1);*/
         /*boolean res2 = cts.saveCurrentTask(2, 2, 3, CurrentTask.IN_PROCESS, "MIDDLE");
         System.out.println("Operation res2 is " + res2);
         boolean res3 = cts.saveCurrentTask(3, 2, 1, CurrentTask.FINISH, "LOW");
         System.out.println("Operation res2 is " + res3);*/
-        System.out.println("Saving is ready");
+     //  System.out.println("Saving is ready");
 
 ////        //getting all --------------
-//        User recipient = new User("Vasya Pupkin","vasya123", "qwert", 1);
+          User recipient = new User("test","test", "test",11);
 //        recipient.setUserId(1);
 //        User creator = new User("Kolya, Pupkin","vasya123", "qwert", 1);
 //        creator.setUserId(2);
@@ -44,9 +44,9 @@ public class CurrentTaskTest
 //        print(cts.getAllByCreatorId(creator));
 //        // getting all current tasks by task id --------------
 //        print(cts.getAllByTaskId(task1));
-//        Parcel<CurrentTask> parcel = cts.getCurrentTaskPage(recipient, 1, 5);
-//        System.out.println(parcel.getCount());
-//        print(parcel.getPage());
+        Parcel<CurrentTask> parcel = cts.getCurrentTaskPage(recipient, 1);
+        System.out.println(parcel.getCount());
+        print(parcel.getPage());
 
         // Updating start and finish dates into current tasks --------------
 //        CurrentTask ct = new CurrentTask(2,2,2,3, "CurrentTask.IN_PROCESS","MIDDLE", new Date());

@@ -5,13 +5,13 @@
 
 <html>
 <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
-<%--<link rel="stylesheet" type="text/css" href="../resources/style.css" />--%>
+<link rel="stylesheet" type="text/css" href="../content/style.css" />
 <head>
     <title></title>
 </head>
 <body>
 <form action="/authorization" method="post">
-    <div  style="width: 100%; text-align: -webkit-center; margin-top: 50;">
+    <div  style="width: 100%; text-align: -webkit-center; margin-top: 200;">
         <table>
             <tr>
                 <td colspan="2" style="text-align:-webkit-auto; ">
