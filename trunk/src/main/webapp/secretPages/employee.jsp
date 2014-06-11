@@ -49,6 +49,12 @@
                  <td class="column-view">${item.currentTask.endDate}</td>
              </tr>
          </c:forEach>
+        <tr>
+            <p align="center">
+                <input type="button" value="  &lt;--PREV   " onclick="history.go(-1)">
+                <input type="button" value="NEXT --&gt;"     onclick="history.go(1)">
+            </p>
+        </tr>
     </table>
 </div>
 
