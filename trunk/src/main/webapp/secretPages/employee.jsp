@@ -5,12 +5,32 @@
 
 
 <html>
-<script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css" />
 <head>
     <title></title>
 </head>
 <body>
+<script type="text/javascript">
+    function ajaxStartTask(currentTaskId)
+    {
+            document.getElementById("startTask-" + currentTaskId).style.display = "none";
+            var paramData = "taskId=" + currentTaskId;
+            $.ajax({
+                type:'POST',
+                url:'/secretPages/startTaskEmployee',
+                data: paramData,
+                success: function(servletResult) {
+                    document.getElementById('query-result').innerHTML = servletResult;
+                },
+                error: function (){
+                    console.log('error');
+                }
+
+            });
+    }
+
+</script>
 
 <table>
     <tr>
@@ -45,8 +65,14 @@
                  <td class="column-view">${item.task.taskTitle}</td>
                  <td class="column-view">${item.task.description}</td>
                  <td class="column-view">${item.currentTask.priority}</td>
-                 <td class="column-view">${item.currentTask.startDate}</td>
-                 <td class="column-view">${item.currentTask.endDate}</td>
+                 <td class="column-view" >
+                    <input id = "startTask-${item.currentTask.id}" type="button" value="Start" onclick="ajaxStartTask(${item.currentTask.id})">
+                    ${item.currentTask.startDate}
+                 </td>
+                 <td class="column-view" >
+                     <input type="button" value="End" onclick="">
+                     ${item.currentTask.endDate}
+                 </td>
              </tr>
          </c:forEach>
         <tr>

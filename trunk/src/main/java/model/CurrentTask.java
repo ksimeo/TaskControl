@@ -22,6 +22,10 @@ public class CurrentTask {
     public static String PRIORITY_MIDDLE = "middle";
     public static String PRIORITY_HEIGHT = "height";
 
+    public CurrentTask(int id)
+    {
+        this.id = id;
+    }
 
     public CurrentTask(int id, int taskId, int creatorId, int recipientId, String state, String priority, Date createDate, Date startDate, Date endDate) {
         this.id = id;

@@ -25,8 +25,8 @@ import java.util.List;
  */
 public class CurrentTaskDao implements ICurrentTaskDao {
 
-    private String dbConnName = ConnectionConfig.dbConnName;
-    private String dbConnPass = ConnectionConfig.dbConnPass;
+    /*private String dbConnName = ConnectionConfig.dbConnName;
+    private String dbConnPass = ConnectionConfig.dbConnPass;*/
 
     @Override
     public boolean saveCurrentTask(CurrentTask ct) {
@@ -35,9 +35,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         boolean flag = false;
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "INSERT IGNORE INTO taskcontrol.currenttask"
                                 + "(id, task_id, creator_id, recipient_id, state, priority,  create_date)"
@@ -84,9 +82,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
 
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask;");
                 rs = ps.executeQuery();
 
@@ -137,9 +133,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
 
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(recipient_id = " + user.getUserId() + ")");
                 rs = ps.executeQuery();
 
@@ -192,9 +186,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
 
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(creator_id = " + user.getUserId() + ")");
                 rs = ps.executeQuery();
 
@@ -245,9 +237,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
 
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement("SELECT * FROM taskcontrol.currenttask WHERE(task_id = " + task.getId() + ")");
                 rs = ps.executeQuery();
 
@@ -299,9 +289,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         try {
             try {
 
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "SELECT COUNT(id) AS m FROM taskcontrol.currenttask");
                 rs = ps.executeQuery();
@@ -367,9 +355,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         Timestamp time =  new Timestamp(d.getTime());
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "UPDATE taskcontrol.currenttask SET start_date = ? where(id = " + ct.getId() + ")"
                 );
@@ -404,9 +390,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         Timestamp time =  new Timestamp(d.getTime());
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "UPDATE taskcontrol.currenttask SET end_date = ?  WHERE(id = " + ct.getId() + ")"
 
@@ -440,9 +424,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         boolean flag = false;
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "UPDATE taskcontrol.currenttask SET priority = ?  WHERE(id = " + ct.getId() + ")"
 
@@ -476,9 +458,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         boolean flag = false;
         try {
             try {
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "UPDATE taskcontrol.currenttask SET state = ?  WHERE(id = " + ct.getId() + ")"
 
@@ -515,9 +495,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
 
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/taskcontrol",
-                        dbConnName, dbConnPass);
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
                 ps = conn.prepareStatement(
                         "SELECT MAX(id) AS m FROM taskcontrol.currenttask");
                 rs = ps.executeQuery();
