@@ -30,7 +30,7 @@ public class CurrentTaskTest
      //  System.out.println("Saving is ready");
 
 ////        //getting all --------------
-          User recipient = new User("test","test", "test",11);
+          User recipient = new User(11,"test","test", "test",2);
 //        recipient.setUserId(1);
 //        User creator = new User("Kolya, Pupkin","vasya123", "qwert", 1);
 //        creator.setUserId(2);
@@ -44,7 +44,7 @@ public class CurrentTaskTest
 //        print(cts.getAllByCreatorId(creator));
 //        // getting all current tasks by task id --------------
 //        print(cts.getAllByTaskId(task1));
-        Parcel<CurrentTask> parcel = cts.getCurrentTaskPage(recipient, 1);
+        Parcel<CurrentTask> parcel = cts.getCurrentTaskPage(recipient, 2);
         System.out.println(parcel.getCount());
         print(parcel.getPage());
 
@@ -54,8 +54,8 @@ public class CurrentTaskTest
 //        cts.setEndDate(ct);
 
         // Updating priority into current tasks --------------
-        CurrentTask ct = new CurrentTask(2,2,2,3, CurrentTask.STATUS_IN_PROCESS,CurrentTask.PRIORITY_MIDDLE, new Date());
-        cts.setPriority(ct, CurrentTask.PRIORITY_HEIGHT);
+       /* CurrentTask ct = new CurrentTask(2,2,2,3, CurrentTask.STATUS_IN_PROCESS,CurrentTask.PRIORITY_MIDDLE, new Date());
+        cts.setPriority(ct, CurrentTask.PRIORITY_HEIGHT);*/
     }
 
     public static void print(List<CurrentTask> ctasks)
