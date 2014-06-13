@@ -14,7 +14,7 @@ public interface IUserDao
     boolean saveUser(User user);
     User getUserByLoginPassword(String login, String password) throws NoSuchProviderException, NoSuchAlgorithmException;
     User  searchUserByFullName(String fullName);
-    List<String> getAllUsersNames();
+    List<String> getAllEmployeesNames();
     public User getUserById(int id);
 
 }

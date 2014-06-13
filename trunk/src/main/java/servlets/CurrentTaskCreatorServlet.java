@@ -19,8 +19,7 @@ import java.util.List;
  * Created by VLAD on 04.06.2014.
  */
 @WebServlet("/creattask")
-public class CurrentTaskCreatorServlet extends HttpServlet
-{
+public class CurrentTaskCreatorServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         System.out.println("EmployerServlet is i");
@@ -28,8 +27,7 @@ public class CurrentTaskCreatorServlet extends HttpServlet
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         TaskHelper th = new TaskHelper();
         String userName = req.getParameter("username");
@@ -41,22 +39,24 @@ public class CurrentTaskCreatorServlet extends HttpServlet
         String priority = req.getParameter("priority");
         HttpSession session = req.getSession();
 
-        User creator = (User)session.getAttribute("user");
+        User creator = (User) session.getAttribute("user");
+        if (userName != null && taskTitle != null && priority != null) {
 
 
-        System.out.println("-----------------------------");
-        System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
-        System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
-        System.out.println("User Id: " + recipient.getUserId() + "User Name: " + userName);
-        System.out.println("Priority: " + priority);
-        System.out.println("-----------------------------");
+            System.out.println("-----------------------------");
+            System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
+            System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
+            System.out.println("User Id: " + recipient.getUserId() + "User Name: " + userName);
+            System.out.println("Priority: " + priority);
+            System.out.println("-----------------------------");
 
-        CurrentTask newCurTask = th.saveCurrentTask(task.getId(), creator.getUserId(), recipient.getUserId(), priority);
-        List<CurrentTask> newCurTasks = (List)session.getAttribute("newCurTasks");
-        newCurTasks.add(newCurTask);
-        System.out.println(session.getAttribute("newCurTasks"));
+            CurrentTask newCurTask = th.saveCurrentTask(task.getId(), creator.getUserId(), recipient.getUserId(), priority);
+            List<CurrentTask> newCurTasks = (List) session.getAttribute("newCurTasks");
+            newCurTasks.add(newCurTask);
+            System.out.println(session.getAttribute("newCurTasks"));
 
-        req.setAttribute("currenttasks", session.getAttribute("newCurTasks"));
+            req.setAttribute("currenttasks", session.getAttribute("newCurTasks"));
+        }
         //req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
         resp.sendRedirect("/secretPages/employer");
 

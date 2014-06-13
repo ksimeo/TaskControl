@@ -1,6 +1,5 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
@@ -8,12 +7,17 @@
 
 <html>
 <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../../content/style.css" />
+<script type="text/javascript" src="resources/scripts/taskDescription.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../content/style.css"/>
+
 <head>
     <title></title>
+
 </head>
+
 <body>
-Employer
+Employer: <%= request.getAttribute("username")%>
 
 
 <form action="/logout" method="post">
@@ -21,24 +25,25 @@ Employer
 </form>
 
 <hr/>
-<form name=creatTask method="post" action="/creattask">
+<div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px">
+    <form name=creatTask method="post" action="/creattask">
 
 
-    </select>
+        </select>
 
 
-    <table border="0">
-        <tr align="center">
-            <td><b>Workers</b></td>
-            <td><b>Tasks titles</b></td>
-            <td><b>Priority</b></td>
-            <td><b>Tasks description</b></td>
-        </tr>
-        <tr>
-            <td>
-                <select size="10" name="username">
+        <table border="0" style="font-family: sans-serif">
+            <tr align="center">
+                <td><b>Workers</b></td>
+                <td><b>Tasks titles</b></td>
+                <td><b>Priority</b></td>
+                <td><b>Tasks description</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <select size="10" name="username">
 
-                        <%
+                            <%
             Iterator iter;
             List users;
             users = (List)request.getAttribute("users");
@@ -48,19 +53,19 @@ Employer
             {
                 String tmp = (String)iter.next();
         %>
-                    <option value="<%= tmp%>"><%= tmp%>
-                    </option>
+                        <option value="<%= tmp%>"><%= tmp%>
+                        </option>
 
-                        <%
+                            <%
 
             }
         %>
-            </td>
-            <td>
-                <select size="10" name="tasktitle">
+                </td>
+                <td>
+                    <select size="10" name="tasktitle">
 
 
-                        <%
+                            <%
             List tasks;
             tasks = (List)request.getAttribute("tasks");
             iter = tasks.iterator();
@@ -69,50 +74,53 @@ Employer
             {
                 String tmp = (String)iter.next();
         %>
-                    <option value="<%= tmp%>"><%= tmp%>
-                    </option>
+                        <option value="<%= tmp%>"><%= tmp%>
+                        </option>
 
-                        <%
+                            <%
             }
         %>
-            </td>
-            <td>
-                <select size="10" name="priority">
-                    <option value="LOW">LOW</option>
-                    <option value="MIDDLE">MIDDLE</option>
-                    <option value="HEIGHT">HEIGHT</option>
-                </select>
-            </td>
-            <td>
-                <form name="description">
-                    <textarea rows="10" cols="60" style="font-family: sans-serif"></textarea>
-                </form>
-            </td>
+                </td>
+                <td>
+                    <select size="10" name="priority">
+                        <option value="LOW">LOW</option>
+                        <option value="MIDDLE">MIDDLE</option>
+                        <option value="HEIGHT">HEIGHT</option>
+                    </select>
+                </td>
+                <td>
+                    <form name="description">
+                        <textarea rows="10" cols="60" style="font-family: sans-serif"></textarea>
+                    </form>
+                </td>
 
-        </tr>
+            </tr>
 
-        <tr>
-            <td><input type="submit" value="Creat"></td>
-        </tr>
-        <tr>
-            <td>
+            <tr>
+                <td colspan="3" align="right"><input type="submit" value="Create"></td>
+                <td>
+            </tr>
+            <tr>
+                <td>
 
-            </td>
-        </tr>
-    </table>
-</form>
-<hr/>
-<%
-    List newCurTasks = (List)request.getAttribute("ctasks");
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px; padding: 5px; margin-top: 5px; font-family: sans-serif">
+<center><b>New current tasks</b></center>
+    <%
+    List newCurTasks = (List) request.getAttribute("ctasks");
     iter = newCurTasks.iterator();
-    while (iter.hasNext())
-    {
+    while (iter.hasNext()) {
 %>
-        <%= iter.next()%>
-        <br/>
+<%= iter.next()%>
+<br/>
 <%
     }
 %>
-
+</div>
 </body>
 </html>
