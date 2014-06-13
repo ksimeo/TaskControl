@@ -23,10 +23,10 @@ public class TaskHelper
     CurrentTaskService curTaskSer = CurrentTaskService.INSTANCE;
 
 
-    public List<String> getAllUsarsNames()
+    public List<String> getAllEmployessNames()
     {
 
-        return userSer.getAllUsarsNames();
+        return userSer.getAllEmployeesNames();
 
     }
 

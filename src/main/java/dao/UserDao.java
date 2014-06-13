@@ -174,7 +174,7 @@ public class UserDao implements IUserDao
     }
 
     @Override
-    public List<String> getAllUsersNames()
+    public List<String> getAllEmployeesNames()
     {
 
         List<String> res = new ArrayList<>();
@@ -187,7 +187,7 @@ public class UserDao implements IUserDao
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
-                ps = conn.prepareStatement("SELECT user_full_name FROM taskcontrol.user");
+                ps = conn.prepareStatement("SELECT user_full_name FROM taskcontrol.user WHERE (role = 2)");
                 rs = ps.executeQuery();
 
                 while (rs.next())
