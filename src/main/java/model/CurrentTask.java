@@ -89,7 +89,8 @@ public class CurrentTask {
         this.recipientId = recepientId;
     }
 
-    public Date getCreateDate() {
+    public Date getCreateDate()
+    {
         return createDate;
     }
 

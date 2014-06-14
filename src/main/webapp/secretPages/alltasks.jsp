@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 
 
@@ -30,12 +31,18 @@
             <tr class="column-view">
                 <td class="column-view">${item.creator.name}</td>
                 <td class="column-view">${item.recipient.name}</td>
-                <td class="column-view">${item.currentTask.createDate}</td>
+                <td class="column-view">
+                    <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.createDate}"/>
+                </td>
                 <td class="column-view">${item.task.taskTitle}</td>
                 <td class="column-view">${item.task.description}</td>
                 <td class="column-view">${item.currentTask.priority}</td>
-                <td class="column-view">${item.currentTask.startDate}</td>
-                <td class="column-view">${item.currentTask.endDate}</td>
+                <td class="column-view">
+                    <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.startDate}"/>
+                </td>
+                <td class="column-view">
+                    <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.endDate}"/>
+                </td>
             </tr>
         </c:forEach>
         <tr>

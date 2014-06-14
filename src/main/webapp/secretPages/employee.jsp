@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 
 
@@ -24,17 +25,34 @@
                 data: paramData,
                 success: function(servletResult)
                 {
-                    document.getElementById('query-result').innerHTML = servletResult;
+                    document.getElementById('resultStart-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
                         console.log(servletResult);
                 },
                 error: function ()
                 {
                     console.log('error');
                 }
-
             });
     }
-
+    function ajaxEndTask(currentTaskId)
+    {
+        document.getElementById("endTask-" + currentTaskId).style.display = "none";
+        var paramData = "taskId=" + currentTaskId;
+        $.ajax({
+            type:'POST',
+            url:'/secretPages/endTaskEmployee',
+            data: paramData,
+            success: function(servletResult)
+            {
+                document.getElementById('resultEnd-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
+                console.log(servletResult);
+            },
+            error: function ()
+            {
+                console.log('error');
+            }
+        });
+    }
 </script>
 
 <table>
@@ -66,26 +84,35 @@
          <c:forEach var="item" items="${allUserTasks}">
              <tr class="column-view">
                  <td class="column-view">${item.creator.name}</td>
-                 <td class="column-view">${item.currentTask.createDate}</td>
+                 <td class="column-view">
+                     <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.createDate}"/>
+                 </td>
                  <td class="column-view">${item.task.taskTitle}</td>
                  <td class="column-view">${item.task.description}</td>
                  <td class="column-view">${item.currentTask.priority}</td>
                  <td class="column-view" >
-                     <div id="query-result">
+                     <div id="resultStart-${item.currentTask.id}">
                          <c:if test="${empty item.currentTask.startDate}">
                                  <input id = "startTask-${item.currentTask.id}" type="button" value="Start" onclick="ajaxStartTask(${item.currentTask.id})">
                          </c:if>
 
                          <c:if test="${not empty item.currentTask.startDate}">
-                             ${item.currentTask.startDate}
+                             <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.startDate}"/>
                          </c:if>
 
                      </div>
                  </td>
 
                  <td class="column-view" >
-                     <input type="button" value="End" onclick="">
-                     ${item.currentTask.endDate}
+                     <div id="resultEnd-${item.currentTask.id}">
+                         <c:if test="${empty item.currentTask.endDate}">
+                             <input id = "endTask-${item.currentTask.id}" type="button" value="End" onclick="ajaxEndTask(${item.currentTask.id})">
+                         </c:if>
+
+                         <c:if test="${not empty item.currentTask.endDate}">
+                             <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.endDate}"/>
+                         </c:if>
+                     </div>
                  </td>
              </tr>
          </c:forEach>

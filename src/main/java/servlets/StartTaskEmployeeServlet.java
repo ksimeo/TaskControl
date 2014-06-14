@@ -1,5 +1,6 @@
 package servlets;
 
+import helpers.CommonHelper;
 import model.CurrentTask;
 import service.CurrentTaskService;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by Avega on 12.06.14.
@@ -26,10 +29,18 @@ public class StartTaskEmployeeServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        CurrentTaskService startTask = CurrentTaskService.INSTANCE;
-        int idTask = Integer.parseInt(req.getParameter("taskId"));
-        CurrentTask ct = new CurrentTask(idTask);
-        startTask.setStartDate(ct);
-        resp.getWriter().println(ct.getStartDate());
+        try
+        {
+            CurrentTaskService startTask = CurrentTaskService.INSTANCE;
+            int idTask = Integer.parseInt(req.getParameter("taskId"));
+            CurrentTask ct = new CurrentTask(idTask);
+            startTask.setStartDate(ct);
+            resp.getWriter().println(CommonHelper.correctDateFormat(ct.getStartDate()));
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 }
