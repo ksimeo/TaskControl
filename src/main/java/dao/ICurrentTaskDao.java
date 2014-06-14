@@ -19,6 +19,7 @@ public interface ICurrentTaskDao
     public List<CurrentTask> getAllByCreatorId(User user);
     public List<CurrentTask> getAllByTaskId(Task task);
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int from, int to);
+    public Parcel<CurrentTask> getCurrentTaskPageAll(int from, int to);
     public boolean setStartDate(CurrentTask ct, Date d);
     public boolean setEndDate(CurrentTask ct, Date d);
     public boolean setPriority(CurrentTask ct, String priority);

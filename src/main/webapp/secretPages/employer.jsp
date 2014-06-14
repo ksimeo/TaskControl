@@ -35,7 +35,7 @@ Employer: <%= request.getAttribute("username")%>
 <script type="text/javascript">
     function pressButtonAllTasks()
     {
-        document.location ="/secretPages/allTasks";
+        document.location ="/secretPages/allTasks?page=1";
     }
 
 </script>

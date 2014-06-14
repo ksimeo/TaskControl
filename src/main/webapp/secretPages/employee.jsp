@@ -14,6 +14,8 @@
 <body>
 <script type="text/javascript">
 
+    var currentPage = ${page};
+
     function ajaxStartTask(currentTaskId)
     {
 
@@ -52,6 +54,16 @@
                 console.log('error');
             }
         });
+    }
+    function changePage(increment)
+    {
+       var tmp = currentPage + increment;
+       if(tmp > 0)
+       {
+           currentPage += increment;
+           document.location ="/secretPages/employee?page="+ currentPage;
+       }
+
     }
 </script>
 
@@ -118,8 +130,8 @@
          </c:forEach>
         <tr>
             <p align="center">
-                <input type="button" value="&lt;--PREV" onclick="history.go(-1)">
-                <input type="button" value="NEXT --&gt;" onclick="history.go(1)">
+                <input type="button" value="&lt;--PREV" onclick="changePage(-1)">
+                <input type="button" value="NEXT --&gt;" onclick="changePage(1)">
             </p>
         </tr>
     </table>
