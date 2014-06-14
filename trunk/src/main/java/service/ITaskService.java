@@ -11,7 +11,7 @@ import java.util.List;
  * Time: 12:37
  * To change this template use File | Settings | File Templates.
  */
-interface ITaskService {
+public interface ITaskService {
 
     public int getNewTaskId();
     public Task addTask(String taskTitle, String description);
