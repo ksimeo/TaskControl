@@ -4,26 +4,25 @@
 <%@ page isELIgnored="false" %>
 
 <html>
+<head>
+    <title>Creation of new task</title>
+</head>
+<body>
 <form action="/createnewtask" method="post">
-    <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title>Creation of new task</title>
-    </head>
-    <body>
-    <p><h1>Creation of new task</h1></p>
-    <h><b>Title of new task:</b></h><input type="text" size="32" name="title" value="${param.title}"/>
-    </br>
-    <p>
-        <b>Description of task:</b>
-        <br>
-        <textarea name="description" cols="40" rows="10" value="${param.description}></textarea>
-        </br>
-    </p>
-    <input type="submit" value="Create"/>
-    <p style="color: red">
-        ${ErrorForm}
-    </p>
-    </body>
+    <div>
+        <p><h1>Creation of new task</h1></p>
+        <h><b>Title of new task:</b></h>
+        <input type="text" size="32" name="title" style="text-align:left;" value="${param.title}"/>
+        <p>
+            <b>Description of task:</b>
+            <br/>
+            <textarea name="description" cols="40" rows="10">${param.description}</textarea>
+        </p>
+        <input type="submit" value="Create"/>
+        <p style="color: red">
+            ${ErrorForm}
+        </p>
+    </div>
 </form>
+</body>
 </html>

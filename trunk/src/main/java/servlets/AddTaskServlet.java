@@ -1,5 +1,6 @@
 package servlets;
 
+import dao.TaskDao;
 import model.Task;
 import service.TaskService;
 
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,11 +47,21 @@ public class AddTaskServlet extends HttpServlet {
             if(task != null && !isError) {
                 HttpSession session = req.getSession();
                 session.setAttribute("task", task);
+                List<Task> tasks = new ArrayList<>();
+                session.setAttribute("Tasks", tasks);
+                resp.sendRedirect("/secretPages/employer");
+                session.setMaxInactiveInterval(30*60);
             }
             else {
-                req.setAttribute("Error", "Such task is used");
+                req.setAttribute("Error", "Your task is incorrect!");
                 isError = true;
             }
+        }
+        if (isError){
+            TaskDao td = new TaskDao();
+            List<Task> task2 = td.getAllTasks();
+            req.setAttribute("task", task2);
+            req.getRequestDispatcher("/createnewtask.jsp").forward(req, resp);
         }
     }
 }
