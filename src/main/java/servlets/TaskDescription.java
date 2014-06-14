@@ -28,10 +28,10 @@ public class TaskDescription extends HttpServlet
         TaskHelper th = new TaskHelper();
         String descripText = "";
         String val = req.getParameter("title");
+
         if(val != null) {
             descripText = th.getDescriptionByTitle(val);
         }
-
         resp.getWriter().write(descripText);
 
     }

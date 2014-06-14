@@ -6,13 +6,21 @@
 <%@ page isELIgnored="false" %>
 
 <html>
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 
-
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="taskDescription.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css"/>
 
 <head>
     <title></title>
+
+    <script>
+        $(document).ready(
+                function(){
+                    $("#tasktitle").click(clickAction())
+                });
+    </script>
+
 
 </head>
 
@@ -70,7 +78,7 @@ Employer: <%= request.getAttribute("username")%>
         %>
                 </td>
                 <td>
-                    <select size="10" name="tasktitle">
+                    <select size="10" id="tasktitle" name="tasktitle">
 
 
                             <%
@@ -98,7 +106,7 @@ Employer: <%= request.getAttribute("username")%>
                 </td>
                 <td>
                     <form name="description">
-                        <textarea rows="10" cols="60" style="font-family: sans-serif"></textarea>
+                        <textarea id="ansver" rows="10" cols="60" style="font-family: sans-serif"></textarea>
                     </form>
                 </td>
 
