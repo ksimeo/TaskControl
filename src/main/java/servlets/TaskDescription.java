@@ -26,9 +26,14 @@ public class TaskDescription extends HttpServlet
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         TaskHelper th = new TaskHelper();
-        String descripText = th.getDescriptionByTitle(String title);
+        String descripText = "";
         String val = req.getParameter("title");
-        System.out.println(val);
+        if(val != null) {
+            descripText = th.getDescriptionByTitle(val);
+        }
+
+        resp.getWriter().write(descripText);
+
     }
 
 
