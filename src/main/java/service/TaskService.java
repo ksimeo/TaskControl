@@ -56,4 +56,10 @@ public enum TaskService implements ITaskService
     @Override
     public Task  getTaskById(int id){return task.getTaskById(id);};
 
+    @Override
+    public void setDescription(String title, String description)
+    {
+        task.setDescription(title, description);
+    }
+
 }

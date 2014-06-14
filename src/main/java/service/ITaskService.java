@@ -19,4 +19,5 @@ public interface ITaskService {
     public List<String> getAllTasksTitles();
     public Task getTaskByTitle(String title);
     public Task  getTaskById(int id);
+    public void setDescription(String title, String Description);
 }

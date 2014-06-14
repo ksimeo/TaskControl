@@ -41,17 +41,17 @@ public class CurrentTaskCreatorServlet extends HttpServlet {
             User recipient = th.getUserByFullName(userName);
             Task task = th.getTaskByTitle(taskTitle);
 
-            System.out.println("-----------------------------");
-            System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
-            System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
-            System.out.println("User Id: " + recipient.getUserId() + "User Name: " + userName);
-            System.out.println("Priority: " + priority);
-            System.out.println("-----------------------------");
+//            System.out.println("-----------------------------");
+//            System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
+//            System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
+//            System.out.println("User Id: " + recipient.getUserId() + "User Name: " + userName);
+//            System.out.println("Priority: " + priority);
+//            System.out.println("-----------------------------");
 
             CurrentTask newCurTask = th.saveCurrentTask(task.getId(), creator.getUserId(), recipient.getUserId(), priority);
             List<CurrentTask> newCurTasks = (List) session.getAttribute("newCurTasks");
             newCurTasks.add(newCurTask);
-            System.out.println(session.getAttribute("newCurTasks"));
+//            System.out.println(session.getAttribute("newCurTasks"));
 
             req.setAttribute("currenttasks", session.getAttribute("newCurTasks"));
 
