@@ -6,8 +6,8 @@
 <%@ page isELIgnored="false" %>
 
 <html>
-<script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="resources/scripts/taskDescription.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<%--<script type="text/javascript" src="resources/scripts/taskDescription.js"></script>--%>
 
 <link rel="stylesheet" type="text/css" href="../../content/style.css"/>
 
@@ -23,6 +23,14 @@ Employer: <%= request.getAttribute("username")%>
 <form action="/logout" method="post">
     <input type="submit" value="LogOut"/>
 </form>
+
+<script type="text/javascript">
+    function pressButtonAllTasks()
+    {
+        document.location ="/secretPages/allTasks";
+    }
+
+</script>
 
 <hr/>
 <div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px">
@@ -102,7 +110,7 @@ Employer: <%= request.getAttribute("username")%>
             </tr>
             <tr>
                 <td>
-
+                    <input type="button" value="All tasks" onclick="pressButtonAllTasks()">
                 </td>
             </tr>
         </table>

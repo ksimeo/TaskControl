@@ -89,14 +89,21 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 Date sd;
                 Date ed;
                 while (rs.next()) {
-                    try {
+                    try
+                    {
                         sd = new Date(rs.getTimestamp("start_date").getTime());
-                        ed = new Date(rs.getTimestamp("end_date").getTime());
-                    } catch (NullPointerException e) {
+                    } catch (NullPointerException e)
+                    {
                         sd = null;
-                        ed = null;
-
                     }
+                    try
+                    {
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e)
+                    {
+                        ed = null;
+                    }
+
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
                             rs.getInt("creator_id"),
@@ -140,13 +147,19 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 Date sd;
                 Date ed;
                 while (rs.next()) {
-                    try {
+                    try
+                    {
                         sd = new Date(rs.getTimestamp("start_date").getTime());
-                        ed = new Date(rs.getTimestamp("end_date").getTime());
-                    } catch (NullPointerException e) {
+                    } catch (NullPointerException e)
+                    {
                         sd = null;
+                    }
+                    try
+                    {
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e)
+                    {
                         ed = null;
-
                     }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),

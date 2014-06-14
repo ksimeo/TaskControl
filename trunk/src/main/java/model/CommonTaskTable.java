@@ -7,13 +7,21 @@ public class CommonTaskTable
 {
     CurrentTask currentTask;
     Task task;
-    User user;
+    User creator;
+    User recipient;
 
-    public CommonTaskTable(CurrentTask currentTask, Task task, User user)
+    public CommonTaskTable(CurrentTask currentTask, Task task, User creator)
     {
         this.currentTask = currentTask;
         this.task = task;
-        this.user = user;
+        this.creator = creator;
+    }
+
+    public CommonTaskTable(CurrentTask currentTask, Task task, User creator, User recipient) {
+        this.currentTask = currentTask;
+        this.task = task;
+        this.creator = creator;
+        this.recipient = recipient;
     }
 
     public CurrentTask getCurrentTask() {
@@ -32,11 +40,20 @@ public class CommonTaskTable
         this.task = task;
     }
 
-    public User getUser() {
-        return user;
+
+    public User getCreator() {
+        return creator;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setCreator(User creator) {
+        this.creator = creator;
+    }
+
+    public User getRecipient() {
+        return recipient;
+    }
+
+    public void setRecipient(User recipient) {
+        this.recipient = recipient;
     }
 }
