@@ -46,12 +46,7 @@
             <version>1.46</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.jszip.redist</groupId>
-            <artifactId>jquery</artifactId>
-            <version>1.8.3</version>
-            <type>jszip</type>
-        </dependency>
+
 
     </dependencies>
     <build>
