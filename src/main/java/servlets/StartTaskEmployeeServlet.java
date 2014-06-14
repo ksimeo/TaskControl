@@ -30,7 +30,6 @@ public class StartTaskEmployeeServlet extends HttpServlet
         int idTask = Integer.parseInt(req.getParameter("taskId"));
         CurrentTask ct = new CurrentTask(idTask);
         startTask.setStartDate(ct);
-
-        ct.getStartDate();
+        resp.getWriter().println(ct.getStartDate());
     }
 }
