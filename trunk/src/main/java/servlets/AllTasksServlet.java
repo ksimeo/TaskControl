@@ -1,9 +1,6 @@
 package servlets;
 
-import model.CommonTaskTable;
-import model.CurrentTask;
-import model.Task;
-import model.User;
+import model.*;
 import service.CurrentTaskService;
 import service.TaskService;
 import service.UserService;
@@ -28,11 +25,9 @@ public class AllTasksServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        /*HttpSession session = req.getSession();*/
-        /*User sessionUserAttr = (User)session.getAttribute("user");*/
-
-        /*req.setAttribute("currentUser", sessionUserAttr.getName());*/
-        List<CurrentTask> allTasks = CurrentTaskService.INSTANCE.getAllCurrentTasks();
+        int page = Integer.parseInt(req.getParameter("page"));
+        Parcel<CurrentTask> parcel = CurrentTaskService.INSTANCE.getCurrentTaskPageAll(page);
+        List<CurrentTask> allTasks = parcel.getPage();
         List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
         for(CurrentTask item : allTasks)
         {
@@ -44,6 +39,7 @@ public class AllTasksServlet extends HttpServlet
         }
 
         req.setAttribute("allUserTasks", comTaskTab);
+        req.setAttribute("page",page);
 
 
         req.getRequestDispatcher("/secretPages/alltasks.jsp").forward(req, resp);

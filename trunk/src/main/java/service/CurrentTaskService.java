@@ -77,6 +77,13 @@ public enum CurrentTaskService implements ICurrentTaskService
         return ctd.getCurrentTaskPage(user, from, to);
     }
 
+    public Parcel<CurrentTask> getCurrentTaskPageAll(int pageNumber)
+    {
+        int from = (pageNumber-1) * 5;
+        int to = pageNumber * 5;
+        return  ctd.getCurrentTaskPageAll(from, to);
+    }
+
     @Override
     public boolean setStartDate(CurrentTask ct) {
         Date cd = new Date();

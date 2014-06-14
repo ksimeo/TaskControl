@@ -26,7 +26,7 @@ public class AddTaskServlet extends HttpServlet {
     {
         List<Task> task = TaskService.INSTANCE.getAllTasks();
         req.setAttribute("task",task);
-        req.getRequestDispatcher("/createnewtask.jsp").forward(req, resp);
+        req.getRequestDispatcher("/secretPages/createnewtask.jsp").forward(req, resp);
 
     }
 

@@ -18,7 +18,8 @@ public interface ICurrentTaskService
     public List<CurrentTask> getAllByUserId(User user);
     public List<CurrentTask> getAllByCreatorId(User user);
     public List<CurrentTask> getAllByTaskId(Task task);
-    public Parcel<CurrentTask> getCurrentTaskPage(User user, int pageNummber);
+    public Parcel<CurrentTask> getCurrentTaskPage(User user, int pageNumber);
+    public Parcel<CurrentTask> getCurrentTaskPageAll(int pageNumber);
     public boolean setStartDate(CurrentTask ct);
     public boolean setEndDate(CurrentTask ct);
     public boolean setPriority(CurrentTask ct, String state);

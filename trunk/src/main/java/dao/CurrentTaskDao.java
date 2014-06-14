@@ -206,13 +206,19 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 Date sd;
                 Date ed;
                 while (rs.next()) {
-                    try {
+                    try
+                    {
                         sd = new Date(rs.getTimestamp("start_date").getTime());
-                        ed = new Date(rs.getTimestamp("end_date").getTime());
-                    } catch (NullPointerException e) {
+                    } catch (NullPointerException e)
+                    {
                         sd = null;
+                    }
+                    try
+                    {
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e)
+                    {
                         ed = null;
-
                     }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
@@ -257,13 +263,19 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                 Date sd;
                 Date ed;
                 while (rs.next()) {
-                    try {
+                    try
+                    {
                         sd = new Date(rs.getTimestamp("start_date").getTime());
-                        ed = new Date(rs.getTimestamp("end_date").getTime());
-                    } catch (NullPointerException e) {
+                    } catch (NullPointerException e)
+                    {
                         sd = null;
+                    }
+                    try
+                    {
+                        ed = new Date(rs.getTimestamp("end_date").getTime());
+                    } catch (NullPointerException e)
+                    {
                         ed = null;
-
                     }
                     CurrentTask ct = new CurrentTask(rs.getInt("id"),
                             rs.getInt("task_id"),
@@ -320,13 +332,90 @@ public class CurrentTaskDao implements ICurrentTaskDao {
                     Date sd;
                     Date ed;
                     while (rs.next()) {
-                        try {
-                             sd = new Date(rs.getTimestamp("start_date").getTime());
-                             ed = new Date(rs.getTimestamp("end_date").getTime());
-                        } catch (NullPointerException e) {
+                        try
+                        {
+                            sd = new Date(rs.getTimestamp("start_date").getTime());
+                        } catch (NullPointerException e)
+                        {
                             sd = null;
+                        }
+                        try
+                        {
+                            ed = new Date(rs.getTimestamp("end_date").getTime());
+                        } catch (NullPointerException e)
+                        {
                             ed = null;
+                        }
 
+                        CurrentTask ct = new CurrentTask(rs.getInt("id"),
+                                rs.getInt("task_id"),
+                                rs.getInt("creator_id"),
+                                rs.getInt("recipient_id"),
+                                rs.getString("state"),
+                                rs.getString("priority"),
+                                new java.util.Date(rs.getTimestamp("create_date").getTime()),
+                                sd,
+                                ed);
+                        page.add(ct);
+
+                    }
+
+                } else {
+                    page = new ArrayList<>();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return new Parcel<CurrentTask>(count, page);
+    }
+    public Parcel<CurrentTask> getCurrentTaskPageAll(int from, int to) {
+        ArrayList<CurrentTask> page = new ArrayList<>();
+        int count = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+
+        try {
+            try {
+
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
+                ps = conn.prepareStatement(
+                        "SELECT COUNT(id) AS m FROM taskcontrol.currenttask");
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    count = rs.getInt("m");
+                }
+
+                if (from < count) {
+                    ps = conn.prepareStatement(
+                            "SELECT * FROM taskcontrol.currenttask LIMIT ?, ?");
+                    ps.setInt(1,  from);
+                    ps.setInt(2, to);
+                    rs = ps.executeQuery();
+                    Date sd;
+                    Date ed;
+                    while (rs.next()) {
+                        try
+                        {
+                            sd = new Date(rs.getTimestamp("start_date").getTime());
+                        } catch (NullPointerException e)
+                        {
+                            sd = null;
+                        }
+                        try
+                        {
+                            ed = new Date(rs.getTimestamp("end_date").getTime());
+                        } catch (NullPointerException e)
+                        {
+                            ed = null;
                         }
 
                         CurrentTask ct = new CurrentTask(rs.getInt("id"),

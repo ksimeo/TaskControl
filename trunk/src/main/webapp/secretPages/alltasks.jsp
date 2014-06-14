@@ -11,6 +11,18 @@
 <head>
     <title></title>
 </head>
+<script type="text/javascript">
+    var currentPage = ${page};
+    function changePage(increment)
+    {
+        var tmp = currentPage + increment;
+        if(tmp > 0)
+        {
+            currentPage += increment;
+            document.location ="/secretPages/allTasks?page="+ currentPage;
+        }
+    }
+</script>
 <body>
 <div class="table-userdata">
     <table style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
@@ -47,8 +59,8 @@
         </c:forEach>
         <tr>
             <p align="center">
-                <input type="button" value="&lt;--PREV" onclick="history.go(-1)">
-                <input type="button" value="NEXT --&gt;" onclick="history.go(1)">
+                <input type="button" value="&lt;--PREV" onclick="changePage(-1)">
+                <input type="button" value="NEXT --&gt;" onclick="changePage(1)">
             </p>
         </tr>
     </table>

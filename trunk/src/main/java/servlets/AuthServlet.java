@@ -78,7 +78,7 @@ public class AuthServlet extends HttpServlet
                 }
                 else
                 {
-                    resp.sendRedirect("/secretPages/employee");
+                    resp.sendRedirect("/secretPages/employee?page=1");
                 }
             }
 
