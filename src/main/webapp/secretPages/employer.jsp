@@ -32,7 +32,7 @@ Employer: <%= request.getAttribute("username")%>
 
 </script>
 
-<hr/>
+ <hr/>
 <div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px">
     <form name=creatTask method="post" action="/creattask">
 
