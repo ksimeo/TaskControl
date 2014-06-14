@@ -6,10 +6,7 @@ package dao;
         import model.Task;
         import model.User;
 
-        import java.sql.Connection;
-        import java.sql.DriverManager;
-        import java.sql.PreparedStatement;
-        import java.sql.ResultSet;
+        import java.sql.*;
         import java.util.ArrayList;
         import java.util.LinkedList;
         import java.util.List;
@@ -220,5 +217,40 @@ public class TaskDao implements ITaskDao {
             e.printStackTrace();
         }
         return res;
+    }
+
+    @Override
+    public boolean setDescription(String title, String description)
+    {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        boolean flag = false;
+        try {
+            try {
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
+                ps = conn.prepareStatement(
+                        "UPDATE taskcontrol.task SET discription = ? where(title = ?)"
+                );
+                ps.setString(1, description);
+                ps.setString(2, title);
+                int res = ps.executeUpdate();
+
+                if (res != 0) {
+                    flag = true;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+
+        }
+        return flag;
     }
 }

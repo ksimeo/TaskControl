@@ -38,6 +38,11 @@ Employer: <%= request.getAttribute("username")%>
         document.location ="/secretPages/allTasks?page=1";
     }
 
+    function corektDescr()
+    {
+        document.location ="/correct";
+    }
+
 </script>
 
  <hr/>
@@ -48,7 +53,7 @@ Employer: <%= request.getAttribute("username")%>
         </select>
 
 
-        <table border="1" style="font-family: sans-serif">
+        <table border="0" style="font-family: sans-serif">
             <tr align="center">
                 <td><b>Workers</b></td>
                 <td><b>Tasks titles</b></td>
@@ -106,7 +111,7 @@ Employer: <%= request.getAttribute("username")%>
                 </td>
                 <td>
                     <form name="description">
-                        <textarea id="ansver" rows="10" cols="60" style="font-family: sans-serif"></textarea>
+                        <textarea id="ansver" name="description" rows="10" cols="60" style="font-family: sans-serif"></textarea>
                     </form>
                 </td>
 
@@ -115,7 +120,7 @@ Employer: <%= request.getAttribute("username")%>
             <tr>
                 <td colspan="3" align="right"><input type="submit" value="Create"></td>
                 <td align="right">
-                    <input type="submit" value="Correct"/>
+                    <input type="submit" value="Correct" formaction="/correct" formmethod="post"/>
 
                 </td>
 

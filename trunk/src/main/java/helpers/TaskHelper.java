@@ -73,4 +73,9 @@ public class TaskHelper {
         }
         return toReturn;
     }
+
+    public void setDescription(String title, String Description)
+    {
+        taskSer.setDescription(title, Description);
+    }
 }
