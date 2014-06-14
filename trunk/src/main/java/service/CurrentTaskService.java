@@ -90,8 +90,15 @@ public enum CurrentTaskService implements ICurrentTaskService
     }
 
     @Override
-    public boolean setEndDate(CurrentTask ct) {
-        return ctd.setEndDate(ct, new Date());
+    public boolean setEndDate(CurrentTask ct)
+    {
+        Date cd = new Date();
+        if(ctd.setEndDate(ct, cd))
+        {
+            ct.setEndDate(cd);
+            return true;
+        }
+        return false;
     }
 
     public boolean setPriority(CurrentTask ct, String priority)
