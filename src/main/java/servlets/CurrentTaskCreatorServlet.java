@@ -22,7 +22,6 @@ import java.util.List;
 public class CurrentTaskCreatorServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
-        System.out.println("EmployerServlet is i");
 
     }
 
@@ -31,17 +30,16 @@ public class CurrentTaskCreatorServlet extends HttpServlet {
 
         TaskHelper th = new TaskHelper();
         String userName = req.getParameter("username");
-        User recipient = th.getUserByFullName(userName);
-
         String taskTitle = req.getParameter("tasktitle");
-        Task task = th.getTaskByTitle(taskTitle);
-
         String priority = req.getParameter("priority");
         HttpSession session = req.getSession();
-
         User creator = (User) session.getAttribute("user");
-        if (userName != null && taskTitle != null && priority != null) {
 
+
+        if (userName != null && taskTitle != null && priority != null && creator != null) {
+
+            User recipient = th.getUserByFullName(userName);
+            Task task = th.getTaskByTitle(taskTitle);
 
             System.out.println("-----------------------------");
             System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
@@ -56,6 +54,7 @@ public class CurrentTaskCreatorServlet extends HttpServlet {
             System.out.println(session.getAttribute("newCurTasks"));
 
             req.setAttribute("currenttasks", session.getAttribute("newCurTasks"));
+
         }
         //req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
         resp.sendRedirect("/secretPages/employer");

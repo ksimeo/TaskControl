@@ -19,7 +19,7 @@ public class TaskDescription extends HttpServlet
     @Override
     public void init() throws ServletException
     {
-        System.out.println("TaskDescription Servlet is inited");
+
     }
 
     @Override

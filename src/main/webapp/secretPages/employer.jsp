@@ -48,7 +48,7 @@ Employer: <%= request.getAttribute("username")%>
         </select>
 
 
-        <table border="0" style="font-family: sans-serif">
+        <table border="1" style="font-family: sans-serif">
             <tr align="center">
                 <td><b>Workers</b></td>
                 <td><b>Tasks titles</b></td>
@@ -114,12 +114,17 @@ Employer: <%= request.getAttribute("username")%>
 
             <tr>
                 <td colspan="3" align="right"><input type="submit" value="Create"></td>
-                <td>
+                <td align="right">
+                    <input type="submit" value="Correct"/>
+
+                </td>
+
             </tr>
             <tr>
                 <td>
                     <input type="button" value="All tasks" onclick="pressButtonAllTasks()">
                 </td>
+
             </tr>
         </table>
     </form>
