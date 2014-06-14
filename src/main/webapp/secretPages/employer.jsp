@@ -7,24 +7,18 @@
 
 <html>
 
-<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="taskDescription.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../script/taskDescription.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css"/>
 
 <head>
-    <title></title>
+    <title>Task creator</title>
 
-    <script>
-        $(document).ready(
-                function () {
-                    $("#tasktitle").click(clickAction())
-                });
-    </script>
+
     <script type="text/javascript">
         function pressButtonAllTasks() {
             document.location = "/secretPages/allTasks?page=1";
         }
-
 
     </script>
 

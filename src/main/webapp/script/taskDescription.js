@@ -2,6 +2,11 @@
  * Created by VLAD on 13.06.2014.
  */
 
+$(document).ready(
+    function () {
+        $("#tasktitle").click(clickAction())
+    });
+
 function clickAction()
 {
     $("#tasktitle").click(
