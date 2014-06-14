@@ -7,7 +7,7 @@
 
 <html>
 <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<%--<script type="text/javascript" src="resources/scripts/taskDescription.js"></script>--%>
+
 
 <link rel="stylesheet" type="text/css" href="../../content/style.css"/>
 
