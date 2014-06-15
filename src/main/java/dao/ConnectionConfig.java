@@ -7,5 +7,5 @@ public class ConnectionConfig
 {
     public static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol";
     public static String dbConnName = "root";
-    public static String dbConnPass = "Monkey2003";
+    public static String dbConnPass = "root";
 }

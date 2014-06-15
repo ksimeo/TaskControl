@@ -178,6 +178,8 @@ public class TaskDao implements ITaskDao {
         }
         return res;
     }
+
+    @Override
     public Task  getTaskById(int id)
     {
         Task res = null;
@@ -252,5 +254,39 @@ public class TaskDao implements ITaskDao {
 
         }
         return flag;
+    }
+
+    public int getLastId()
+    {
+        int lastId = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs;
+        try {
+
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
+                ps = conn.prepareStatement(
+                        "SELECT MAX(id) AS m FROM taskcontrol.task");
+                rs = ps.executeQuery();
+
+                if (rs.next())
+                    lastId = rs.getInt("m");
+                else
+                    lastId = 0;
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } finally {
+            if (conn != null) {
+                conn = null;
+            }
+            if (ps != null) {
+                ps = null;
+            }
+        }
+        return lastId;
     }
 }

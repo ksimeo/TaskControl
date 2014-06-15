@@ -1,6 +1,7 @@
 package servlets;
 
 import dao.TaskDao;
+import helpers.TaskHelper;
 import model.Task;
 import service.TaskService;
 
@@ -35,33 +36,27 @@ public class AddTaskServlet extends HttpServlet {
     {
         String taskTitle = req.getParameter("title");
         String description = req.getParameter("description");
-        boolean isError = false;
-        if(taskTitle == null || taskTitle.isEmpty()||description == null || description.isEmpty())
+
+        boolean err = false;
+        if(taskTitle.equals("") || description.equals(""))
+//            if(taskTitle==null || taskTitle.isEmpty() || description == null || description.isEmpty())
         {
             req.setAttribute("ErrorForm", "Fill all input field of new task, please!");
-            isError = true;
+            err = true;
         }
         else {
-            TaskService newTask = TaskService.INSTANCE;
-            Task task = newTask.addTask(taskTitle, description);
-            if(task != null && !isError) {
-                HttpSession session = req.getSession();
-                session.setAttribute("task", task);
-                List<Task> tasks = new ArrayList<>();
-                session.setAttribute("Tasks", tasks);
-                resp.sendRedirect("/secretPages/employer");
-                session.setMaxInactiveInterval(30*60);
-            }
-            else {
-                req.setAttribute("Error", "Your task is incorrect!");
-                isError = true;
-            }
+            TaskHelper th = new TaskHelper();
+            th.saveTask(taskTitle, description);
         }
-        if (isError){
-            TaskDao td = new TaskDao();
-            List<Task> task2 = td.getAllTasks();
-            req.setAttribute("task", task2);
-            req.getRequestDispatcher("/createnewtask.jsp").forward(req, resp);
+
+        //resp.sendRedirect("/secretPages/createnewtask.jsp");
+        if(!err)
+        {
+            resp.sendRedirect("/secretPages/employer");
+        }
+        else {
+            req.getRequestDispatcher("/secretPages/createnewtask.jsp").forward(req, resp);
         }
     }
+
 }

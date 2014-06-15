@@ -39,6 +39,8 @@
                                 <br/>
                                 <%= request.getAttribute("username")%>
                                 <input type="submit" value="LogOut"/>
+                                <br/>
+                                <a href="/secretPages/createnewtask.jsp">Create new task</a>
                             </form>
                         </td>
                     </tr>
