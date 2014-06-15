@@ -1,0 +1,21 @@
+body {
+
+    background-image: url("../img/lmv2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.column-view {
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    color:black ;
+    border:1px solid black;
+    padding: 5px;
+}
+.table-userdata
+{
+    position: absolute;
+    left:30px;
+    top: 100px;
+    z-index:5;
+}
