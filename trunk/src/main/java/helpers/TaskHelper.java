@@ -78,4 +78,10 @@ public class TaskHelper {
     {
         taskSer.setDescription(title, Description);
     }
+
+    public void saveTask(String title, String description)
+    {
+
+        taskSer.addTask(title, description);
+    }
 }

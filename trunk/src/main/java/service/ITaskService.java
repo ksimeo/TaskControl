@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface ITaskService {
 
-    public int getNewTaskId();
+    //public int getNewTaskId();
     public Task addTask(String taskTitle, String description);
     public List<Task> getAllTasks();
     public List<String> getAllTasksTitles();

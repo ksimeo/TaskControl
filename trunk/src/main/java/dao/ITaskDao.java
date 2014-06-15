@@ -11,7 +11,7 @@ import java.util.List;
  * Time: 10:54
  * To change this template use File | Settings | File Templates.
  */
-interface ITaskDao
+public interface ITaskDao
 {
 
     public List<Task> getAllTasks();
@@ -20,4 +20,5 @@ interface ITaskDao
     public Task getTaskByTitle(String title);
     public Task  getTaskById(int id);
     public boolean setDescription(String title, String description);
+    public int getLastId();
 }
