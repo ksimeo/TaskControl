@@ -72,15 +72,15 @@ public enum CurrentTaskService implements ICurrentTaskService
     @Override
     public Parcel<CurrentTask> getCurrentTaskPage(User user, int pageNumber)
     {
-        int from = (pageNumber-1) * 5;
-        int to = pageNumber * 5;
+        int from = (pageNumber*5);
+        int to = (pageNumber +1) * 5;
         return ctd.getCurrentTaskPage(user, from, to);
     }
 
     public Parcel<CurrentTask> getCurrentTaskPageAll(int pageNumber)
     {
-        int from = (pageNumber-1) * 5;
-        int to = pageNumber * 5;
+        int from = (pageNumber*5);
+        int to = (pageNumber +1) * 5;
         return  ctd.getCurrentTaskPageAll(from, to);
     }
 

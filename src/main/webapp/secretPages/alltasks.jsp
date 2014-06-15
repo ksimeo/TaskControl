@@ -16,7 +16,7 @@
     function changePage(increment)
     {
         var tmp = currentPage + increment;
-        if(tmp > 0)
+        if(tmp >= 0)
         {
             currentPage += increment;
             document.location ="/secretPages/allTasks?page="+ currentPage;
