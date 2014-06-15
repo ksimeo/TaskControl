@@ -17,7 +17,7 @@
 
     <script type="text/javascript">
         function pressButtonAllTasks() {
-            document.location = "/secretPages/allTasks?page=1";
+            document.location = "/secretPages/allTasks?page=0";
         }
 
     </script>
