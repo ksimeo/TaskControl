@@ -27,7 +27,7 @@
 <div class="table-userdata">
     <table style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
         <tr>
-        <tr class="column-view"><td colspan="8" style="text-align: center; border: 3px solid;"><h3>List all the tasks </h3></td></tr>
+        <tr class="column-view"><td colspan="9" style="text-align: center; border: 3px solid;"><h3>List all the tasks </h3></td></tr>
         </tr>
         <tr class="column-view" style="background-color: goldenrod">
             <td class="column-view">Creator</td>
@@ -36,6 +36,7 @@
             <td class="column-view">Title</td>
             <td class="column-view">Description</td>
             <td class="column-view">Priority</td>
+            <td class="column-view">State</td>
             <td class="column-view">Start date</td>
             <td class="column-view">End date</td>
         </tr>
@@ -49,6 +50,7 @@
                 <td class="column-view">${item.task.taskTitle}</td>
                 <td class="column-view">${item.task.description}</td>
                 <td class="column-view">${item.currentTask.priority}</td>
+                <td class="column-view">${item.currentTask.state}</td>
                 <td class="column-view">
                     <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.startDate}"/>
                 </td>
