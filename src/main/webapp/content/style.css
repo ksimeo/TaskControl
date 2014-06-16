@@ -28,8 +28,16 @@ body {
     padding: 5px;
     margin-top: 5px;
     font-family: sans-serif;
-    opacity: 50;
-    width: 800px
+    opacity: 100;
+    width: 700px;
 
 
 }
+
+#ansver
+{
+    font-family: sans-serif;
+    background-color: #fffa9e;
+    border-radius: 5;
+}
+

@@ -21,6 +21,7 @@ function clickAction()
                 $("#ansver").text(responsetext)
             });
         });
+    $("")
 };
 
 function pressButtonAllTasks() {
