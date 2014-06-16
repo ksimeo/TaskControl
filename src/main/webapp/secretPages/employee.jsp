@@ -18,7 +18,6 @@
 
     function ajaxStartTask(currentTaskId)
     {
-
             document.getElementById("startTask-" + currentTaskId).style.display = "none";
             var paramData = "taskId=" + currentTaskId;
             $.ajax({
@@ -29,6 +28,7 @@
                 {
                     document.getElementById('resultStart-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
                         console.log(servletResult);
+                    document.getElementById("endTask-" + currentTaskId).style.display = "true";
                 },
                 error: function ()
                 {
@@ -38,22 +38,30 @@
     }
     function ajaxEndTask(currentTaskId)
     {
-        document.getElementById("endTask-" + currentTaskId).style.display = "none";
-        var paramData = "taskId=" + currentTaskId;
-        $.ajax({
-            type:'POST',
-            url:'/secretPages/endTaskEmployee',
-            data: paramData,
-            success: function(servletResult)
-            {
-                document.getElementById('resultEnd-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
-                console.log(servletResult);
-            },
-            error: function ()
-            {
-                console.log('error');
-            }
-        });
+        console.log("currentTaskId:" +currentTaskId );
+        if ( document.getElementById("startTask-" + currentTaskId) != null && document.getElementById("startTask-" + currentTaskId).style.display != "none")
+        {
+            document.getElementById("endTask-" + currentTaskId).style.display = "false";
+        }
+        else
+        {
+            document.getElementById("endTask-" + currentTaskId).style.display = "none";
+            var paramData = "taskId=" + currentTaskId;
+            $.ajax({
+                type:'POST',
+                url:'/secretPages/endTaskEmployee',
+                data: paramData,
+                success: function(servletResult)
+                {
+                    document.getElementById('resultEnd-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
+                    console.log(servletResult);
+                },
+                error: function ()
+                {
+                    console.log('error');
+                }
+            });
+        }
     }
     function changePage(increment)
     {
@@ -118,7 +126,7 @@
                  <td class="column-view" >
                      <div id="resultEnd-${item.currentTask.id}">
                          <c:if test="${empty item.currentTask.endDate}">
-                             <input id = "endTask-${item.currentTask.id}" type="button" value="End" onclick="ajaxEndTask(${item.currentTask.id})">
+                             <input id = "endTask-${item.currentTask.id}" type="button" value="End" onclick="ajaxEndTask('${item.currentTask.id}')">
                          </c:if>
 
                          <c:if test="${not empty item.currentTask.endDate}">
