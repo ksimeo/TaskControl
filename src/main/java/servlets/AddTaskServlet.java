@@ -37,6 +37,7 @@ public class AddTaskServlet extends HttpServlet {
         String taskTitle = req.getParameter("title");
         String description = req.getParameter("description");
 
+
         boolean err = false;
         if(taskTitle.equals("") || description.equals(""))
 //            if(taskTitle==null || taskTitle.isEmpty() || description == null || description.isEmpty())
