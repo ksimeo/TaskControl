@@ -1,6 +1,7 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.List" %>
 <%@ page import="model.CurrentTask" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
@@ -43,7 +44,7 @@
                     </select>
 
 
-                    <table border="0" style="font-family: sans-serif">
+                    <table border="0" align="center" style="font-family: sans-serif">
                         <tr align="center">
                             <td><b>Workers</b></td>
                             <td><b>Tasks titles</b></td>
@@ -101,8 +102,7 @@
                             </td>
                             <td>
                                 <form name="description">
-                                    <textarea id="ansver" name="description" rows="10" cols="60" style="resize: none"
-                                              style="font-family: sans-serif"></textarea>
+                                    <textarea class="textarea"  id="ansver" name="description" rows="10" cols="60" style="resize: none"></textarea>
                                 </form>
                             </td>
 
@@ -137,13 +137,13 @@
                 <hr/>
 
                 <%
-                    List newCurTasks = (List) request.getAttribute("ctasks");
+                    List<CurrentTask> newCurTasks = (List) request.getAttribute("ctasks");
                     iter = newCurTasks.iterator();
                     while (iter.hasNext()) {
-                        CurrentTask tmp = (CurrentTask)iter.next();
+
                 %>
 
-                    <%= tmp%>
+                    <%= iter.next()%>
                     <br/>
                 <%
                     }
