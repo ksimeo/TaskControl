@@ -21,7 +21,13 @@ function clickAction()
                 $("#ansver").text(responsetext)
             });
         });
-
-
-
 };
+
+function pressButtonAllTasks() {
+    document.location = "/secretPages/allTasks?page=0";
+}
+
+function CreateTask()
+{
+    document.location = "/secretPages/createnewtask.jsp";
+}

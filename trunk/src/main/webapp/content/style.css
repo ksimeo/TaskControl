@@ -19,3 +19,17 @@ body {
     top: 100px;
     z-index:5;
 }
+
+.div-content
+{
+    background-color: #ededed;
+    border: 1px solid #aaacb2;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    opacity: 50;
+    width: 800px
+
+
+}

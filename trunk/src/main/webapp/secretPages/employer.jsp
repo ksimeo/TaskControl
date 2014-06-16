@@ -1,5 +1,6 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.List" %>
+<%@ page import="model.CurrentTask" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
@@ -13,24 +14,13 @@
 
 <head>
     <title>Task creator</title>
-
-
-    <script type="text/javascript">
-        function pressButtonAllTasks() {
-            document.location = "/secretPages/allTasks?page=0";
-        }
-
-    </script>
-
-
 </head>
 
 <body>
-
-<table align="center">
+<table align="center" border="0">
     <tr>
         <td>
-            <div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px; padding: 5px; margin-top: 5px; font-family: sans-serif">
+            <div class="div-content" style="margin-top: 50px">
                 <table border="0">
                     <tr>
                         <td>
@@ -40,15 +30,13 @@
                                 <%= request.getAttribute("username")%>
                                 <input type="submit" value="LogOut"/>
                                 <br/>
-                                <a href="/secretPages/createnewtask.jsp">Create new task</a>
                             </form>
                         </td>
                     </tr>
                 </table>
             </div>
 
-
-            <div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px; padding: 5px; margin-top: 5px; font-family: sans-serif">
+            <div class="div-content">
                 <form name=creatTask method="post" action="/creattask">
 
 
@@ -133,33 +121,37 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td colspan="2">
                                 <input type="button" value="All tasks" onclick="pressButtonAllTasks()">
+                                <input type="button" value="Create task" onclick="CreateTask()">
                             </td>
+
 
                         </tr>
                     </table>
                 </form>
             </div>
 
-            <div style="background-color: #ededed; border: 1px solid #aaacb2; border-radius: 10px; padding: 5px; margin-top: 5px; font-family: sans-serif">
+            <div class="div-content">
                 <center><b>New current tasks</b></center>
                 <hr/>
+
                 <%
                     List newCurTasks = (List) request.getAttribute("ctasks");
                     iter = newCurTasks.iterator();
                     while (iter.hasNext()) {
+                        CurrentTask tmp = (CurrentTask)iter.next();
                 %>
-                <%= iter.next()%>
-                <br/>
+
+                    <%= tmp%>
+                    <br/>
                 <%
                     }
                 %>
+
             </div>
         </td>
     </tr>
 </table>
-
-
 </body>
 </html>
