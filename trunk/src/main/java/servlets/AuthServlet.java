@@ -71,7 +71,6 @@ public class AuthServlet extends HttpServlet
             {
                 req.removeAttribute("ErrorLogin");
                 req.removeAttribute("ErrorPassw");
-                //req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
                 if(usr.getRole() == 1)
                 {
                     resp.sendRedirect("/secretPages/employer");

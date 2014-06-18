@@ -22,8 +22,17 @@
             document.location ="/secretPages/allTasks?page="+ currentPage;
         }
     }
+    function pressButtonEmployer() {
+        document.location = "/secretPages/employer";
+    }
+
 </script>
 <body>
+<tr>
+    <td>
+    <input type="button" value="&lt;--PAGE EMPLOYER" onclick="pressButtonEmployer()"  style="margin-top: 35; margin-left: 50;">
+    </td>
+</tr>
 <div class="table-userdata">
     <table style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
         <tr>

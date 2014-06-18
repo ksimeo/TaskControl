@@ -26,9 +26,10 @@
                 data: paramData,
                 success: function(servletResult)
                 {
-                    document.getElementById('resultStart-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
-                        console.log(servletResult);
+                    console.log("Date:" + servletResult.date + "State:" + servletResult.state);
+                    document.getElementById('resultStart-' + currentTaskId).innerHTML = '<p>' + servletResult.date + '</p>';
                     document.getElementById("endTask-" + currentTaskId).style.display = "true";
+                    document.getElementById('state-' + currentTaskId).innerHTML = servletResult.state;
                 },
                 error: function ()
                 {
@@ -45,6 +46,7 @@
         }
         else
         {
+
             document.getElementById("endTask-" + currentTaskId).style.display = "none";
             var paramData = "taskId=" + currentTaskId;
             $.ajax({
@@ -53,8 +55,9 @@
                 data: paramData,
                 success: function(servletResult)
                 {
-                    document.getElementById('resultEnd-' + currentTaskId).innerHTML = '<p>' + servletResult + '</p>';
-                    console.log(servletResult);
+                    console.log("Date:" + servletResult.date + "State:" + servletResult.state);
+                    document.getElementById('resultEnd-' + currentTaskId).innerHTML = '<p>' + servletResult.date + '</p>';
+                    document.getElementById('state-' + currentTaskId).innerHTML = servletResult.state;
                 },
                 error: function ()
                 {
@@ -77,20 +80,27 @@
 
 <table>
     <tr>
-        <td>
+        <td >
             <p>
-                <h2>
+                <h2 style="margin-top: 35; margin-left: 25;">
                      ${currentUser}
                 </h2>
             </p>
 
         </td>
     </tr>
+    <tr>
+        <td>
+            <form action="/logout" method="post" style="margin-left: 25;">
+                <input type="submit" value="LogOut"/>
+            </form>
+        </td>
+    </tr>
 </table>
 <div class="table-userdata">
     <table style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
         <tr>
-        <tr class="column-view"><td colspan="7" style="text-align: center; border: 3px solid;"><h3>List all the tasks </h3></td></tr>
+        <tr class="column-view"><td colspan="8" style="text-align: center; border: 3px solid;"><h3>List all the tasks </h3></td></tr>
         </tr>
         <tr class="column-view" style="background-color: goldenrod">
             <td class="column-view">Creator</td>
@@ -98,6 +108,7 @@
             <td class="column-view">Title</td>
             <td class="column-view">Description</td>
             <td class="column-view">Priority</td>
+            <td class="column-view">State</td>
             <td class="column-view">Start date</td>
             <td class="column-view">End date</td>
         </tr>
@@ -110,6 +121,12 @@
                  <td class="column-view">${item.task.taskTitle}</td>
                  <td class="column-view">${item.task.description}</td>
                  <td class="column-view">${item.currentTask.priority}</td>
+
+                 <td class="column-view">
+                     <div id="state-${item.currentTask.id}">
+                        ${item.currentTask.state}
+                     </div>
+                 </td>
                  <td class="column-view" >
                      <div id="resultStart-${item.currentTask.id}">
                          <c:if test="${empty item.currentTask.startDate}">
@@ -144,9 +161,5 @@
         </tr>
     </table>
 </div>
-
-<form action="/logout" method="post">
-    <input type="submit" value="LogOut"/>
-</form>
 </body>
 </html>

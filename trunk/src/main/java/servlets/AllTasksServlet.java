@@ -25,24 +25,31 @@ public class AllTasksServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        int page = Integer.parseInt(req.getParameter("page"));
-        Parcel<CurrentTask> parcel = CurrentTaskService.INSTANCE.getCurrentTaskPageAll(page);
-        List<CurrentTask> allTasks = parcel.getPage();
-        List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
-        for(CurrentTask item : allTasks)
+        try
         {
-            Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
-            User creator = UserService.INSTANCE.getUserById(item.getCreatorId());
-            User recipient = UserService.INSTANCE.getUserById(item.getRecepientId());
-            CommonTaskTable commonTaskTable = new CommonTaskTable(item, t, creator, recipient);
-            comTaskTab.add(commonTaskTable);
+            int page = Integer.parseInt(req.getParameter("page"));
+            Parcel<CurrentTask> parcel = CurrentTaskService.INSTANCE.getCurrentTaskPageAll(page);
+            List<CurrentTask> allTasks = parcel.getPage();
+            List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
+            for(CurrentTask item : allTasks)
+            {
+                Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
+                User creator = UserService.INSTANCE.getUserById(item.getCreatorId());
+                User recipient = UserService.INSTANCE.getUserById(item.getRecepientId());
+                CommonTaskTable commonTaskTable = new CommonTaskTable(item, t, creator, recipient);
+                comTaskTab.add(commonTaskTable);
+            }
+
+            req.setAttribute("allUserTasks", comTaskTab);
+            req.setAttribute("page",page);
+
+
+            req.getRequestDispatcher("/secretPages/alltasks.jsp").forward(req, resp);
+            }
+        catch (Exception e)
+        {
+            e.printStackTrace();
         }
-
-        req.setAttribute("allUserTasks", comTaskTab);
-        req.setAttribute("page",page);
-
-
-        req.getRequestDispatcher("/secretPages/alltasks.jsp").forward(req, resp);
     }
 
     @Override

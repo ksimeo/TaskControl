@@ -31,75 +31,82 @@ public class RegisterServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        String name = req.getParameter("fullName");
+        try
+        {
+            String name = req.getParameter("fullName");
 
-        String login = req.getParameter("login");
-        String password = req.getParameter("password");
-        String confPassword = req.getParameter("confPassword");
-        String role = req.getParameter("role");
-        int rolenum = role != null ? Integer.parseInt(role) : 0;
-        boolean isError = false;
-        if(null == name || name.isEmpty())
-        {
-            req.setAttribute("ErrorName", "Field Full name is empty!");
-            isError = true;
-        }
-        if (null == login || login.isEmpty())
-        {
-            req.setAttribute("ErrorLogin", "Field Login is empty!");
-            isError = true;
-        }
-        if(null == password || password.isEmpty())
-        {
-            req.setAttribute("ErrorPassw", "Field Password is empty!");
-            isError = true;
-        }
-        if(null == confPassword || confPassword.isEmpty())
-        {
-            req.setAttribute("ErrorConfPassw", "Field Password is empty!");
-            isError = true;
-        }
-        if (confPassword.equals(password) && !isError && !confPassword.isEmpty() && !password.isEmpty())
-        {
-            UserService saveUs = UserService.INSTANCE;
-            User user = saveUs.saveUser(name, login, password, rolenum);
-            if(user != null && !isError)
+            String login = req.getParameter("login");
+            String password = req.getParameter("password");
+            String confPassword = req.getParameter("confPassword");
+            String role = req.getParameter("role");
+            int rolenum = role != null ? Integer.parseInt(role) : 0;
+            boolean isError = false;
+            if(null == name || name.isEmpty())
             {
-                HttpSession session = req.getSession();
-
-                session.setAttribute("user", user);
-                List<CurrentTask> newCurTasks = new ArrayList<>();
-                session.setAttribute("newCurTasks", newCurTasks);
-
-                session.setMaxInactiveInterval(30*60);
-                Cookie userLogin = new Cookie("user", login);
-                userLogin.setMaxAge(30*60);
-                resp.addCookie(userLogin);
-                if(user.getRole() == 1)
+                req.setAttribute("ErrorName", "Field Full name is empty!");
+                isError = true;
+            }
+            if (null == login || login.isEmpty())
+            {
+                req.setAttribute("ErrorLogin", "Field Login is empty!");
+                isError = true;
+            }
+            if(null == password || password.isEmpty())
+            {
+                req.setAttribute("ErrorPassw", "Field Password is empty!");
+                isError = true;
+            }
+            if(null == confPassword || confPassword.isEmpty())
+            {
+                req.setAttribute("ErrorConfPassw", "Field Password is empty!");
+                isError = true;
+            }
+            if (confPassword.equals(password) && !isError && !confPassword.isEmpty() && !password.isEmpty())
+            {
+                UserService saveUs = UserService.INSTANCE;
+                User user = saveUs.saveUser(name, login, password, rolenum);
+                if(user != null && !isError)
                 {
-                    resp.sendRedirect("/secretPages/employer");
+                    HttpSession session = req.getSession();
+
+                    session.setAttribute("user", user);
+                    List<CurrentTask> newCurTasks = new ArrayList<>();
+                    session.setAttribute("newCurTasks", newCurTasks);
+
+                    session.setMaxInactiveInterval(30*60);
+                    Cookie userLogin = new Cookie("user", login);
+                    userLogin.setMaxAge(30*60);
+                    resp.addCookie(userLogin);
+                    if(user.getRole() == 1)
+                    {
+                        resp.sendRedirect("/secretPages/employer");
+                    }
+                    else
+                    {
+                        resp.sendRedirect("/secretPages/employee?page=0");
+                    }
                 }
                 else
                 {
-                    resp.sendRedirect("/secretPages/employee?page=0");
+                    req.setAttribute("Error", "Such login is used");
+                    isError = true;
                 }
+
             }
-            else
+
+
+            if(isError)
             {
-                req.setAttribute("Error", "Such login is used");
-                isError = true;
+                RoleDao rDao = new RoleDao();
+                List<Role> role2 = rDao.getAllRole();
+                req.setAttribute("role",role2);
+                req.getRequestDispatcher("/registration.jsp").forward(req, resp);
             }
 
         }
-
-
-        if(isError)
+        catch (Exception e)
         {
-            RoleDao rDao = new RoleDao();
-            List<Role> role2 = rDao.getAllRole();
-            req.setAttribute("role",role2);
-            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
+            e.printStackTrace();
         }
-
     }
 }

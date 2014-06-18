@@ -115,14 +115,22 @@ public enum CurrentTaskService implements ICurrentTaskService
 
     public boolean setStateStart(CurrentTask ct)
     {
-
-        return ctd.setPriority(ct, "STARTED");
+        if (ctd.setState(ct, "STARTED"))
+        {
+            ct.setState("STARTED");
+            return true;
+        }
+        return false;
     }
 
     public boolean setStateFinish(CurrentTask ct)
     {
-
-        return ctd.setPriority(ct, "FINISHED");
+        if(ctd.setState(ct,"FINISHED"))
+        {
+            ct.setState("FINISHED");
+            return true;
+        }
+        return false;
     }
 
 }

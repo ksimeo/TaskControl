@@ -8,14 +8,15 @@ body {
 .column-view {
     font-family: "Georgia", serif;
     font-weight: bold;
+    width: 400px;
     color:black ;
     border:1px solid black;
     padding: 5px;
 }
 .table-userdata
 {
-    position: absolute;
-    left:30px;
+    position:static;
+    left:0px;
     top: 100px;
     z-index:5;
 }
