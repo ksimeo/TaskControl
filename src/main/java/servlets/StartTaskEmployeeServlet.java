@@ -1,5 +1,6 @@
 package servlets;
 
+import com.amazonaws.util.json.JSONObject;
 import helpers.CommonHelper;
 import model.CurrentTask;
 import service.CurrentTaskService;
@@ -31,11 +32,17 @@ public class StartTaskEmployeeServlet extends HttpServlet
     {
         try
         {
+            resp.setContentType("application/json");
             CurrentTaskService startTask = CurrentTaskService.INSTANCE;
             int idTask = Integer.parseInt(req.getParameter("taskId"));
             CurrentTask ct = new CurrentTask(idTask);
             startTask.setStartDate(ct);
-            resp.getWriter().println(CommonHelper.correctDateFormat(ct.getStartDate()));
+            startTask.setStateStart(ct);
+
+            JSONObject obj = new JSONObject();
+            obj.put("date", CommonHelper.correctDateFormat(ct.getStartDate()));
+            obj.put("state", ct.getState());
+            resp.getWriter().println(obj);
         }
         catch (Exception e)
         {

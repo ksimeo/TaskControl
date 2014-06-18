@@ -26,27 +26,27 @@ public class EmployeeServlet extends HttpServlet
     {
         try
         {
-        HttpSession session = req.getSession();
-        User sessionUserAttr = (User)session.getAttribute("user");
-        int page = Integer.parseInt(req.getParameter("page"));
-        Parcel<CurrentTask> parcel = CurrentTaskService.INSTANCE.getCurrentTaskPage(sessionUserAttr, page);
+            HttpSession session = req.getSession();
+            User sessionUserAttr = (User)session.getAttribute("user");
+            int page = Integer.parseInt(req.getParameter("page"));
+            Parcel<CurrentTask> parcel = CurrentTaskService.INSTANCE.getCurrentTaskPage(sessionUserAttr, page);
 
-        req.setAttribute("currentUser", sessionUserAttr.getName());
-        List<CurrentTask> allTasks = parcel.getPage();
-        List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
-        for(CurrentTask item : allTasks)
-        {
-            Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
-            User u = UserService.INSTANCE.getUserById(item.getCreatorId());
-            CommonTaskTable commonTaskTable = new CommonTaskTable(item, t, u);
-            comTaskTab.add(commonTaskTable);
-        }
+            req.setAttribute("currentUser", sessionUserAttr.getName());
+            List<CurrentTask> allTasks = parcel.getPage();
+            List<CommonTaskTable> comTaskTab = new ArrayList<CommonTaskTable>();
+            for(CurrentTask item : allTasks)
+            {
+                Task t = TaskService.INSTANCE.getTaskById(item.getTaskId());
+                User u = UserService.INSTANCE.getUserById(item.getCreatorId());
+                CommonTaskTable commonTaskTable = new CommonTaskTable(item, t, u);
+                comTaskTab.add(commonTaskTable);
+            }
 
-        req.setAttribute("allUserTasks", comTaskTab);
-        req.setAttribute("page", page);
+            req.setAttribute("allUserTasks", comTaskTab);
+            req.setAttribute("page", page);
 
-        req.getRequestDispatcher("/secretPages/employee.jsp").forward(req, resp);
-        }
+            req.getRequestDispatcher("/secretPages/employee.jsp").forward(req, resp);
+            }
         catch(Exception e)
         {
             e.printStackTrace();
