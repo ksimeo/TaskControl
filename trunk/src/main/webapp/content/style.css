@@ -12,6 +12,20 @@ body {
     color:black ;
     border:1px solid black;
     padding: 5px;
+
+}
+.column-viewHeader{
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    width: 400px;
+    color:black ;
+    border:1px solid black;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    background-image: url("../img/bg.gif");
+
 }
 .table-userdata
 {

@@ -7,6 +7,7 @@
 
 <html>
 <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="../../script/jquery.tablesorter.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css" />
 <head>
     <title></title>
@@ -76,6 +77,11 @@
        }
 
     }
+    $(document).ready(function()
+            {
+                $("#allTasks").tablesorter( {sortList: [[0,0], [1,0]]} );
+            }
+    );
 </script>
 
 <table>
@@ -97,68 +103,70 @@
         </td>
     </tr>
 </table>
+<tr>
+    <p align="center">
+        <input type="button" value="&lt;--PREV" onclick="changePage(-1)">
+        <input type="button" value="NEXT --&gt;" onclick="changePage(1)">
+    </p>
+    <h3 align="center">List all the tasks </h3>
+</tr>
 <div class="table-userdata">
-    <table style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
-        <tr>
-        <tr class="column-view"><td colspan="8" style="text-align: center; border: 3px solid;"><h3>List all the tasks </h3></td></tr>
-        </tr>
-        <tr class="column-view" style="background-color: goldenrod">
-            <td class="column-view">Creator</td>
-            <td class="column-view">Date create</td>
-            <td class="column-view">Title</td>
-            <td class="column-view">Description</td>
-            <td class="column-view">Priority</td>
-            <td class="column-view">State</td>
-            <td class="column-view">Start date</td>
-            <td class="column-view">End date</td>
-        </tr>
-         <c:forEach var="item" items="${allUserTasks}">
-             <tr class="column-view">
-                 <td class="column-view">${item.creator.name}</td>
-                 <td class="column-view">
-                     <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.createDate}"/>
-                 </td>
-                 <td class="column-view">${item.task.taskTitle}</td>
-                 <td class="column-view">${item.task.description}</td>
-                 <td class="column-view">${item.currentTask.priority}</td>
+    <table id="allTasks" class="tablesorter"style="border:3px solid black; border-collapse: collapse; margin-left: 50px;">
+       <thead>
+            <tr class="column-view" style="background-color: goldenrod">
+                <th class="column-viewHeader">Creator</th>
+                <th class="column-viewHeader">Date create</th>
+                <th class="column-viewHeader">Title</th>
+                <th class="column-viewHeader">Description</th>
+                <th class="column-viewHeader">Priority</th>
+                <th class="column-viewHeader">State</th>
+                <th class="column-viewHeader">Start date</th>
+                <th class="column-viewHeader">End date</th>
+            </tr>
+       </thead>
+        <tbody>
+             <c:forEach var="item" items="${allUserTasks}">
+                 <tr class="column-view">
+                     <td class="column-view">${item.creator.name}</td>
+                     <td class="column-view">
+                         <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.createDate}"/>
+                     </td>
+                     <td class="column-view">${item.task.taskTitle}</td>
+                     <td class="column-view">${item.task.description}</td>
+                     <td class="column-view">${item.currentTask.priority}</td>
 
-                 <td class="column-view">
-                     <div id="state-${item.currentTask.id}">
-                        ${item.currentTask.state}
-                     </div>
-                 </td>
-                 <td class="column-view" >
-                     <div id="resultStart-${item.currentTask.id}">
-                         <c:if test="${empty item.currentTask.startDate}">
-                                 <input id = "startTask-${item.currentTask.id}" type="button" value="Start" onclick="ajaxStartTask(${item.currentTask.id})">
-                         </c:if>
+                     <td class="column-view">
+                         <div id="state-${item.currentTask.id}">
+                            ${item.currentTask.state}
+                         </div>
+                     </td>
+                     <td class="column-view" >
+                         <div id="resultStart-${item.currentTask.id}">
+                             <c:if test="${empty item.currentTask.startDate}">
+                                     <input id = "startTask-${item.currentTask.id}" type="button" value="Start" onclick="ajaxStartTask(${item.currentTask.id})">
+                             </c:if>
 
-                         <c:if test="${not empty item.currentTask.startDate}">
-                             <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.startDate}"/>
-                         </c:if>
+                             <c:if test="${not empty item.currentTask.startDate}">
+                                 <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.startDate}"/>
+                             </c:if>
 
-                     </div>
-                 </td>
+                         </div>
+                     </td>
 
-                 <td class="column-view" >
-                     <div id="resultEnd-${item.currentTask.id}">
-                         <c:if test="${empty item.currentTask.endDate}">
-                             <input id = "endTask-${item.currentTask.id}" type="button" value="End" onclick="ajaxEndTask('${item.currentTask.id}')">
-                         </c:if>
+                     <td class="column-view" >
+                         <div id="resultEnd-${item.currentTask.id}">
+                             <c:if test="${empty item.currentTask.endDate}">
+                                 <input id = "endTask-${item.currentTask.id}" type="button" value="End" onclick="ajaxEndTask('${item.currentTask.id}')">
+                             </c:if>
 
-                         <c:if test="${not empty item.currentTask.endDate}">
-                             <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.endDate}"/>
-                         </c:if>
-                     </div>
-                 </td>
-             </tr>
-         </c:forEach>
-        <tr>
-            <p align="center">
-                <input type="button" value="&lt;--PREV" onclick="changePage(-1)">
-                <input type="button" value="NEXT --&gt;" onclick="changePage(1)">
-            </p>
-        </tr>
+                             <c:if test="${not empty item.currentTask.endDate}">
+                                 <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${item.currentTask.endDate}"/>
+                             </c:if>
+                         </div>
+                     </td>
+                 </tr>
+             </c:forEach>
+        </tbody>
     </table>
 </div>
 </body>
