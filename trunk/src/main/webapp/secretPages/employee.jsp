@@ -10,7 +10,7 @@
 <script type="text/javascript" src="../../script/jquery.tablesorter.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css" />
 <head>
-    <title></title>
+    <title>${currentUser}</title>
 </head>
 <body>
 <script type="text/javascript">

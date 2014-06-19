@@ -7,7 +7,7 @@
 <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../content/style.css" />
 <head>
-    <title></title>
+    <title>Registration</title>
 </head>
 <body>
 <form action="/registration" method="post">
