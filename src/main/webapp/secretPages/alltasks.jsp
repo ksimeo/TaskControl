@@ -11,7 +11,7 @@
 <%--<script type="text/javascript" src="../../script/jquery-latest.js"></script>--%>
 <script type="text/javascript" src="../../script/jquery.tablesorter.min.js"></script>
 <head>
-    <title></title>
+    <title>All tasks</title>
 </head>
 <script type="text/javascript">
     var currentPage = ${page};
