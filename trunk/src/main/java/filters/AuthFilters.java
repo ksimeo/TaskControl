@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by Avega on 02.06.14.
  */
-@WebFilter(urlPatterns = "")
+@WebFilter(urlPatterns = "/*")
 public class AuthFilters implements Filter
 {
 
@@ -55,7 +55,7 @@ public class AuthFilters implements Filter
             }
 
         }
-        if(!isLoggedIn && !(uri.endsWith("/index.jsp") || uri.endsWith("authorization") || uri.endsWith("registration")))
+        if(!isLoggedIn && !(uri.endsWith("/index.jsp") || uri.endsWith("authorization") || uri.endsWith("registration") || uri.contains("/script") || uri.contains("/img") || uri.contains("/content") ))
         {
             resp.sendRedirect("/index.jsp");
         }else{
@@ -65,13 +65,31 @@ public class AuthFilters implements Filter
                 {
                     filterChain.doFilter(servletRequest, servletResponse);
                 }
-                else if(sessionUserAttr.getRole() == 1 && ! (uri.endsWith("employer") || uri.endsWith("employer.jsp") )) //if employer
+                else if(sessionUserAttr.getRole() == 1 && ! (uri.endsWith("employer") ||
+                        uri.endsWith("employer.jsp") ||
+                        uri.endsWith("/startTaskEmployee") ||
+                        uri.endsWith("/endTaskEmployee") ||
+                        uri.contains("/script") ||
+                        uri.contains("/img") ||
+                        uri.contains("/content") ||
+                        uri.endsWith("/correct")||
+                        uri.endsWith("/allTasks")||
+                        uri.contains("/createnewtask")||
+                        uri.endsWith("/creattask") ||
+                        uri.endsWith("/favicon.ico") ||
+                        uri.endsWith("/description"))) //if employer
                 {
                     resp.sendRedirect("/secretPages/employer");
                 }
-                else if (sessionUserAttr.getRole() == 2 && !( uri.endsWith("employee") || uri.endsWith("employee.jsp")))
+                else if (sessionUserAttr.getRole() == 2 && !( uri.endsWith("employee") ||
+                        uri.endsWith("employee.jsp") ||
+                        uri.endsWith("/startTaskEmployee") ||
+                        uri.endsWith("/endTaskEmployee") ||
+                        uri.contains("/script") ||
+                        uri.contains("/img") ||
+                        uri.contains("/content") ))
                 {
-                    resp.sendRedirect("/secretPages/employee");
+                    resp.sendRedirect("/secretPages/employee?page=0");
                 }
                 else
                 {
