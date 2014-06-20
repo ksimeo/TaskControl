@@ -1,6 +1,5 @@
 package servlets;
 
-import dao.TaskDao;
 import helpers.TaskHelper;
 import model.Task;
 import service.TaskService;
@@ -10,10 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * Created by Ksimeo on 09.06.2014.
@@ -26,6 +24,7 @@ public class AddTaskServlet extends HttpServlet {
     protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         List<Task> task = TaskService.INSTANCE.getAllTasks();
+
         req.setAttribute("task",task);
         req.getRequestDispatcher("/secretPages/createnewtask.jsp").forward(req, resp);
 
@@ -34,25 +33,34 @@ public class AddTaskServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
+
+//        req.setCharacterEncoding("UTF-8");
         String taskTitle = req.getParameter("title");
+//        String taskTitle = new String(req.getParameter("title").getBytes("ISO-8859-1"), "Cp1251");
         String description = req.getParameter("description");
-
-
+//        String description = new String(req.getParameter("description").getBytes("ISO-8859-1"), "Cp1251");
+        TaskHelper th = new TaskHelper();
         boolean err = false;
-        if(taskTitle.equals("") || description.equals(""))
-//            if(taskTitle==null || taskTitle.isEmpty() || description == null || description.isEmpty())
-        {
+
+        List<String> taskTitles = th.getAllTasksTitles();
+        Iterator iter = taskTitles.iterator();
+        while (iter.hasNext()) {
+            String tmp = (String) iter.next();
+            if(tmp == taskTitle) {
+                req.setAttribute("ErrorForm", "Task with the same title already exists!");
+                err = true;
+            }
+        }
+
+        if(taskTitle.equals("") || description.equals("")) {
             req.setAttribute("ErrorForm", "Fill all input field of new task, please!");
             err = true;
         }
         else {
-            TaskHelper th = new TaskHelper();
             th.saveTask(taskTitle, description);
         }
 
-        //resp.sendRedirect("/secretPages/createnewtask.jsp");
-        if(!err)
-        {
+        if(!err) {
             resp.sendRedirect("/secretPages/employer");
         }
         else {
