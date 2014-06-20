@@ -23,7 +23,7 @@
                 </td>
             </tr>
 
-            <tr>
+            <tr class="fieldsName">
                 <td>
                     <p> <strong> Full name:</strong> </p>
                 </td>
@@ -35,7 +35,7 @@
                     </p>
                 </td>
             </tr>
-            <tr>
+            <tr class="fieldsName">
                 <td>
                     <p> <strong> Login:</strong> </p>
                 </td>
@@ -47,7 +47,7 @@
                     </p>
                 </td>
             </tr>
-            <tr>
+            <tr class="fieldsName">
                 <td>
                     <p> <strong> Password:</strong> </p>
                 </td>
@@ -59,7 +59,7 @@
                     </p>
                 </td>
             </tr>
-            <tr>
+            <tr class="fieldsName">
             <td>
                 <p> <strong> Confirm password:</strong> </p>
             </td>
@@ -71,7 +71,7 @@
                 </p>
             </td>
             </tr>
-            <tr>
+            <tr class="fieldsName">
                 <td>
                     <p> <strong> User Role:</strong> </p>
                 </td>

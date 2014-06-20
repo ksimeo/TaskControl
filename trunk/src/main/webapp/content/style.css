@@ -55,4 +55,7 @@ body {
     background-color: #fffa9e;
     border-radius: 5;
 }
+.fieldsName{
+    vertical-align: super;
+}
 
