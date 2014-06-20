@@ -33,38 +33,42 @@ public class AddTaskServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-
+        try {
 //        req.setCharacterEncoding("UTF-8");
-        String taskTitle = req.getParameter("title");
+            String taskTitle = req.getParameter("title");
+//            System.out.println(taskTitle);
 //        String taskTitle = new String(req.getParameter("title").getBytes("ISO-8859-1"), "Cp1251");
-        String description = req.getParameter("description");
+            String description = req.getParameter("description");
 //        String description = new String(req.getParameter("description").getBytes("ISO-8859-1"), "Cp1251");
-        TaskHelper th = new TaskHelper();
-        boolean err = false;
+            TaskHelper th = new TaskHelper();
+            boolean err = false;
+            List<String> taskTitles = th.getAllTasksTitles();
+            Iterator<String> iter = taskTitles.iterator();
+            while (iter.hasNext()) {
+                String tmp = iter.next();
+//                System.out.print(tmp);
+                if (tmp == taskTitle) {
+                    req.setAttribute("ErrorForm", "Task with the same title already exists!");
+                    err = true;
+                    break;
+                }
+            }
 
-        List<String> taskTitles = th.getAllTasksTitles();
-        Iterator iter = taskTitles.iterator();
-        while (iter.hasNext()) {
-            String tmp = (String) iter.next();
-            if(tmp == taskTitle) {
-                req.setAttribute("ErrorForm", "Task with the same title already exists!");
+            if (taskTitle.equals("") || description.equals("")) {
+                req.setAttribute("ErrorForm", "Fill all input field of new task, please!");
                 err = true;
+            } else {
+                th.saveTask(taskTitle, description);
+            }
+
+            if (!err) {
+                resp.sendRedirect("/secretPages/employer");
+            } else {
+                req.getRequestDispatcher("/secretPages/createnewtask.jsp").forward(req, resp);
             }
         }
-
-        if(taskTitle.equals("") || description.equals("")) {
-            req.setAttribute("ErrorForm", "Fill all input field of new task, please!");
-            err = true;
-        }
-        else {
-            th.saveTask(taskTitle, description);
-        }
-
-        if(!err) {
-            resp.sendRedirect("/secretPages/employer");
-        }
-        else {
-            req.getRequestDispatcher("/secretPages/createnewtask.jsp").forward(req, resp);
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
