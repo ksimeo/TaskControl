@@ -7,7 +7,7 @@
 <script type="text/javascript" src="../script/jquery-1.9.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../content/style.css" />
 <head>
-    <title>Authorization</title>
+    <title>Authorization - TaskControl 1.0</title>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
