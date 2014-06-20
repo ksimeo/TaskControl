@@ -23,7 +23,7 @@
                 </td>
             </tr>
 
-            <tr>
+            <tr style="vertical-align: super;">
                 <td>
                     <p> <strong> Login:</strong> </p>
                 </td>
@@ -36,7 +36,7 @@
                 </td>
             </tr>
 
-            <tr>
+            <tr style="vertical-align: super;">
                 <td>
                     <p> <strong> Password:</strong> </p>
                 </td>
