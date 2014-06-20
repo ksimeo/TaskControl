@@ -36,6 +36,10 @@ public class EmployerServlet extends HttpServlet
         User user = (User)ses.getAttribute("user");
         String name = user.getName();
         req.setAttribute("username", name);
+/*
+        req.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html; charset=UTF-8");
+*/
         req.getRequestDispatcher("/secretPages/employer.jsp").forward(req, resp);
 
     }
