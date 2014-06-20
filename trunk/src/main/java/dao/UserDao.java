@@ -33,7 +33,7 @@ public class UserDao implements IUserDao
 
                 Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
-                ps = conn.prepareStatement("Insert into taskcontrol.user" + "(user_full_name, login, password, role)" +
+                ps = conn.prepareStatement("SET NAMES utf8;" +"Insert into taskcontrol.user" + "(user_full_name, login, password, role)" +
                         " VALUES" + "(?, ?, ?, ?)");
 
                 ps.setString(1, user.getName());
@@ -72,7 +72,7 @@ public class UserDao implements IUserDao
     public User getUserByLoginPassword(String login, String password) throws NoSuchProviderException, NoSuchAlgorithmException {
 
 
-        String query = "Select * from taskcontrol.user where "
+        String query ="Select * from taskcontrol.user where "
                 + " login = '" + login
                 + "' and password= '" + AuthHelper.String2Hash(password) + "'";
 
@@ -124,7 +124,7 @@ public class UserDao implements IUserDao
     @Override
     public User  searchUserByFullName(String fullName)
     {
-        String query = "Select * from taskcontrol.user where "
+        String query ="SET NAMES utf8;" + "Select * from taskcontrol.user where "
                 + " user_full_name = '" + fullName + "'";
 
         User retValue = null;

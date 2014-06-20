@@ -36,7 +36,7 @@ public class CurrentTaskDao implements ICurrentTaskDao {
         try {
             try {
                 conn = DriverManager.getConnection(ConnectionConfig.mConnString, ConnectionConfig.dbConnName, ConnectionConfig.dbConnPass);
-                ps = conn.prepareStatement(
+                ps = conn.prepareStatement("SET NAMES utf8;" +
                         "INSERT IGNORE INTO taskcontrol.currenttask"
                                 + "(id, task_id, creator_id, recipient_id, state, priority,  create_date)"
                                 + "VALUES(?,?,?,?,?,?,?)"
