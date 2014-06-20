@@ -35,3 +35,11 @@ body {
     resize: none;
     border-radius: 5;
 }
+
+#textString {
+    text-align:left;
+    border-radius: 5;
+    border: 1px solid #aaacb2;
+    padding-left: 5px;
+    padding-right: 5px;
+}
