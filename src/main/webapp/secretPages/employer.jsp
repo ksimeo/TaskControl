@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="../../content/style.css"/>
 
 <head>
-    <title>Task creator</title>
+    <title>Task creator - TaskControl 1.0</title>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 

@@ -10,7 +10,7 @@
 <script type="text/javascript" src="../../script/jquery.tablesorter.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../content/style.css" />
 <head>
-    <title>${currentUser}</title>
+    <title>${currentUser} - TaskControl 1.0</title>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
