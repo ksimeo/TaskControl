@@ -47,7 +47,7 @@ public class AddTaskServlet extends HttpServlet {
             while (iter.hasNext()) {
                 String tmp = iter.next();
 //                System.out.print(tmp);
-                if (tmp == taskTitle) {
+                if (tmp.equalsIgnoreCase(taskTitle)) {
                     req.setAttribute("ErrorForm", "Task with the same title already exists!");
                     err = true;
                     break;
