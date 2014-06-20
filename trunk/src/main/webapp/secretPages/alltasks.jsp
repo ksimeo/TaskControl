@@ -12,6 +12,7 @@
 <script type="text/javascript" src="../../script/jquery.tablesorter.min.js"></script>
 <head>
     <title>All tasks</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <script type="text/javascript">
     var currentPage = ${page};
