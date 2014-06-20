@@ -1,0 +1,37 @@
+body {
+
+    background-image: url("../img/lmv2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#plank1
+{
+    width: 730px;
+    height: 77px;
+    text-align: -webkit-center;
+    margin: 0px auto;
+    margin-top: 60px;
+    background-color: #ededed;
+    border: 1px solid #aaacb2;
+    border-radius: 10px;
+    padding: 1px 15px 1px 15px;
+    font-family: sans-serif
+}
+#plank2 {
+    width: 642px; text-align : -webkit-center;
+    margin: 0px auto;
+    margin-top: 5px;
+    background-color: #ededed;
+    border: 1px solid #aaacb2;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    font-family: sans-serif;
+}
+#textwindow {
+    background-color: #fffa9e;
+    resize: none;
+    border-radius: 5;
+}

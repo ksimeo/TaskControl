@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../content/style.css" />
 <head>
     <title>Registration</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 <form action="/registration" method="post">
