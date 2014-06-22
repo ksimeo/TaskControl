@@ -73,8 +73,8 @@ public class TaskDao implements ITaskDao {
                         +" VALUES(?,?,?)"
                 );
                 ps.setInt(1, task.getId());
-                ps.setString(2, task.getTaskTitle());
-                ps.setString(3, task.getDescription());
+                ps.setBytes(2, task.getTaskTitle().getBytes());
+                ps.setBytes(3, task.getDescription().getBytes());
                 int res = ps.executeUpdate();
                 f = res > 0;
             }
