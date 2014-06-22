@@ -13,12 +13,10 @@ import java.io.IOException;
  * Created by VLAD on 13.06.2014.
  */
 @WebServlet(urlPatterns = "/description")
-public class TaskDescription extends HttpServlet
-{
+public class TaskDescription extends HttpServlet {
 
     @Override
-    public void init() throws ServletException
-    {
+    public void init() throws ServletException {
 
     }
 
@@ -29,9 +27,10 @@ public class TaskDescription extends HttpServlet
         String descripText = "";
         String val = req.getParameter("title");
 
-        if(val != null) {
+        if (val != null) {
             descripText = th.getDescriptionByTitle(val);
         }
+        resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(descripText);
 
     }
