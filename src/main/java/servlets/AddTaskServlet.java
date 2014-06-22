@@ -34,7 +34,7 @@ public class AddTaskServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         try {
-            req.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding("UTF-8");
             String taskTitle = req.getParameter("title");
 //            System.out.println(taskTitle);
 //        String taskTitle = new String(req.getParameter("title").getBytes("ISO-8859-1"), "Cp1251");
