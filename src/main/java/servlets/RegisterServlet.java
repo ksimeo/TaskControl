@@ -34,7 +34,6 @@ public class RegisterServlet extends HttpServlet
         try
         {
             String name = req.getParameter("fullName");
-
             String login = req.getParameter("login");
             String password = req.getParameter("password");
             String confPassword = req.getParameter("confPassword");

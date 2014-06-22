@@ -28,6 +28,7 @@ public class CurrentTaskCreatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setCharacterEncoding("UTF-8");
         TaskHelper th = new TaskHelper();
         String userName = req.getParameter("username");
         String taskTitle = req.getParameter("tasktitle");
@@ -41,12 +42,7 @@ public class CurrentTaskCreatorServlet extends HttpServlet {
             User recipient = th.getUserByFullName(userName);
             Task task = th.getTaskByTitle(taskTitle);
 
-//            System.out.println("-----------------------------");
-//            System.out.println("Task Id: " + task.getId() + "Task Title: " + taskTitle);
-//            System.out.println("Creator's id: " + creator.getUserId() + "Creator name: " + creator.getName());
-//            System.out.println("User Id: " + recipient.getUserId() + "User Name: " + userName);
-//            System.out.println("Priority: " + priority);
-//            System.out.println("-----------------------------");
+
 
             CurrentTask newCurTask = th.saveCurrentTask(task.getId(), creator.getUserId(), recipient.getUserId(), priority);
             List<CurrentTask> newCurTasks = (List) session.getAttribute("newCurTasks");
