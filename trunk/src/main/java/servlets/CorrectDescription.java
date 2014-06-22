@@ -20,6 +20,7 @@ public class CorrectDescription extends HttpServlet
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         String description = req.getParameter("description");
         String title = req.getParameter("tasktitle");
         if(!description.equals("") && title != null)
