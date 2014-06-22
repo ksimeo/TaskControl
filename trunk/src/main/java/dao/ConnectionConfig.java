@@ -7,5 +7,5 @@ public class ConnectionConfig
 {
     public static String mConnString = "jdbc:mysql://localhost:3306/taskcontrol?useUnicode=true&characterEncoding=utf-8";
     public static String dbConnName = "root";
-    public static String dbConnPass = "Monkey2003";
+    public static String dbConnPass = "root123";
 }
