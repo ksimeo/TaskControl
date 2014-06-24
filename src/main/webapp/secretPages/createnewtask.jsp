@@ -19,7 +19,7 @@
     </div>
     <div id="plank2">
         <h><b>Title of new task:</b></h>
-            <input type="text" size="78" name="title" id="textString"/>
+            <input type="text" size="77" name="title" id="textString"/>
             <p style="text-align: left; padding-left: 2px;">
                 <h><b>Description of task:</b></h>
                 <textarea name="description" cols="77" rows="10" id="textwindow"></textarea>
