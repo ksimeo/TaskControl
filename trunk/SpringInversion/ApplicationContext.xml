@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="album" class="models.Album"/>
+    <bean id="photo" class="models.Photo"/>
+
+    <bean id="album_dao" class="dao.AlbumDao"/>
+    <bean id="photo_dao" class="dao.PhotoDao"/>
+
+    <bean id="maneger" class="service.AlbumManager">
+        <constructor-arg name="ad" ref="album_dao"/>
+        <constructor-arg name="pd" ref="photo_dao"/>
+    </bean>
+</beans>
